@@ -25,7 +25,6 @@ DATA = ROOT / "docs" / "data"
 FILE = DATA / "products.json"
 UA = "Mozilla/5.0 (compatible; CompetitorRadar/1.0)"
 NOW = datetime.now(timezone.utc).isoformat()
-KEYWORDS = [k.lower() for k in CONFIG.get("product_keywords", ["soap", "body wash", "scrub"])]
 
 
 def fetch(url, timeout=25):
@@ -34,20 +33,33 @@ def fetch(url, timeout=25):
         return r.read()
 
 
-def category_of(text):
-    t = text.lower()
-    if "scrub" in t or "exfoliat" in t:
-        return "Body scrub"
-    if any(k in t for k in ("body wash", "bodywash", "shower", "gel wash")):
+# Words that mean the item is not a single body wash, soap or body scrub.
+NOT_BODY = re.compile(r"\b(face|facial|lip|scalp|underarm|hair|shampoo|conditioner|toner|peel(ing)?|serum solution|"
+                      r"hand ?wash|dish ?wash|face ?wash|lotion(?! soap)|moisturi[sz]er|roll ?on|mist|deo|cream(?! beauty bar)|"
+                      r"cr[eè]me|shower cap|scrub-a-dub)\b", re.I)
+# Bundles that mix different products are left out (packs of the same item are kept).
+BUNDLE = re.compile(r"\b(kit|combo|duo|trio|set|gift|essentials)\b|"
+                    r"(\d\s*(ml|gm|g|l)\b|\))\s*\+[^|]*?\b(wash|soap|scrub|lotion|shampoo|roll ?on|bar|cream|loofah)", re.I)
+ACCESSORY_TYPE = re.compile(r"accessor|loofah|tool|cap|merch", re.I)
+
+
+def category_of(title):
+    """Category from the product NAME only (shop tags are too loose)."""
+    t = title.lower()
+    if re.search(r"body ?wash|shower gel|shower ?wash|head to toe wash", t):
         return "Body wash / shower gel"
-    if any(k in t for k in ("soap", "bar")):
+    if re.search(r"\bscrub\b", t):
+        return "Body scrub"
+    if re.search(r"\bsoap\b|bathing bar|gel bar|beauty bar|serum bar|milk bar|\bbar\b", t):
         return "Soap / gel bar"
-    return "Other"
+    return None
 
 
-def relevant(text):
-    t = text.lower()
-    return any(k in t for k in KEYWORDS) and not any(x in t for x in ("hand wash", "handwash", "dishwash", "face wash", "facewash"))
+def classify(title, product_type=""):
+    """Returns the category, or None if the item should be left out."""
+    if NOT_BODY.search(title) or BUNDLE.search(title) or ACCESSORY_TYPE.search(product_type or ""):
+        return None
+    return category_of(title)
 
 
 def shopify(brand, base, vendor=None):
@@ -61,14 +73,15 @@ def shopify(brand, base, vendor=None):
             if vendor and vendor.lower() not in (p.get("vendor") or "").lower() + " " + (p.get("title") or "").lower():
                 continue
             text = " ".join([p.get("title", ""), p.get("product_type", ""), " ".join(p.get("tags", []) if isinstance(p.get("tags"), list) else [str(p.get("tags", ""))])])
-            if not relevant(text):
+            cat = classify(p.get("title", ""), p.get("product_type", ""))
+            if not cat:
                 continue
             for v in p.get("variants", []):
                 size = v.get("title") if v.get("title") not in (None, "Default Title") else ""
                 out.append({
                     "key": f"{brand}|{p['handle']}|{v.get('id')}",
                     "brand": brand, "product": p.get("title", ""), "size": size,
-                    "category": category_of(text),
+                    "category": cat,
                     "price": float(v["price"]) if v.get("price") else None,
                     "mrp": float(v["compare_at_price"]) if v.get("compare_at_price") else None,
                     "in_stock": bool(v.get("available", True)),
@@ -103,10 +116,11 @@ def sitemap(brand, cfg):
         if match and not any(m in lu for m in match):
             continue
         slug = re.sub(r"[-_]+", " ", lu.rstrip("/").split("/")[-1].split(".")[0]).strip()
-        if not slug or not relevant(lu.replace("-", " ")):
+        cat = classify(slug) if slug else None
+        if not cat:
             continue
         out.append({"key": f"{brand}|{u}", "brand": brand, "product": slug.title(), "size": "",
-                    "category": category_of(lu.replace("-", " ")), "price": None, "mrp": None,
+                    "category": cat, "price": None, "mrp": None,
                     "in_stock": None, "url": u, "source": "Brand website"})
     return out
 
@@ -141,6 +155,9 @@ def diff(old, new, checked_brands):
 def run(log=print):
     """Check every brand; returns (change events, run log entries)."""
     old = json.loads(FILE.read_text()).get("products", []) if FILE.exists() else []
+    # apply today's category rules to the saved list too, so items we now leave out
+    # are not reported as "no longer listed"
+    old = [dict(p, category=classify(p["product"])) for p in old if classify(p["product"])]
     new, run_log, checked = [], [], set()
     for b in CONFIG["brands"]:
         cfg = b.get("products") or {}

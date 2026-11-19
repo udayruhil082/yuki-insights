@@ -13,8 +13,8 @@
    "must_mention": [
     "Fiama"
    ],
-   "youtube_handle": "@FiamaIndia",
-   "instagram": "fiama_india",
+   "youtube_handle": "@fiamadiwills",
+   "instagram": "fiamaindia",
    "ad_library_query": "Fiama",
    "products": {
     "shopify": "https://www.fiama.in"
@@ -23,7 +23,8 @@
     "itcportal.com",
     "fiama.in"
    ],
-   "website": "https://www.fiama.in"
+   "website": "https://www.fiama.in",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Dove",
@@ -33,7 +34,7 @@
     "Dove"
    ],
    "youtube_handle": "@DoveIndia",
-   "instagram": "doveindia",
+   "instagram": "doveindiachannel",
    "ad_library_query": "Dove India",
    "products": {
     "shopify": "https://www.dove-india.com"
@@ -42,7 +43,9 @@
     "hul.co.in",
     "dove-india.com"
    ],
-   "website": "https://www.dove-india.com"
+   "website": "https://www.dove-india.com",
+   "exclude_regex": "dove cameron|curology|mourning dove|peace dove",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Nivea",
@@ -59,7 +62,8 @@
     "nivea.in",
     "beiersdorf.com"
    ],
-   "website": "https://www.nivea.in"
+   "website": "https://www.nivea.in",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Pears",
@@ -69,13 +73,15 @@
     "Pears"
    ],
    "youtube_handle": "@PearsIndia",
-   "instagram": "pearsindia",
+   "instagram": "pearsindiaofficial",
    "ad_library_query": "Pears soap",
    "products": {},
    "official_sites": [
     "hul.co.in"
    ],
-   "website": "https://www.hul.co.in/brands/personal-care/pears/"
+   "website": "https://www.hul.co.in/brands/personal-care/pears/",
+   "exclude_regex": "grape|fruit|orchard|apple|harvest|export|farm",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Palmolive",
@@ -93,7 +99,10 @@
     "colgateinvestors.co.in",
     "colgatepalmolive.com"
    ],
-   "website": "https://www.colgatepalmolive.co.in"
+   "website": "https://www.colgatepalmolive.co.in",
+   "must_regex": "(?<!colgate-)(?<!colgate )(?<!colgate– )palmolive",
+   "_note_regex": "Only headlines about the Palmolive brand itself, not Colgate-Palmolive company news.",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Chemist at Play",
@@ -113,7 +122,8 @@
    "official_sites": [
     "innovist.com"
    ],
-   "website": "https://innovist.com/collections/chemist-at-play"
+   "website": "https://innovist.com/collections/chemist-at-play",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Love Beauty and Planet",
@@ -132,7 +142,8 @@
    "official_sites": [
     "hul.co.in"
    ],
-   "website": "https://lovebeautyandplanet.in"
+   "website": "https://lovebeautyandplanet.in",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Lux",
@@ -149,7 +160,9 @@
     "hul.co.in",
     "lux.com"
    ],
-   "website": "https://www.lux.com/in/"
+   "website": "https://www.lux.com/in/",
+   "exclude_regex": "lux cozi|\\bcozi\\b|lux industries",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Santoor",
@@ -158,15 +171,16 @@
    "must_mention": [
     "Santoor"
    ],
-   "youtube_handle": "@SantoorSoap",
-   "instagram": "santoorsoap",
+   "youtube_handle": "user/SantoorBrand",
+   "instagram": "",
    "ad_library_query": "Santoor",
    "products": {},
    "official_sites": [
     "wiproconsumercare.com",
     "wipro.com"
    ],
-   "website": ""
+   "website": "",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Mamaearth",
@@ -176,7 +190,7 @@
     "Mamaearth",
     "Honasa"
    ],
-   "youtube_handle": "@MamaearthIndia",
+   "youtube_handle": "UC5qhqSIcahBKKMEdLPFqeVA",
    "instagram": "mamaearth.in",
    "ad_library_query": "Mamaearth",
    "products": {
@@ -186,7 +200,8 @@
     "honasa.in",
     "mamaearth.in"
    ],
-   "website": "https://mamaearth.in"
+   "website": "https://mamaearth.in",
+   "handles_checked": "2026-11-20"
   },
   {
    "name": "Ghar Soaps",
@@ -202,7 +217,9 @@
    "official_sites": [
     "gharsoaps.in"
    ],
-   "website": ""
+   "website": "",
+   "must_regex": "ghar soap",
+   "handles_checked": "2026-11-20"
   }
  ],
  "category_watch": {

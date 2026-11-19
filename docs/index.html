@@ -468,6 +468,7 @@ body.intro-on .app{visibility:hidden}
   <div class="topactions">
     <button class="btn" id="logBtn" type="button"><svg class="i"><use href="#i-plus"/></svg>Log a post</button>
     <a class="btn" id="excelBtn" href="data/competitor_radar.xlsx" download><svg class="i"><use href="#i-down"/></svg>Export Excel</a>
+    <button class="btn switch" id="scopeBtn" type="button" role="switch" aria-checked="false" title="Also show news about hair care, face care, deodorants and other products outside body wash, soap and scrub"><span class="lbl">Other categories</span><span class="track"><span class="knob"></span></span></button>
     <button class="btn switch" id="themeBtn" type="button" role="switch" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg><span class="lbl">Dark mode</span><span class="track"><span class="knob"></span></span></button>
   </div>
 </div>
@@ -789,7 +790,14 @@ document.addEventListener("click", async e => {
 });
 
 // ---------- load data ----------
-let D = {};
+let D = {}, RAW = [];
+// News about other categories (hair, face, deo...) is hidden unless the switch is on.
+function scopeItems(){
+  const all = store.get("otherCats", false);
+  $("#scopeBtn").setAttribute("aria-checked", all);
+  D.items = RAW.filter(i => all || !i.other_category);
+}
+$("#scopeBtn").onclick = () => { store.set("otherCats", !store.get("otherCats", false)); scopeItems(); mergeFiama(); render(); showTab(store.get("tab", "overview")); };
 Promise.all(["stats","items","seed","products","fiama_activity"].map(n =>
   fetch(`data/${n}.json`, {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null)
 )).then(async ([stats, items, seed, products, fiama]) => {
@@ -797,7 +805,8 @@ Promise.all(["stats","items","seed","products","fiama_activity"].map(n =>
   LOCAL = !!(st && st.local); GITHUB = st && st.github;
   D.products = products;
   D.stats = stats || {brands:[], weeks:[], share_of_voice:{}, tags_90d:{}, tag_names:[], big_move_tags:["Launch","Campaign","Celebrity","Partnership"], run_log:[]};
-  D.items = items || [];
+  RAW = items || [];
+  scopeItems();
   D.seed = seed || {sheets:{}};
   if (!D.stats.brands.length) D.stats.brands = D.seed.brands || [...new Set(rowsOf("Product Range").map(r => r.Brand).filter(Boolean))].map(n => ({name: n, role: n === "Fiama" ? "self" : "competitor"}));
   D.brands = D.stats.brands.map(b => b.name);
@@ -1226,7 +1235,7 @@ function renderNotes(){
 }
 function renderRunLog(){
   const log = D.stats.run_log || [];
-  $("#runLog").innerHTML = log.length ? log.map(l => `<div>${l.ok ? '<span class="ok">✔</span>' : '<span class="bad">✖</span>'} ${esc(l.source)}: ${l.ok ? l.found + " found" : "failed (" + esc(l.error) + ")"}</div>`).join("") : "No refresh has run yet.";
+  $("#runLog").innerHTML = log.length ? log.map(l => `<div>${l.ok ? '<span class="ok">✔</span>' : '<span class="bad">✖</span>'} ${esc(l.source)}: ${l.ok ? l.found + " found" + (l.channel ? ` (channel: ${esc(l.channel)})` : "") : "failed (" + esc(l.error) + ")"}</div>`).join("") : "No refresh has run yet.";
 }
 
 // ---------- pixie dust on every click ----------

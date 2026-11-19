@@ -93,18 +93,61 @@ def source_type(publisher, domain, brand=None):
     return "News"
 
 
-# Headlines left out on purpose: agency appointments (team rule, no agency names) and stock-market chatter.
+# Headlines left out on purpose:
+#  - agency appointments and anything naming an agency (team rule: no agency names)
+#  - stock-market and quarterly-results chatter (kept if it is about ad spend)
+#  - shop blog / SEO articles and empty titles
 SKIP_TITLE = re.compile(r"\b(agency|agencies|AOR|account win|wins .{0,40} account|creative mandate|media mandate|"
                         r"share price|stock|shares|target price|rated (buy|sell|hold)|investor|dividend|Q[1-4] results|quarterly results|"
                         r"seasonal returns|analyst)\b", re.I)
+AGENCY_NAMES = re.compile(r"\b(mindshare|hogarth|omnicom|wpp|ogilvy|lowe lintas|mullenlowe|dentsu|publicis|leo burnett|mccann|"
+                          r"havas|fcb|ddb|tbwa|wavemaker|groupm|madison media|anymind|digitas|schbang|talented agency|"
+                          r"social panga|kinnect|bbh|vml|lodestar|mediacom|essencemediacom|starcom|spark foundry|omd|carat|"
+                          r"iprospect|wunderman|white rivers|infectious|moonshine|tilt brand|the glitch|famous innovations|"
+                          r"grey group|grey india|initiative india|zenith india|phd india)\b", re.I)
+FINANCE = re.compile(r"net profit|profit (rises|jumps|falls|surges|up|down|grows|soars)|revenue (rises|jumps|up|grows|soars)|"
+                     r"net sales|earnings|\bq[1-4]\s?fy\d*|quarterly profit|\bq[1-4] (net|profit|revenue)|upside|maintains|"
+                     r"buy rating|tax demand|webcast|(third|3rd|second|2nd|first|1st|fourth|4th)[- ]quarter|cuts guidance|"
+                     r"results:|turnaround|arbitration", re.I)
+AD_MONEY = re.compile(r"ad spend|advertis|marketing spend|a&p", re.I)
+BLOG = re.compile(r"^\s*-\s|^how to use|step-by-step guide|reddit|what the reviews|debate:|^\s*$", re.I)
 SKIP_PUBLISHER = re.compile(r"yahoo finance|marketsmojo|simply wall|scanx|moneycontrol|marketscreener|investing\.com|"
-                            r"tickertape|trendlyne|equitymaster|stock|marketbeat", re.I)
+                            r"tickertape|trendlyne|equitymaster|stock|marketbeat|tradingview", re.I)
+# News about products outside body wash / soap / scrub is marked so the app can hide it.
+OTHER_CAT = re.compile(r"\b(hair\w*|shampoo|conditioner|sunscreen|spf|lip\w*|face ?wash|makeup|fragrance|perfume|"
+                       r"underarm|deo\w*|toothpaste|oral|innerwear|lotion|moistur\w*|serum|mist)\b", re.I)
+OUR_CAT = re.compile(r"body ?wash|shower|soap|bath\w*|scrub|\bbars?\b|exfoliat\w*|personal wash|skin ?care", re.I)
 
 
-def google_news(query, brand, must=None):
+def skip_news(title, publisher="", domain="", brand=None):
+    """True if a news headline should be left out."""
+    if BLOG.search(title) or SKIP_TITLE.search(title) or AGENCY_NAMES.search(title):
+        return True
+    if FINANCE.search(title) and not AD_MONEY.search(title):
+        return True
+    if SKIP_PUBLISHER.search(f"{publisher} {domain}"):
+        return True
+    b = next((x for x in CONFIG["brands"] if x["name"] == brand), {})
+    if b.get("must_regex") and not re.search(b["must_regex"], title, re.I):
+        return True
+    if b.get("exclude_regex") and re.search(b["exclude_regex"], title, re.I):
+        return True
+    return False
+
+
+def mentions(title, words):
+    """Whole-word match, so 'Lux' does not match 'luxury'."""
+    return any(re.search(r"\b" + re.escape(w) + r"\b", title, re.I) for w in words)
+
+
+def other_category(text):
+    return bool(OTHER_CAT.search(text)) and not OUR_CAT.search(text)
+
+
+def google_news(query, brand, must=None, days=30):
     r = CONFIG["region"]
     url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-        {"q": query + " when:30d", "hl": r["hl"], "gl": r["gl"], "ceid": r["ceid"]})
+        {"q": query + f" when:{days}d", "hl": r["hl"], "gl": r["gl"], "ceid": r["ceid"]})
     root = ET.fromstring(fetch(url))
     out = []
     for it in root.iter("item"):
@@ -114,10 +157,10 @@ def google_news(query, brand, must=None):
         domain = urllib.parse.urlparse(src.get("url", "")).netloc if src is not None else ""
         if publisher and title.endswith(" - " + publisher):
             title = title[: -len(publisher) - 3]
-        if must and not any(m.lower() in title.lower() for m in must):
+        if must and not mentions(title, must):
             continue
-        if SKIP_TITLE.search(title) or SKIP_PUBLISHER.search(publisher + " " + domain):
-            continue   # agency news (team rule: no agency names) and share-price noise
+        if skip_news(title, publisher, domain, brand):
+            continue
         link = it.findtext("link") or ""
         summary = strip_html(it.findtext("description"))
         if summary.startswith(title):
@@ -132,10 +175,15 @@ def google_news(query, brand, must=None):
 
 
 def youtube_channel_id(handle):
+    if re.fullmatch(r"UC[\w-]{22}", handle):   # a channel id was given directly
+        return handle
     page = fetch("https://www.youtube.com/" + handle.lstrip("/")).decode("utf-8", "ignore")
     m = re.search(r'"(?:externalId|channelId)":"(UC[\w-]{22})"', page) or \
         re.search(r'channel/(UC[\w-]{22})', page)
     return m.group(1) if m else None
+
+
+YT_NAMES = {}
 
 
 def youtube(handle, brand, cache):
@@ -146,6 +194,7 @@ def youtube(handle, brand, cache):
     ns = {"a": "http://www.w3.org/2005/Atom", "m": "http://search.yahoo.com/mrss/",
           "yt": "http://www.youtube.com/xml/schemas/2015"}
     root = ET.fromstring(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"))
+    YT_NAMES[brand] = root.findtext("a:title", namespaces=ns) or ""   # shown in Sources so the channel can be checked
     out = []
     for e in root.findall("a:entry", ns):
         vid = e.findtext("yt:videoId", namespaces=ns)
@@ -233,7 +282,10 @@ def merge(existing, new):
         added += 1
     cutoff = (NOW - timedelta(days=KEEP_DAYS)).isoformat()
     items = [i for i in by_id.values() if i["published"] >= cutoff
-             and not (i["kind"] == "news" and (SKIP_TITLE.search(i["title"]) or SKIP_PUBLISHER.search(i.get("publisher", "") + " " + i.get("source_domain", ""))))]
+             and not (i["kind"] == "news" and skip_news(i["title"], i.get("publisher", ""), i.get("source_domain", ""), i["brand"]))
+             and not (i["kind"] == "youtube" and AGENCY_NAMES.search(i["title"]))]
+    for i in items:   # re-checked every run so rule changes apply to old items too
+        i["other_category"] = i["kind"] in ("news", "youtube") and other_category(i["title"] + " " + (i.get("summary") or "")[:200])
     items.sort(key=lambda i: i["published"], reverse=True)
     return items, added
 
@@ -351,16 +403,19 @@ def main():
         attempt(f"News: {b['name']}", lambda b=b, must=must: google_news(b["news_query"], b["name"], must))
         if CONFIG.get("trade_press"):
             q = f'"{b["name"]}" (' + " OR ".join("site:" + d for d in CONFIG["trade_press"]) + ")"
-            attempt(f"Trade press: {b['name']}", lambda q=q, b=b, must=must: google_news(q, b["name"], must))
+            attempt(f"Trade press: {b['name']}", lambda q=q, b=b, must=must: google_news(q, b["name"], must, 365))
         if b.get("official_sites"):
             q = f'"{b["name"]}" (' + " OR ".join("site:" + d for d in b["official_sites"]) + ")"
-            attempt(f"Official: {b['name']}", lambda q=q, b=b, must=must: google_news(q, b["name"], must))
+            attempt(f"Official: {b['name']}", lambda q=q, b=b, must=must: google_news(q, b["name"], must, 365))
         if b.get("youtube_handle"):
             attempt(f"YouTube: {b['name']}", lambda b=b: youtube(b["youtube_handle"], b["name"], yt_cache))
     cw = CONFIG.get("category_watch")
     if cw:
         attempt("News: Category", lambda: google_news(cw["news_query"], "Category"))
     attempt("Logged posts", manual_logs)
+    for r in run_log:
+        if r["source"].startswith("YouTube: ") and r["source"][9:] in YT_NAMES:
+            r["channel"] = YT_NAMES[r["source"][9:]]
 
     # Product range: new products, price changes, stock (see radar/products.py)
     try:
