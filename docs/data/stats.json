@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-19T21:04:42.621791+00:00",
+ "updated": "2026-11-19T21:25:50.438489+00:00",
  "brands": [
   {
    "name": "Fiama",
    "role": "self",
-   "instagram": "fiama_india",
+   "instagram": "fiamaindia",
    "ad_library_query": "Fiama",
-   "youtube_handle": "@FiamaIndia",
+   "youtube_handle": "@fiamadiwills",
    "website": "https://www.fiama.in",
    "official_sites": [
     "itcportal.com",
@@ -16,7 +16,7 @@
   {
    "name": "Dove",
    "role": "competitor",
-   "instagram": "doveindia",
+   "instagram": "doveindiachannel",
    "ad_library_query": "Dove India",
    "youtube_handle": "@DoveIndia",
    "website": "https://www.dove-india.com",
@@ -40,7 +40,7 @@
   {
    "name": "Pears",
    "role": "competitor",
-   "instagram": "pearsindia",
+   "instagram": "pearsindiaofficial",
    "ad_library_query": "Pears soap",
    "youtube_handle": "@PearsIndia",
    "website": "https://www.hul.co.in/brands/personal-care/pears/",
@@ -98,9 +98,9 @@
   {
    "name": "Santoor",
    "role": "competitor",
-   "instagram": "santoorsoap",
+   "instagram": "",
    "ad_library_query": "Santoor",
-   "youtube_handle": "@SantoorSoap",
+   "youtube_handle": "user/SantoorBrand",
    "website": "",
    "official_sites": [
     "wiproconsumercare.com",
@@ -112,7 +112,7 @@
    "role": "competitor",
    "instagram": "mamaearth.in",
    "ad_library_query": "Mamaearth",
-   "youtube_handle": "@MamaearthIndia",
+   "youtube_handle": "UC5qhqSIcahBKKMEdLPFqeVA",
    "website": "https://mamaearth.in",
    "official_sites": [
     "honasa.in",
@@ -132,10 +132,10 @@
   }
  ],
  "weeks": [
-  "2026-08-24",
   "2026-08-31",
   "2026-09-07",
   "2026-09-14",
+  "2026-09-21",
   "2026-09-28",
   "2026-10-05",
   "2026-10-12",
@@ -146,21 +146,8 @@
   "2026-11-16"
  ],
  "share_of_voice": {
-  "2026-08-24": {
-   "Fiama": 0,
-   "Dove": 0,
-   "Nivea": 0,
-   "Pears": 0,
-   "Palmolive": 0,
-   "Chemist at Play": 0,
-   "Love Beauty and Planet": 0,
-   "Lux": 0,
-   "Santoor": 0,
-   "Mamaearth": 1,
-   "Ghar Soaps": 0
-  },
   "2026-08-31": {
-   "Fiama": 0,
+   "Fiama": 3,
    "Dove": 0,
    "Nivea": 1,
    "Pears": 0,
@@ -177,31 +164,18 @@
    "Dove": 0,
    "Nivea": 0,
    "Pears": 0,
-   "Palmolive": 1,
+   "Palmolive": 0,
    "Chemist at Play": 0,
    "Love Beauty and Planet": 0,
    "Lux": 2,
    "Santoor": 0,
-   "Mamaearth": 1,
+   "Mamaearth": 2,
    "Ghar Soaps": 0
   },
   "2026-09-14": {
    "Fiama": 0,
    "Dove": 0,
-   "Nivea": 0,
-   "Pears": 0,
-   "Palmolive": 1,
-   "Chemist at Play": 0,
-   "Love Beauty and Planet": 0,
-   "Lux": 0,
-   "Santoor": 0,
-   "Mamaearth": 0,
-   "Ghar Soaps": 0
-  },
-  "2026-09-28": {
-   "Fiama": 0,
-   "Dove": 0,
-   "Nivea": 0,
+   "Nivea": 1,
    "Pears": 0,
    "Palmolive": 0,
    "Chemist at Play": 0,
@@ -211,8 +185,34 @@
    "Mamaearth": 0,
    "Ghar Soaps": 1
   },
+  "2026-09-21": {
+   "Fiama": 1,
+   "Dove": 0,
+   "Nivea": 0,
+   "Pears": 0,
+   "Palmolive": 0,
+   "Chemist at Play": 1,
+   "Love Beauty and Planet": 0,
+   "Lux": 0,
+   "Santoor": 0,
+   "Mamaearth": 1,
+   "Ghar Soaps": 0
+  },
+  "2026-09-28": {
+   "Fiama": 1,
+   "Dove": 0,
+   "Nivea": 0,
+   "Pears": 0,
+   "Palmolive": 0,
+   "Chemist at Play": 0,
+   "Love Beauty and Planet": 0,
+   "Lux": 0,
+   "Santoor": 2,
+   "Mamaearth": 0,
+   "Ghar Soaps": 1
+  },
   "2026-10-05": {
-   "Fiama": 0,
+   "Fiama": 3,
    "Dove": 0,
    "Nivea": 1,
    "Pears": 0,
@@ -225,7 +225,7 @@
    "Ghar Soaps": 0
   },
   "2026-10-12": {
-   "Fiama": 0,
+   "Fiama": 1,
    "Dove": 1,
    "Nivea": 0,
    "Pears": 0,
@@ -238,62 +238,62 @@
    "Ghar Soaps": 2
   },
   "2026-10-19": {
-   "Fiama": 0,
+   "Fiama": 1,
    "Dove": 12,
    "Nivea": 1,
    "Pears": 0,
-   "Palmolive": 23,
+   "Palmolive": 0,
    "Chemist at Play": 0,
    "Love Beauty and Planet": 0,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 3,
+   "Mamaearth": 2,
    "Ghar Soaps": 0
   },
   "2026-10-26": {
-   "Fiama": 0,
-   "Dove": 11,
-   "Nivea": 1,
+   "Fiama": 1,
+   "Dove": 10,
+   "Nivea": 0,
    "Pears": 0,
-   "Palmolive": 2,
+   "Palmolive": 0,
    "Chemist at Play": 1,
    "Love Beauty and Planet": 5,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 4,
+   "Mamaearth": 1,
    "Ghar Soaps": 1
   },
   "2026-11-02": {
-   "Fiama": 0,
+   "Fiama": 2,
    "Dove": 5,
    "Nivea": 1,
    "Pears": 0,
-   "Palmolive": 1,
+   "Palmolive": 0,
    "Chemist at Play": 1,
    "Love Beauty and Planet": 4,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 9,
+   "Mamaearth": 1,
    "Ghar Soaps": 0
   },
   "2026-11-09": {
-   "Fiama": 0,
+   "Fiama": 2,
    "Dove": 4,
    "Nivea": 3,
    "Pears": 0,
-   "Palmolive": 1,
+   "Palmolive": 0,
    "Chemist at Play": 1,
    "Love Beauty and Planet": 2,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 7,
+   "Mamaearth": 2,
    "Ghar Soaps": 0
   },
   "2026-11-16": {
-   "Fiama": 0,
-   "Dove": 2,
+   "Fiama": 7,
+   "Dove": 7,
    "Nivea": 1,
-   "Pears": 1,
+   "Pears": 0,
    "Palmolive": 0,
    "Chemist at Play": 0,
    "Love Beauty and Planet": 4,
@@ -304,26 +304,24 @@
   }
  },
  "tags_90d": {
-  "Fiama": {},
+  "Fiama": {
+   "Launch": 4,
+   "Product": 6
+  },
   "Dove": {
+   "Launch": 8,
+   "Product": 6,
    "Pricing & Promo": 3,
-   "Business": 3,
-   "Launch": 3,
-   "Partnership": 1
+   "Business": 3
   },
   "Nivea": {
    "Campaign": 2,
-   "Purpose": 1,
-   "Business": 1
+   "Purpose": 1
   },
   "Pears": {},
-  "Palmolive": {
-   "Business": 13,
-   "Pricing & Promo": 6,
-   "Campaign": 4
-  },
+  "Palmolive": {},
   "Chemist at Play": {
-   "Pricing & Promo": 2
+   "Pricing & Promo": 3
   },
   "Love Beauty and Planet": {
    "Influencer": 1,
@@ -335,8 +333,6 @@
   "Santoor": {},
   "Mamaearth": {
    "Campaign": 3,
-   "Business": 9,
-   "Pricing & Promo": 3,
    "Partnership": 1
   },
   "Ghar Soaps": {}
@@ -367,37 +363,39 @@
   {
    "source": "Trade press: Fiama",
    "ok": true,
-   "found": 23
+   "found": 27
   },
   {
    "source": "Official: Fiama",
    "ok": true,
-   "found": 0
+   "found": 5
   },
   {
    "source": "YouTube: Fiama",
-   "ok": false,
-   "error": "HTTP Error 404: Not Found"
+   "ok": true,
+   "found": 15,
+   "channel": "Vivel"
   },
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 11
+   "found": 10
   },
   {
    "source": "Trade press: Dove",
    "ok": true,
-   "found": 58
+   "found": 53
   },
   {
    "source": "Official: Dove",
    "ok": true,
-   "found": 11
+   "found": 10
   },
   {
    "source": "YouTube: Dove",
    "ok": true,
-   "found": 15
+   "found": 15,
+   "channel": "Dove India"
   },
   {
    "source": "News: Nivea",
@@ -407,22 +405,23 @@
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 55
+   "found": 53
   },
   {
    "source": "Official: Nivea",
    "ok": true,
-   "found": 4
+   "found": 13
   },
   {
    "source": "YouTube: Nivea",
    "ok": true,
-   "found": 15
+   "found": 15,
+   "channel": "NIVEA India"
   },
   {
    "source": "News: Pears",
    "ok": true,
-   "found": 1
+   "found": 0
   },
   {
    "source": "Trade press: Pears",
@@ -437,27 +436,29 @@
   {
    "source": "YouTube: Pears",
    "ok": true,
-   "found": 15
+   "found": 15,
+   "channel": "Pears India"
   },
   {
    "source": "News: Palmolive",
    "ok": true,
-   "found": 20
+   "found": 0
   },
   {
    "source": "Trade press: Palmolive",
    "ok": true,
-   "found": 58
+   "found": 6
   },
   {
    "source": "Official: Palmolive",
    "ok": true,
-   "found": 2
+   "found": 0
   },
   {
    "source": "YouTube: Palmolive",
    "ok": true,
-   "found": 15
+   "found": 15,
+   "channel": "Palmolive India"
   },
   {
    "source": "News: Chemist at Play",
@@ -472,12 +473,13 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 2
+   "found": 11
   },
   {
    "source": "YouTube: Chemist at Play",
    "ok": true,
-   "found": 7
+   "found": 7,
+   "channel": "ChemistAtPlay"
   },
   {
    "source": "News: Love Beauty and Planet",
@@ -497,7 +499,8 @@
   {
    "source": "YouTube: Love Beauty and Planet",
    "ok": true,
-   "found": 15
+   "found": 15,
+   "channel": "Love Beauty And Planet "
   },
   {
    "source": "News: Lux",
@@ -507,17 +510,18 @@
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 57
+   "found": 29
   },
   {
    "source": "Official: Lux",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "YouTube: Lux",
    "ok": true,
-   "found": 3
+   "found": 3,
+   "channel": "Lux India"
   },
   {
    "source": "News: Santoor",
@@ -527,37 +531,39 @@
   {
    "source": "Trade press: Santoor",
    "ok": true,
-   "found": 51
+   "found": 48
   },
   {
    "source": "Official: Santoor",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "YouTube: Santoor",
    "ok": true,
-   "found": 0
+   "found": 15,
+   "channel": "Santoor Stay Young"
   },
   {
    "source": "News: Mamaearth",
    "ok": true,
-   "found": 13
+   "found": 4
   },
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 57
+   "found": 88
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 14
+   "found": 10
   },
   {
    "source": "YouTube: Mamaearth",
    "ok": true,
-   "found": 0
+   "found": 15,
+   "channel": "Mamaearth India"
   },
   {
    "source": "News: Ghar Soaps",
@@ -572,17 +578,18 @@
   {
    "source": "Official: Ghar Soaps",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "YouTube: Ghar Soaps",
    "ok": true,
-   "found": 15
+   "found": 15,
+   "channel": "Ghar Soaps"
   },
   {
    "source": "News: Category",
    "ok": true,
-   "found": 13
+   "found": 12
   },
   {
    "source": "Logged posts",
@@ -592,27 +599,27 @@
   {
    "source": "Products: Fiama",
    "ok": true,
-   "found": 73
+   "found": 71
   },
   {
    "source": "Products: Dove",
    "ok": true,
-   "found": 23
+   "found": 26
   },
   {
    "source": "Products: Chemist at Play",
    "ok": true,
-   "found": 58
+   "found": 31
   },
   {
    "source": "Products: Love Beauty and Planet",
-   "ok": true,
-   "found": 1
+   "ok": false,
+   "error": "no matching products found"
   },
   {
    "source": "Products: Mamaearth",
    "ok": true,
-   "found": 78
+   "found": 58
   }
  ]
 }
