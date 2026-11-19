@@ -7,7 +7,7 @@
 "publisher": "YouTube",
 "published": "2026-11-19T14:20:19+00:00",
 "summary": "Thanks for visiting NIVEA on YouTube! Join us as we celebrate 100 years of Skincare.\n\nAt NIVEA skin inspires us to constantly understand its secrets and behavior. We preempt consumer needs and design innovative caring solutions that address the need.\n\nGot some helpful skincare secrets? Stories or memories of your favorite NIVEA products? Don't keep them to yourself - share them with the world here",
-"views": 84,
+"views": 116,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/1r6-D7NAzoM/mqdefault.jpg",
 "id": "f68378b424e9179d",
@@ -27,11 +27,11 @@
 "source_type": "News",
 "id": "f6e1872b4324c6e1",
 "tags": [
-"Launch",
 "Celebrity"
 ],
 "first_seen": "2026-11-19T21:26:50.360219+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Category",
@@ -136,7 +136,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Category",
@@ -149,11 +150,10 @@
 "source_domain": "www.businesstoday.in",
 "source_type": "News",
 "id": "15658a30d0fba460",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Category",
@@ -167,11 +167,11 @@
 "source_type": "News",
 "id": "acad78341232776f",
 "tags": [
-"Launch",
 "Pricing & Promo"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Category",
@@ -188,7 +188,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Category",
@@ -201,11 +202,10 @@
 "source_domain": "m.economictimes.com",
 "source_type": "News",
 "id": "c525947e1a974af6",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:26:50.360219+00:00",
-"other_category": false
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Category",
@@ -219,11 +219,11 @@
 "source_type": "News",
 "id": "b611775432ae1633",
 "tags": [
-"Launch",
 "Pricing & Promo"
 ],
 "first_seen": "2026-11-19T21:26:50.360219+00:00",
-"other_category": false
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Category",
@@ -236,11 +236,10 @@
 "source_domain": "ascendants.in",
 "source_type": "News",
 "id": "42aa9bfe2db5abc3",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:26:50.360219+00:00",
-"other_category": false
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Category",
@@ -272,7 +271,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Dove",
@@ -302,11 +302,11 @@
 "source_type": "News",
 "id": "0f569ee89893bfce",
 "tags": [
-"Launch",
 "Campaign"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Category",
@@ -323,7 +323,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Category",
@@ -385,11 +386,11 @@
 "source_type": "News",
 "id": "30ec239ebe40db86",
 "tags": [
-"Launch",
 "Celebrity"
 ],
 "first_seen": "2026-11-19T21:26:50.360219+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Category",
@@ -406,7 +407,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Category",
@@ -423,7 +425,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:26:50.360219+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Fiama",
@@ -1026,7 +1029,7 @@
 "publisher": "YouTube",
 "published": "2026-10-31T12:48:14+00:00",
 "summary": "Beach ho ya Thailand... protection ke bina risk lena theek nahi! 😳\n\nVacation pe khul ke enjoy karo - baaki dhoop ka hisaab hum sambhal lenge. 😉\n\nGhar Soaps ke Magic Soap mein hai chandan aur kesar ka solid dum, jo har ziddi tan ka game over kar deta hai.\n\n“Phuket” mein pareshan mat ho. Baap ki suno, kyunki Ghar Soaps hai De-Tan Ka Baap!",
-"views": 20488441,
+"views": 20506385,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/SVtIk3R0m3c/mqdefault.jpg",
 "id": "555fc98e3156f6bc",
@@ -1339,11 +1342,10 @@
 "source_domain": "www.globalcosmeticsnews.com",
 "source_type": "News",
 "id": "680a68bf9d3a58bf",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": true
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Dove",
@@ -1400,7 +1402,7 @@
 "publisher": "YouTube",
 "published": "2026-10-25T06:34:18+00:00",
 "summary": "Day 3 at Nykaaland is moving fast!​\nStop by, grab your goodie bag, and experience the booth in person! 🛍️​\nCause our Peptide Bond Strength Range doesn't just mask the total damage, it works beneath the surface to reconstruct broken hair bonds, giving your hair more strength and resilience.",
-"views": 467,
+"views": 466,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/j6HWshpqed4/mqdefault.jpg",
 "id": "1cc6dc17642d3bf1",
@@ -1446,7 +1448,7 @@
 "publisher": "YouTube",
 "published": "2026-10-24T12:30:40+00:00",
 "summary": "There’s no such thing as too much serum when it’s BONDing time! ✨​\nOur Peptide Bond Strength Bi-phasic Serum is taking over Nykaaland one spray at a time!",
-"views": 1331,
+"views": 1332,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/DKFtWgrIjKw/mqdefault.jpg",
 "id": "57a7989be79eb1c7",
@@ -1492,7 +1494,7 @@
 "publisher": "YouTube",
 "published": "2026-10-24T09:07:05+00:00",
 "summary": "Take a quick tour of the Dove booth at Nykaaland and discover all the interactive activities waiting for you! 🛍️✨​",
-"views": 517,
+"views": 515,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/14NJWxpl38c/mqdefault.jpg",
 "id": "9b7cc3f541a74a31",
@@ -1556,11 +1558,10 @@
 "source_domain": "www.prnewswire.com",
 "source_type": "News",
 "id": "06d0783edd64718d",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Dove",
@@ -1585,7 +1586,7 @@
 "publisher": "YouTube",
 "published": "2026-10-21T12:30:39+00:00",
 "summary": "Get ready for all-things-hair, peptide play-time and more! We've saved you a spot, so come hang with us. ​\n\nWe are taking over Nykaaland powered by our Peptide Bond Strength Range! ​",
-"views": 480,
+"views": 482,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/WN9xZ8eRsKg/mqdefault.jpg",
 "id": "909e918957aee9c8",
@@ -1616,7 +1617,7 @@
 "publisher": "YouTube",
 "published": "2026-10-14T11:37:41+00:00",
 "summary": "Shweta Tiwari & Ghar Soap Magic Facewash = Glow with a touch of magic! 💖🫧\n\n#ShwetaTiwari #GharSoap #MagicFacewash #YouTubeShorts",
-"views": 28833,
+"views": 28852,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/KpXz7bUIalk/mqdefault.jpg",
 "id": "8ea3ba31091d5d89",
@@ -1757,7 +1758,7 @@
 "publisher": "YouTube",
 "published": "2026-10-03T12:11:05+00:00",
 "summary": "TAN ka best solution syllabus mein nahi, shower mein milega. 🫡✨\nAur BB to sign karke dene ke liye tayyar hai -\nDe-Tan ka asli baap: GHAR SOAPS. 😎🔥\n4 Crore+ loogon ka trusted choice.",
-"views": 62927722,
+"views": 62927732,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/CUrIedvDt40/mqdefault.jpg",
 "id": "399bfece620f5135",
@@ -1805,7 +1806,7 @@
 "publisher": "YouTube",
 "published": "2026-09-28T10:06:02+00:00",
 "summary": "",
-"views": 22172719,
+"views": 22183367,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/LWlfrjnyeIM/mqdefault.jpg",
 "id": "fd341b52ca42825a",
@@ -1854,7 +1855,7 @@
 "publisher": "YouTube",
 "published": "2026-09-21T09:04:46+00:00",
 "summary": "",
-"views": 87662266,
+"views": 87660161,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/YnJ9FarE3-Y/mqdefault.jpg",
 "id": "b1aba89c81886b36",
@@ -2112,11 +2113,11 @@
 "source_type": "Trade press",
 "id": "4599ceaa7baa174a",
 "tags": [
-"Launch",
 "Campaign"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Pears",
@@ -2130,12 +2131,12 @@
 "source_type": "Trade press",
 "id": "5e3bffcc0c5e46a2",
 "tags": [
-"Launch",
 "Campaign",
 "Pricing & Promo"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Pears",
@@ -2183,7 +2184,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "brand"
 },
 {
 "brand": "Santoor",
@@ -2213,7 +2215,7 @@
 "id": "af36be2a34386cc6",
 "tags": [],
 "first_seen": "2026-11-19T21:04:42.621791+00:00",
-"other_category": false
+"other_category": true
 },
 {
 "brand": "Pears",
@@ -2223,7 +2225,7 @@
 "publisher": "YouTube",
 "published": "2026-07-27T12:22:41+00:00",
 "summary": "",
-"views": 37784721,
+"views": 37785652,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/5gjAhXW6FNw/mqdefault.jpg",
 "id": "828a6ef5e7032ef5",
@@ -2255,7 +2257,7 @@
 "publisher": "YouTube",
 "published": "2026-07-27T12:22:35+00:00",
 "summary": "",
-"views": 45757699,
+"views": 45757839,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/Vop8DSE4hbM/mqdefault.jpg",
 "id": "67eada7db23b329c",
@@ -2271,7 +2273,7 @@
 "publisher": "YouTube",
 "published": "2026-07-27T12:22:31+00:00",
 "summary": "",
-"views": 26601598,
+"views": 26601993,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/vvkFOoVBywo/mqdefault.jpg",
 "id": "928650d749218fe1",
@@ -2367,7 +2369,7 @@
 "publisher": "YouTube",
 "published": "2026-07-27T12:22:11+00:00",
 "summary": "",
-"views": 81617987,
+"views": 81619488,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/qhy7Dd5MQrE/mqdefault.jpg",
 "id": "df3215b3032cb00f",
@@ -2383,7 +2385,7 @@
 "publisher": "YouTube",
 "published": "2026-07-27T12:22:07+00:00",
 "summary": "",
-"views": 162489672,
+"views": 162494977,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/KTqzc2-e4eM/mqdefault.jpg",
 "id": "e57316862c881095",
@@ -2415,7 +2417,7 @@
 "publisher": "YouTube",
 "published": "2026-07-27T12:22:00+00:00",
 "summary": "",
-"views": 85175788,
+"views": 85177060,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/DmpgUCtRPGY/mqdefault.jpg",
 "id": "8fd3692432b10a54",
@@ -2568,7 +2570,7 @@
 "publisher": "YouTube",
 "published": "2026-07-08T05:59:30+00:00",
 "summary": "Say goodbye to pimples in just 3 days! Mamaearth Tea Tree Face Wash delivers 4X pimple reduction in 3 days with the dual power of Tea Tree and Salicylic Acid. While Tea Tree helps control excess oil, Salicylic Acid unclogs pores and fights bacteria to target pimples at the root. The formula also helps prevent the recurrence of pimples, leaving your skin feeling clear, fresh, and healthy.\nMade Safe",
-"views": 10204985,
+"views": 10204982,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/WF5UnbLuuHI/mqdefault.jpg",
 "id": "45eeec22ed029d4c",
@@ -2604,11 +2606,11 @@
 "source_type": "Trade press",
 "id": "ff9b5f97ee4804ff",
 "tags": [
-"Launch",
 "Campaign"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": true
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Chemist at Play",
@@ -2761,7 +2763,7 @@
 "publisher": "YouTube",
 "published": "2026-06-06T11:08:07+00:00",
 "summary": "",
-"views": 30715015,
+"views": 30715017,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/RV-P4BE3jXk/mqdefault.jpg",
 "id": "f5cf9524c2b0669c",
@@ -2798,11 +2800,10 @@
 "source_domain": "www.beiersdorf.com",
 "source_type": "Official",
 "id": "22e3bb91e15317ea",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:25:50.438489+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Chemist at Play",
@@ -3004,7 +3005,7 @@
 "publisher": "YouTube",
 "published": "2026-05-09T07:56:32+00:00",
 "summary": "Santoor Shower Gel is infused with the goodness of sandalwood and gardenia extracts. It deeply nourishes and moisturizes your skin, leaving it irresistibly soft and supple.",
-"views": 902,
+"views": 903,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/SxAT1hQKojU/mqdefault.jpg",
 "id": "427fe13c772cee9a",
@@ -3056,11 +3057,11 @@
 "source_type": "Trade press",
 "id": "28bc5916a538260f",
 "tags": [
-"Launch",
 "Campaign"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Santoor",
@@ -3138,12 +3139,12 @@
 "source_type": "Trade press",
 "id": "c7dc7fb801df842a",
 "tags": [
-"Launch",
 "Campaign",
 "Celebrity"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Ghar Soaps",
@@ -3239,11 +3240,11 @@
 "source_type": "Trade press",
 "id": "01e9eadd543d7a5b",
 "tags": [
-"Launch",
 "Campaign"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Santoor",
@@ -3378,7 +3379,7 @@
 "publisher": "YouTube",
 "published": "2026-03-09T11:51:49+00:00",
 "summary": "Say goodbye to tan & dullness with Mamaearth Ubtan Natural Glow Face Wash! 🌿✨Enriched with the goodness of natural ingredients like Turmeric and Saffron, it gently exfoliates, removes tan, and gives your skin a natural glow.\n\nLanguage - Hindi\n\n#Mamaearth #UbtanFaceWash #naturalglowingskin #elvishyadav #elvisharmy",
-"views": 44768363,
+"views": 44768365,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/AM50hi2SU4Y/mqdefault.jpg",
 "id": "ad0ab2313d5e0786",
@@ -3489,11 +3490,10 @@
 "source_domain": "www.afaqs.com",
 "source_type": "Trade press",
 "id": "4963189ed506c134",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": true
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Dove",
@@ -3510,7 +3510,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Dove",
@@ -3527,7 +3528,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Mamaearth",
@@ -3607,11 +3609,11 @@
 "source_type": "Trade press",
 "id": "7706c3912b694d04",
 "tags": [
-"Launch",
 "Celebrity"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": true
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Mamaearth",
@@ -3641,11 +3643,10 @@
 "source_domain": "www.adgully.com",
 "source_type": "Trade press",
 "id": "724908905e38150c",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Santoor",
@@ -3882,11 +3883,10 @@
 "source_domain": "www.beiersdorf.com",
 "source_type": "Official",
 "id": "4b281fc5fbe42aac",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:25:50.438489+00:00",
-"other_category": false
+"other_category": true,
+"launch": null
 },
 {
 "brand": "Santoor",
@@ -3964,11 +3964,10 @@
 "source_domain": "www.afaqs.com",
 "source_type": "Trade press",
 "id": "ae067a048782d54d",
-"tags": [
-"Launch"
-],
+"tags": [],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Dove",
@@ -4158,12 +4157,12 @@
 "source_type": "Trade press",
 "id": "18e2b880562686ae",
 "tags": [
-"Launch",
 "Influencer",
 "Purpose"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 },
 {
 "brand": "Mamaearth",
@@ -4173,13 +4172,13 @@
 "publisher": "YouTube",
 "published": "2025-11-13T08:04:12+00:00",
 "summary": "",
-"views": 186496238,
+"views": 186335184,
 "source_type": "Official",
 "thumb": "https://i.ytimg.com/vi/SPGepjR3-uc/mqdefault.jpg",
 "id": "471d74b215c44a21",
 "tags": [],
 "first_seen": "2026-11-19T21:25:50.438489+00:00",
-"other_category": false
+"other_category": true
 },
 {
 "brand": "Mamaearth",
@@ -4212,7 +4211,8 @@
 "Launch"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": "news"
 },
 {
 "brand": "Mamaearth",
@@ -4243,10 +4243,10 @@
 "source_type": "Trade press",
 "id": "a200bae3c97df57a",
 "tags": [
-"Launch",
 "Campaign"
 ],
 "first_seen": "2026-11-19T21:03:08.296135+00:00",
-"other_category": false
+"other_category": false,
+"launch": null
 }
 ]
