@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:26:50.360219+00:00",
+ "updated": "2026-11-19T21:32:28.505894+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -290,8 +290,8 @@
    "Ghar Soaps": 0
   },
   "2026-11-16": {
-   "Fiama": 7,
-   "Dove": 7,
+   "Fiama": 3,
+   "Dove": 1,
    "Nivea": 1,
    "Pears": 0,
    "Palmolive": 0,
@@ -305,14 +305,12 @@
  },
  "tags_90d": {
   "Fiama": {
-   "Launch": 4,
-   "Product": 6
+   "Product": 2
   },
   "Dove": {
-   "Launch": 8,
-   "Product": 6,
    "Pricing & Promo": 3,
-   "Business": 3
+   "Business": 3,
+   "Launch": 2
   },
   "Nivea": {
    "Campaign": 2,
@@ -473,7 +471,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 11
+   "found": 12
   },
   {
    "source": "YouTube: Chemist at Play",

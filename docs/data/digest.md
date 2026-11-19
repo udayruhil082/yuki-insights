@@ -1,22 +1,15 @@
 # Yuki Insights weekly digest (12 Nov to 19 Nov 2026)
 
-**Mentions this week:** Category 19, Fiama 8, Dove 7, Love Beauty and Planet 5, Ghar Soaps 3, Nivea 1, Chemist at Play 1, Mamaearth 1
+**Mentions this week:** Category 19, Love Beauty and Planet 5, Fiama 4, Ghar Soaps 3, Nivea 1, Dove 1, Chemist at Play 1, Mamaearth 1
 
-## Fiama (8 items, 4 big moves)
-- [New product listed: Fiama Japanese Hokkaido Milk Bar Multipack Bundle125gx3](https://www.fiama.in/products/fiama-japanese-hokkaido-milk-bar-multipack-bundle125gx3) (Brand store) `Launch, Product`
-- [New product listed: Fiama Japanese Hokkaido Milk Bar Blue Berry 125gx3](https://www.fiama.in/products/fiama-japanese-hokkaido-milk-bar-blue-berry-125gx3) (Brand store) `Launch, Product`
-- [New product listed: Fiama Japanese Hokkaido Milk Bar Goji Berry 125gx3](https://www.fiama.in/products/fiama-japanese-hokkaido-milk-bar-goji-berry-125gx3) (Brand store) `Launch, Product`
-- [New product listed: Fiama Japanese Hokkaido Milk Bar Acai Berry 125gx3](https://www.fiama.in/products/fiama-japanese-hokkaido-milk-bar-acai-berry-125gx3) (Brand store) `Launch, Product`
+## Fiama (4 items)
 - [Product no longer listed: Fiama Detan Body Scrub 200g](https://www.fiama.in/products/fiama-detan-body-scrub-200g) (Brand store) `Product`
 - [Product no longer listed: Foamy Soap Pocket](https://www.fiama.in/products/foamy-soap-pocket) (Brand store) `Product`
+- [🫧 + ✨ + 🚿 = Feel-good shower vibes with Fiama Brightening Bodywash! 💗 #FiamaByITC](https://www.youtube.com/watch?v=5U3_I1D3WrU) (YouTube)
+- [Wedding invites are in, group chats are buzzing, and the prep has officially begun. 💌✨ #FiamaByITC](https://www.youtube.com/watch?v=NRnEbtXLElY) (YouTube)
 
-## Dove (7 items, 6 big moves)
-- [New product listed: Dove Serum Bar with Nutrient Serum | 1000g (125g x 8)](https://www.dove-india.com/products/dove-cream-beauty-bathing-bar-nutrient-serum-24hr-nourished-skin-8x125g) (Brand store) `Launch, Product`
-- [New product listed: Dove Fresh Beauty Bathing Bar - For Refreshed and Nourished Skin | 6x75g](https://www.dove-india.com/products/dove-fresh-beauty-bathing-bar-for-refreshed-and-nourished-skin-6x75g) (Brand store) `Launch, Product`
-- [New product listed: Dove Serum Bar with Nutrient Serum | 375g (125g x 3)](https://www.dove-india.com/products/dove-cream-beauty-bathing-bar-nutrient-serum-24hr-nourished-skin-3x125g) (Brand store) `Launch, Product`
-- [New product listed: Dove Serum Bar with Nutrient Serum | 625g (125g x 5)](https://www.dove-india.com/products/dove-cream-beauty-bathing-bar-nutrient-serum-24hr-nourished-skin-5x125g) (Brand store) `Launch, Product`
-- [New product listed: Dove Serum Bar with Radiance Serum | 375g (125g x 3)](https://www.dove-india.com/products/dove-pink-beauty-bathing-bar-even-toned-glow-3x125g) (Brand store) `Launch, Product`
-- [New product listed: Dove Serum Bar with Radiance Serum | 625g (125g x 5)](https://www.dove-india.com/products/dove-pink-beauty-bathing-bar-even-toned-glow-5x125g) (Brand store) `Launch, Product`
+## Dove (1 items)
+- [Post-Festive Hair Essentials Loading... ⏳✨](https://www.youtube.com/watch?v=pLq-5AgFCT8) (YouTube)
 
 ## Nivea (1 items)
 - [Uncomplicated Skincare with NIVEA Soft](https://www.youtube.com/watch?v=1r6-D7NAzoM) (YouTube)
