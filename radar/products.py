@@ -83,7 +83,7 @@ def shopify(brand, base, vendor=None):
                     "key": f"{brand}|{p['handle']}|{v.get('id')}",
                     "brand": brand, "product": p.get("title", ""), "size": size,
                     "category": cat,
-                    "price": float(v["price"]) if v.get("price") else None,
+                    "price": float(v["price"]) if v.get("price") and float(v["price"]) > 0 else None,   # ₹0 = shop shows no price
                     "mrp": float(v["compare_at_price"]) if v.get("compare_at_price") else None,
                     "in_stock": bool(v.get("available", True)),
                     "url": f"{base.rstrip('/')}/products/{p['handle']}",
