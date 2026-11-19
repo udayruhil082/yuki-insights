@@ -127,10 +127,9 @@ PARENT_PREFIX = re.compile(r"\b(ITC|HUL['’]s|Unilever['’]s|Wipro['’]s)\s+(
 
 
 def hide_parent(i):
-    """Removes parent company names. Returns False if the headline only makes sense with them (then it is left out)."""
+    """Hides parent company names. Returns False if the headline names one (team rule: such headlines are left out)."""
     if PARENT.search(i.get("publisher", "")):
         i["publisher"] = "Brand website" if i.get("source_type") == "Official" else "Company website"
-    i["title"] = PARENT_PREFIX.sub("", i["title"])       # "ITC Fiama ..." -> "Fiama ..."
     if i.get("summary"):
         i["summary"] = re.sub(r"\s{2,}", " ", PARENT.sub("", re.sub(r"#\w*(ITC|HUL)\w*", "", i["summary"]))).strip()
     return not PARENT.search(i["title"])
