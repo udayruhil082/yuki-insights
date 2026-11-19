@@ -108,6 +108,26 @@ select,input,textarea{font:inherit;font-size:13.5px;padding:7px 10px;border-radi
 .chip[aria-pressed="false"]{opacity:.75}
 
 /* objects */
+.sech{font-size:16.5px;margin:26px 0 12px}
+.acts{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1100px){.acts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.acts{grid-template-columns:1fr}}
+.act{display:flex;gap:14px;align-items:flex-start;text-align:left;background:var(--glass,var(--surface));border:1px solid var(--line);border-radius:var(--r,14px);padding:16px 18px;box-shadow:var(--shadow);color:var(--text);font:inherit;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.act:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(138,63,194,.16)}
+.act:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.act .ic{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;flex:none}
+.act b{display:block;font-size:15px;margin-bottom:3px}
+.act span.w{display:block;color:var(--text-2);font-size:13px;line-height:1.45}
+.act .go{margin-top:8px;font-size:12.5px;font-weight:700;color:var(--accent)}
+.sig{display:flex;gap:14px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.sig:last-child{border-bottom:0}
+.sig .k{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;display:inline-block;margin-bottom:6px}
+.sig a.t,.sig span.t{display:block;font-weight:700;color:var(--text);text-decoration:none;font-size:14.5px;line-height:1.4}
+.sig a.t:hover{text-decoration:underline}
+.sig .m{font-size:12.5px;color:var(--muted);margin-top:3px}
+.sig .so{margin-top:8px;font-size:13px;color:var(--text-2);background:var(--surface-2,rgba(0,0,0,.03));border-radius:10px;padding:8px 11px}
+.sig .so b{color:var(--text)}
+.more{display:block;width:100%;padding:11px;border:0;border-top:1px solid var(--line);background:none;color:var(--accent);font:inherit;font-weight:700;font-size:13px;cursor:pointer}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
@@ -121,6 +141,8 @@ select,input,textarea{font:inherit;font-size:13.5px;padding:7px 10px;border-radi
 .chip .av{width:20px;height:20px;border-radius:50%;font-size:8.5px}
 .tag{display:inline-flex;align-items:center;font-size:11.5px;font-weight:500;padding:1px 8px;border-radius:999px;background:var(--surface-2);color:var(--text-2);margin:0 4px 0 0;white-space:nowrap}
 .tag.big{background:var(--accent-soft);color:var(--accent)}
+.tag.lc-shop{background:var(--good-soft);color:var(--good);font-weight:700}
+.tag.lc-news{background:var(--p-peach);color:var(--p-peach-ink);font-weight:700}
 .tag.src-official{background:var(--good-soft);color:var(--good)}
 .tag.src-trade{background:var(--info-soft);color:var(--info)}
 .tag.src-fiama{background:var(--accent);color:#fff}
@@ -477,31 +499,24 @@ body.intro-on .app{visibility:hidden}
 
 <section class="panel on" id="p-overview">
   <div class="hero" id="hero"></div>
-  <div class="tiles" id="tiles"></div>
+  <h2 class="sech">What do you want to do?</h2>
+  <div class="acts" id="acts"></div>
   <div class="cols">
   <div class="box">
-    <div class="box-h"><div><h2>Big moves this week</h2><p class="sub">Launches, campaigns, signings and partnerships in the last 7 days.</p></div></div>
-    <div class="box-b "><div class="feed" id="bigMoves"></div></div>
+    <div class="box-h"><div><h2>Key signals this month</h2><p class="sub">The moves worth a look, picked from the last 30 days. Open one, then note what Fiama could do.</p></div></div>
+    <div class="box-b"><div id="signals"></div></div>
   </div>
   <div class="box">
-    <div class="box-h"><div><h2>Brands at a glance</h2><p class="sub">Activity in the last 30 days. Click a brand to open its page.</p></div></div>
-    <div class="box-b "><div id="brandGlance"></div></div>
+    <div class="box-h"><div><h2>Who is most active</h2><p class="sub">News, PR and videos in the last 30 days.</p></div></div>
+    <div class="box-b "><div id="brandGlance"></div><button class="more" id="glanceMore" type="button">Show all brands</button></div>
   </div>
-  </div>
-  <div class="box">
-    <div class="box-h"><div><h2>Who is talked about most</h2><p class="sub">News, press releases and videos per brand, per week, last 12 weeks. Fiama is in orange.</p></div></div>
-    <div class="box-b pad"><div class="chartbox" id="sovBox"><div class="tip" id="sovTip"></div></div></div>
-  </div>
-  <div class="box">
-    <div class="box-h"><div><h2>What each brand is focusing on</h2><p class="sub">Items in the last 90 days with each label. Darker means more.</p></div></div>
-    <div class="box-b "><div class="tablewrap"><table class="heat" id="heat"></table></div></div>
   </div>
 </section>
 
 <section class="panel" id="p-launches">
   <div class="tiles" id="launchTiles"></div>
   <div class="box">
-    <div class="box-h"><div><h2>New launches</h2><p class="sub">Last 12 months, from official sites, the press, brand stores and your team.</p></div></div>
+    <div class="box-h"><div><h2>New launches</h2><p class="sub">Last 12 months. <b>✓ Confirmed on brand shop</b> means the product appeared on the brand's own online shop. <b>✓ Announced by the brand</b> means it was posted on the brand's own website or YouTube. <b>From news, check source</b> means a news story reported it; open the link to confirm. Only India launches in soap, body wash and scrub are counted.</p></div></div>
     <div class="box-tools"><div class="chips" id="launchChips"></div></div>
     <div class="box-b "><div class="feed" id="launchList"></div></div>
   </div>
@@ -569,6 +584,14 @@ body.intro-on .app{visibility:hidden}
 <section class="panel" id="p-compare">
   <div class="filters cmpbar"><select id="cmpA" aria-label="First brand"></select><span class="vs">vs</span><select id="cmpB" aria-label="Second brand"></select></div>
   <div class="cmp" id="cmpOut"></div>
+  <div class="box">
+    <div class="box-h"><div><h2>Who is talked about most</h2><p class="sub">News, press releases and videos per brand, per week, last 12 weeks. Fiama is in orange.</p></div></div>
+    <div class="box-b pad"><div class="chartbox" id="sovBox"><div class="tip" id="sovTip"></div></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>What each brand is focusing on</h2><p class="sub">Items in the last 90 days with each label. Darker means more.</p></div></div>
+    <div class="box-b "><div class="tablewrap"><table class="heat" id="heat"></table></div></div>
+  </div>
 </section>
 
 <section class="panel" id="p-brand"><div id="brandPage"></div></section>
@@ -693,9 +716,9 @@ function showTab(id){
   if (!sel(id)) id = "overview";
   const btn = sel(id);
   $("#pageTitle").textContent = btn.childNodes[1].textContent.trim();
-  const DESC = {overview: "This week across Fiama and 10 competitors", launches: "New products and launch news from every brand", feed: "Every news story, press release, video and logged post",
+  const DESC = {overview: "Your starting point: what changed, and where to go next", launches: "New products and launch news from every brand", feed: "Every news story, press release, video and logged post",
     campaigns: "Campaigns and creator posts, with official links", products: "Every brand's range, with sources", prices: "Who charges what, per category",
-    compare: "Two brands side by side", fiama: "Fiama's own campaigns and launches, so the comparison is fair", gaps: "Where Fiama can win, and your ideas", about: "Where the information comes from"};
+    compare: "Two brands side by side, plus who is talked about most", fiama: "Fiama's own campaigns and launches, so the comparison is fair", gaps: "Where Fiama can win, and your ideas", about: "Where the information comes from"};
   $("#pageDesc").textContent = id.startsWith("brand:") ? (D.brandInfo[id.slice(6)]?.role === "self" ? "Our brand" : "Competitor profile") : (DESC[id] || "");
   $("#crumb").textContent = id.startsWith("brand:") ? "Home · Brands" : "Fiama · Personal wash · India";
   document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b === btn));
@@ -838,15 +861,25 @@ function render(){
   const cur = store.get("tab", "overview");
   $("#brandNav").innerHTML = D.brands.map(b => `<button class="bsub" data-tab="brand:${esc(b)}" aria-selected="${cur === "brand:" + b}">${av(b)}<span>${esc(b)}</span></button>`).join("");
   if (cur.startsWith("brand:")) renderBrandPage(cur.slice(6));
-  renderHero(); renderTiles(); renderBig(); renderGlance(); renderSov(); renderHeat(); setupFeed(); renderLaunches(); renderCampaigns(); renderProducts(); renderPrices(); setupCompare(); renderFiama(); renderGaps(); renderRunLog();
+  renderHero(); renderActs(); renderSignals(); renderGlance(); renderSov(); renderHeat(); setupFeed(); renderLaunches(); renderCampaigns(); renderProducts(); renderPrices(); setupCompare(); renderFiama(); renderGaps(); renderRunLog();
 }
 
 // ---------- items ----------
 const KIND = {news:"News", youtube:"YouTube", manual:"Logged post", product:"Product", internal:"Fiama activity"};
 const srcClass = s => ({"Official":"src-official","Trade press":"src-trade","Fiama team":"src-fiama"})[s] || "";
+// How sure we are about a launch (set by the daily check)
+const LAUNCH_LABEL = {shop: ["lc-shop", "✓ Confirmed on brand shop", "This product appeared on the brand's own online shop."],
+  news: ["lc-news", "From news, check source", "A news story says this launched. Open the link to confirm."],
+  brand: ["lc-shop", "✓ Announced by the brand", "Posted on the brand's own website or YouTube channel."],
+  team: ["lc-shop", "Added by your team", ""]};
+function launchBadge(i){
+  const l = i.tags.includes("Launch") && LAUNCH_LABEL[i.launch || (i.kind === "product" ? "shop" : i.kind === "internal" ? "team" : "news")];
+  return l ? `<span class="tag ${l[0]}" title="${esc(l[2])}">${esc(l[1])}</span>` : "";
+}
 function itemHtml(i, withNote){
   const img = i.thumb ? `<img src="${esc(i.thumb)}" alt="" loading="lazy" onerror="this.remove()">` : "";
-  const tags = i.tags.map(t => `<span class="tag ${D.stats.big_move_tags.includes(t) ? "big" : ""}">${esc(t)}</span>`).join("");
+  const badge = launchBadge(i);
+  const tags = badge + i.tags.filter(t => !(badge && t === "Launch")).map(t => `<span class="tag ${D.stats.big_move_tags.includes(t) ? "big" : ""}">${esc(t)}</span>`).join("");
   const views = i.views ? `<span>· ${i.views.toLocaleString("en-IN")} views</span>` : "";
   const url = safeUrl(i.url);
   const saved = store.get("note:" + i.id, "");
@@ -869,23 +902,6 @@ document.addEventListener("input", e => {
 
 // ---------- home ----------
 const tile = (ic, n, l, d = "") => `<div class="card tile"><div class="ic">${icon(ic)}</div><div><div class="n">${esc(n)}</div><div class="l">${esc(l)}</div>${d ? `<div class="d">${esc(d)}</div>` : ""}</div></div>`;
-function renderTiles(){
-  const ext = D.items.filter(i => i.brand !== "Category" && i.kind !== "internal");
-  const wk = ext.filter(i => i.published >= daysAgo(7)), prev = ext.filter(i => i.published >= daysAgo(14) && i.published < daysAgo(7));
-  const counts = {}; wk.forEach(i => counts[i.brand] = (counts[i.brand] || 0) + 1);
-  const top = Object.entries(counts).filter(([b]) => b !== "Fiama").sort((a, b) => b[1] - a[1])[0];
-  const diff = wk.length - prev.length;
-  $("#tiles").innerHTML = [
-    tile("mega", wk.length, "news, PR and videos this week", `${diff >= 0 ? "+" : ""}${diff} vs last week`),
-    tile("bolt", wk.filter(isBig).length, "big moves this week", "launches, campaigns, signings"),
-    tile("trend", top ? top[0] : "–", "most active competitor", top ? `${top[1]} items this week` : ""),
-    tile("star", counts["Fiama"] || 0, "Fiama mentions this week", `${FIAMA.length} activities added by your team`),
-  ].join("");
-}
-function renderBig(){
-  const big = D.items.filter(i => i.published >= daysAgo(7) && isBig(i) && i.brand !== "Category" && i.kind !== "internal").slice(0, 8);
-  $("#bigMoves").innerHTML = big.length ? big.map(i => itemHtml(i, true)).join("") : `<div class="empty">No big moves found in the last 7 days.</div>`;
-}
 function renderSov(){
   const box = $("#sovBox"), tip = $("#sovTip");
   const weeks = D.stats.weeks || [], sov = D.stats.share_of_voice || {};
@@ -953,8 +969,8 @@ function renderLaunches(){
   const by = {}; all.forEach(i => by[i.brand] = (by[i.brand] || 0) + 1);
   const top = Object.entries(by).filter(([b]) => b !== "Fiama").sort((a, b) => b[1] - a[1])[0];
   $("#launchTiles").innerHTML = [
-    tile("rocket", all.filter(i => i.published >= daysAgo(30) && i.kind !== "internal").length, "competitor launch signals, 30 days"),
-    tile("box", all.filter(i => i.kind === "product").length, "new products spotted on stores"),
+    tile("rocket", all.filter(i => i.kind === "news").length, "from news, check source", "India, soap / body wash / scrub only"),
+    tile("box", all.filter(i => i.kind === "product").length, "confirmed on brand shops", "a new product appeared on the brand's own shop"),
     tile("trend", top ? top[0] : "–", "most active launcher", top ? `${top[1]} in 12 months` : ""),
     tile("bolt", by["Fiama"] || 0, "Fiama launches", "from news and your team"),
   ].join("");
@@ -1189,24 +1205,73 @@ $("#brandPage").addEventListener("click", e => {
 });
 
 // ---------- welcome banner (home) ----------
+const pl = (k, one, many = one + "s") => `${k} ${k === 1 ? one : many}`;
 function renderHero(){
   const h = new Date().getHours(), hi = h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
-  const wk = D.items.filter(i => i.brand !== "Category" && i.kind !== "internal" && i.published >= daysAgo(7));
-  const launches = wk.filter(i => i.tags.includes("Launch")).length, camps = wk.filter(i => i.tags.includes("Campaign")).length;
-  $("#hero").innerHTML = `<h2>${hi}, team Fiama</h2>
-    <p>Here's what moved in personal wash this week across Fiama and 10 competitors.</p>
-    <div class="pills"><span class="pill">${wk.length} stories</span><span class="pill">${launches} launches</span><span class="pill">${camps} campaigns</span><span class="pill">${FIAMA.length} Fiama activities logged</span></div>`;
+  const m = D.items.filter(i => i.brand !== "Category" && i.kind !== "internal" && i.published >= daysAgo(30));
+  const cnt = {}; m.forEach(i => cnt[i.brand] = (cnt[i.brand] || 0) + 1);
+  const top = Object.entries(cnt).filter(([b]) => b !== "Fiama").sort((a, b) => b[1] - a[1])[0];
+  const n = t => m.filter(i => i.tags.includes(t)).length;
+  const line = top ? `In the last 30 days <b>${esc(top[0])}</b> was the busiest competitor with ${pl(top[1], "story", "stories")}. Fiama had ${cnt.Fiama || 0}.` : "No news in the last 30 days yet.";
+  $("#hero").innerHTML = `<h2>${hi}, team Fiama</h2><p>${line} Pick a task below, or start with the key signals.</p>
+    <div class="pills"><span class="pill">${pl(n("Launch"), "launch", "launches")}</span><span class="pill">${pl(n("Campaign"), "campaign")}</span><span class="pill">${pl(n("Celebrity"), "celebrity move")}</span><span class="pill">${pl(m.length, "story", "stories")} in 30 days</span></div>`;
+}
+
+// ---------- task shortcuts (home) ----------
+const ACTS = [
+  {ic: "mega", c: "p1", t: "See what competitors did", w: "Every launch, campaign and press story, newest first.", go: "feed", b: "Open the news"},
+  {ic: "building", c: "p2", t: "Look up one brand", w: "Everything on one rival: news, campaigns, products and prices.", go: "brand", b: "Choose a brand"},
+  {ic: "rupee", c: "p3", t: "Check prices", w: "Who is cheaper or pricier than Fiama, per category.", go: "prices", b: "Open prices"},
+  {ic: "star", c: "p4", t: "Get campaign and creator ideas", w: "Rivals' recent campaigns and the creators they used.", go: "campaigns", b: "Open campaigns"},
+  {ic: "flag", c: "p1", t: "Find where Fiama can win", w: "Gaps where competitors are strong and Fiama is not.", go: "gaps", b: "Open opportunities"},
+  {ic: "compare", c: "p2", t: "Compare two brands", w: "Fiama against any rival, side by side, with charts.", go: "compare", b: "Compare"},
+];
+function renderActs(){
+  $("#acts").innerHTML = ACTS.map((a, k) => `<button class="act" type="button" data-act="${k}"><span class="ic ${a.c}">${icon(a.ic)}</span>
+    <span><b>${esc(a.t)}</b><span class="w">${esc(a.w)}</span><span class="go">${esc(a.b)} →</span></span></button>`).join("");
+}
+$("#acts").addEventListener("click", e => {
+  const a = ACTS[e.target.closest("[data-act]")?.dataset.act]; if (!a) return;
+  if (a.go === "brand") { const first = D.brands.find(b => b !== "Fiama"); showTab("brand:" + first); $("#brandNav").scrollIntoView({block: "nearest"}); return; }
+  showTab(a.go);
+});
+
+// ---------- key signals (home) ----------
+const SIG = [
+  {tag: "Celebrity", k: "Celebrity", c: "p2", so: "A rival is buying reach with a famous face. Is a Fiama ambassador active this month?"},
+  {tag: "Launch", k: "Launch", c: "p1", so: "A new product to watch. Does Fiama have an answer in the same price band?"},
+  {tag: "Campaign", k: "Campaign", c: "p3", so: "Look at the idea and the channels. What would a Fiama version be?"},
+  {tag: "Partnership", k: "Partnership", c: "p4", so: "A tie-up that opens a new channel or audience. Is it one Fiama should be in?"},
+  {tag: "Pricing & Promo", k: "Price", c: "p3", so: "Check the Prices page to see where Fiama now sits."},
+];
+function renderSignals(){
+  const pool = D.items.filter(i => i.published >= daysAgo(30) && !["Category", "Fiama"].includes(i.brand) && i.kind !== "internal" && (i.kind !== "product" || i.tags.includes("Launch")))
+    .sort((a, b) => (b.kind === "product") - (a.kind === "product"));
+  const used = new Set(), cards = [];
+  SIG.forEach(s => {
+    const i = pool.find(x => x.tags.includes(s.tag) && !used.has(x.id) && !cards.some(c => c.i.brand === x.brand && c.i.title.slice(0, 25) === x.title.slice(0, 25)));
+    if (i) { used.add(i.id); cards.push({s, i}); }
+  });
+  $("#signals").innerHTML = cards.length ? cards.slice(0, 4).map(({s, i}) => { const url = safeUrl(i.url);
+    return `<div class="sig">${av(i.brand)}<div style="min-width:0"><span class="k ic ${s.c}" style="width:auto;height:auto">${esc(s.k)}</span>
+      ${url ? `<a class="t" href="${esc(url)}" target="_blank" rel="noopener">${esc(i.title)}</a>` : `<span class="t">${esc(i.title)}</span>`}
+      <div class="m">${esc(i.brand)} · ${esc(i.publisher)} · ${fmtDate(i.published)} ${s.tag === "Launch" ? launchBadge(i) : ""}</div>
+      <div class="so"><b>Think about:</b> ${esc(s.so)}</div></div></div>`; }).join("")
+    : `<div class="empty">No launches, campaigns or celebrity moves in the last 30 days.</div>`;
 }
 
 // ---------- brands at a glance (home) ----------
 function renderGlance(){
   const n = b => D.items.filter(i => i.brand === b && i.kind !== "internal" && i.published >= daysAgo(30)).length;
-  const rows = D.brands.map(b => ({b, n: n(b), last: D.items.find(i => i.brand === b && i.kind !== "internal")})).sort((x, y) => (y.b === "Fiama") - (x.b === "Fiama") || y.n - x.n);
+  const all = D.brands.map(b => ({b, n: n(b), last: D.items.find(i => i.brand === b && i.kind !== "internal" && i.kind !== "product")})).sort((x, y) => (y.b === "Fiama") - (x.b === "Fiama") || y.n - x.n);
+  const showAll = store.get("glanceAll", false), rows = showAll ? all : all.slice(0, 6);
+  $("#glanceMore").textContent = showAll ? "Show fewer" : `Show all ${all.length} brands`;
   const max = Math.max(1, ...rows.map(r => r.n));
   $("#brandGlance").innerHTML = rows.map(r => `<button class="glance ${r.b === "Fiama" ? "us" : ""}" type="button" data-tab="brand:${esc(r.b)}">${av(r.b)}
     <span class="nm">${esc(r.b)}<small>${r.last ? esc(r.last.title) : "No news yet"}</small></span>
     <span class="bar"><div style="width:${Math.round(r.n / max * 100)}%"></div></span><span class="n">${r.n}</span></button>`).join("");
 }
+$("#glanceMore").onclick = () => { store.set("glanceAll", !store.get("glanceAll", false)); renderGlance(); };
 $("#brandGlance").addEventListener("click", e => { const t = e.target.closest("[data-tab]"); if (t) showTab(t.dataset.tab); });
 
 // ---------- Fiama activity list, opportunities, help ----------
