@@ -1,6 +1,6 @@
 # Yuki Insights weekly digest (12 Nov to 19 Nov 2026)
 
-**Mentions this week:** Category 10, Fiama 8, Dove 7, Love Beauty and Planet 5, Ghar Soaps 3, Nivea 1, Chemist at Play 1, Mamaearth 1
+**Mentions this week:** Category 19, Fiama 8, Dove 7, Love Beauty and Planet 5, Ghar Soaps 3, Nivea 1, Chemist at Play 1, Mamaearth 1
 
 ## Fiama (8 items, 4 big moves)
 - [New product listed: Fiama Japanese Hokkaido Milk Bar Multipack Bundle125gx3](https://www.fiama.in/products/fiama-japanese-hokkaido-milk-bar-multipack-bundle125gx3) (Brand store) `Launch, Product`

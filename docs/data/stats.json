@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-19T21:25:50.438489+00:00",
+ "updated": "2026-11-19T21:26:50.360219+00:00",
  "brands": [
   {
    "name": "Fiama",
    "role": "self",
    "instagram": "fiamaindia",
    "ad_library_query": "Fiama",
-   "youtube_handle": "@fiamadiwills",
+   "youtube_handle": "UCwq4kpb0q9f-s84dOVlf_xw",
    "website": "https://www.fiama.in",
    "official_sites": [
     "itcportal.com",
@@ -147,7 +147,7 @@
  ],
  "share_of_voice": {
   "2026-08-31": {
-   "Fiama": 3,
+   "Fiama": 0,
    "Dove": 0,
    "Nivea": 1,
    "Pears": 0,
@@ -186,7 +186,7 @@
    "Ghar Soaps": 1
   },
   "2026-09-21": {
-   "Fiama": 1,
+   "Fiama": 0,
    "Dove": 0,
    "Nivea": 0,
    "Pears": 0,
@@ -199,7 +199,7 @@
    "Ghar Soaps": 0
   },
   "2026-09-28": {
-   "Fiama": 1,
+   "Fiama": 2,
    "Dove": 0,
    "Nivea": 0,
    "Pears": 0,
@@ -225,7 +225,7 @@
    "Ghar Soaps": 0
   },
   "2026-10-12": {
-   "Fiama": 1,
+   "Fiama": 2,
    "Dove": 1,
    "Nivea": 0,
    "Pears": 0,
@@ -238,7 +238,7 @@
    "Ghar Soaps": 2
   },
   "2026-10-19": {
-   "Fiama": 1,
+   "Fiama": 0,
    "Dove": 12,
    "Nivea": 1,
    "Pears": 0,
@@ -251,7 +251,7 @@
    "Ghar Soaps": 0
   },
   "2026-10-26": {
-   "Fiama": 1,
+   "Fiama": 2,
    "Dove": 10,
    "Nivea": 0,
    "Pears": 0,
@@ -264,7 +264,7 @@
    "Ghar Soaps": 1
   },
   "2026-11-02": {
-   "Fiama": 2,
+   "Fiama": 4,
    "Dove": 5,
    "Nivea": 1,
    "Pears": 0,
@@ -374,7 +374,7 @@
    "source": "YouTube: Fiama",
    "ok": true,
    "found": 15,
-   "channel": "Vivel"
+   "channel": "Fiama"
   },
   {
    "source": "News: Dove",
@@ -447,7 +447,7 @@
   {
    "source": "Trade press: Palmolive",
    "ok": true,
-   "found": 6
+   "found": 4
   },
   {
    "source": "Official: Palmolive",
@@ -531,7 +531,7 @@
   {
    "source": "Trade press: Santoor",
    "ok": true,
-   "found": 48
+   "found": 50
   },
   {
    "source": "Official: Santoor",
@@ -552,12 +552,12 @@
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 88
+   "found": 56
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 10
+   "found": 9
   },
   {
    "source": "YouTube: Mamaearth",
@@ -589,7 +589,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 12
+   "found": 23
   },
   {
    "source": "Logged posts",
