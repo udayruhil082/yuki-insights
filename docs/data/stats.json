@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:03:08.296135+00:00",
+ "updated": "2026-11-19T21:04:42.621791+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -242,12 +242,12 @@
    "Dove": 12,
    "Nivea": 1,
    "Pears": 0,
-   "Palmolive": 29,
+   "Palmolive": 23,
    "Chemist at Play": 0,
    "Love Beauty and Planet": 0,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 4,
+   "Mamaearth": 3,
    "Ghar Soaps": 0
   },
   "2026-10-26": {
@@ -255,7 +255,7 @@
    "Dove": 11,
    "Nivea": 1,
    "Pears": 0,
-   "Palmolive": 5,
+   "Palmolive": 2,
    "Chemist at Play": 1,
    "Love Beauty and Planet": 5,
    "Lux": 0,
@@ -273,7 +273,7 @@
    "Love Beauty and Planet": 4,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 13,
+   "Mamaearth": 9,
    "Ghar Soaps": 0
   },
   "2026-11-09": {
@@ -281,12 +281,12 @@
    "Dove": 4,
    "Nivea": 3,
    "Pears": 0,
-   "Palmolive": 3,
+   "Palmolive": 1,
    "Chemist at Play": 1,
    "Love Beauty and Planet": 2,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 8,
+   "Mamaearth": 7,
    "Ghar Soaps": 0
   },
   "2026-11-16": {
@@ -294,7 +294,7 @@
    "Dove": 2,
    "Nivea": 1,
    "Pears": 1,
-   "Palmolive": 2,
+   "Palmolive": 0,
    "Chemist at Play": 0,
    "Love Beauty and Planet": 4,
    "Lux": 0,
@@ -318,8 +318,8 @@
   },
   "Pears": {},
   "Palmolive": {
-   "Business": 15,
-   "Pricing & Promo": 9,
+   "Business": 13,
+   "Pricing & Promo": 6,
    "Campaign": 4
   },
   "Chemist at Play": {
@@ -335,8 +335,8 @@
   "Santoor": {},
   "Mamaearth": {
    "Campaign": 3,
-   "Business": 15,
-   "Pricing & Promo": 8,
+   "Business": 9,
+   "Pricing & Promo": 3,
    "Partnership": 1
   },
   "Ghar Soaps": {}
@@ -367,7 +367,7 @@
   {
    "source": "Trade press: Fiama",
    "ok": true,
-   "found": 27
+   "found": 23
   },
   {
    "source": "Official: Fiama",
@@ -407,7 +407,7 @@
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 56
+   "found": 55
   },
   {
    "source": "Official: Nivea",
@@ -442,17 +442,17 @@
   {
    "source": "News: Palmolive",
    "ok": true,
-   "found": 31
+   "found": 20
   },
   {
    "source": "Trade press: Palmolive",
    "ok": true,
-   "found": 60
+   "found": 58
   },
   {
    "source": "Official: Palmolive",
    "ok": true,
-   "found": 4
+   "found": 2
   },
   {
    "source": "YouTube: Palmolive",
@@ -542,12 +542,12 @@
   {
    "source": "News: Mamaearth",
    "ok": true,
-   "found": 20
+   "found": 13
   },
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 58
+   "found": 57
   },
   {
    "source": "Official: Mamaearth",

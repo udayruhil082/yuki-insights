@@ -1,6 +1,6 @@
 # Yuki Insights weekly digest (12 Nov to 19 Nov 2026)
 
-**Mentions this week:** Category 10, Love Beauty and Planet 5, Mamaearth 5, Palmolive 3, Ghar Soaps 3, Dove 2, Nivea 1, Pears 1, Chemist at Play 1
+**Mentions this week:** Category 10, Love Beauty and Planet 5, Mamaearth 5, Ghar Soaps 3, Dove 2, Nivea 1, Pears 1, Chemist at Play 1
 
 ## Dove (2 items)
 - [Post-Festive Hair Essentials Loading... ⏳✨](https://www.youtube.com/watch?v=pLq-5AgFCT8) (YouTube)
@@ -11,11 +11,6 @@
 
 ## Pears (1 items)
 - [South Korea expands U.S. market access for grapes and pears](https://news.google.com/rss/articles/CBMitwFBVV95cUxQWmdhWDNrMDJDMWNtV2dNSmJPeFlqZ3VJZVdSMXdRQ3EzWG9TSGVNd3ZmZWw5ZWtiYmFnNW1BSUNXU1NTYWctSGY3VDQxamNXckZ5VGlKanBocXphUk5WMlpDaTM0UnkzSlBJempXbG93V2hZanF3ampHazU4LXVQWXhZaUJ6MGVRVFBYVVh2dGk2OFFSVlRJb2dqT2tZMzNfVG1vWXFyTXhCUUUtVXRUSkhfTVVZaGc?oc=5) (FreshPlaza)
-
-## Palmolive (3 items)
-- [Colgate-Palmolive (India) Limited (COLPAL.BO) Seasonal returns chart](https://news.google.com/rss/articles/CBMiaEFVX3lxTFBPQXNMMUh5NDg4eUluS0hJQTJ1eGFDUjVfUS14WHRrY3lVaVJnUWwwdGdsVWN5cnJjaldzNE1PNExmNk9jcUtWT0N3RmhUUXdUM1F5eHUwVE4tdDEtZ3ppbzFybGtCUFpf?oc=5) (Yahoo Finance UK)
-- [Colgate-Palmolive (India) Ltd is Rated Sell](https://news.google.com/rss/articles/CBMipgFBVV95cUxQN184cU9VcHg5ZVB2VW8wdVpHQXVBb2hOWEFRVmNibFVUd3U3Znp4NVFFNXVrXzNqQ3pyUGlzZkdyQjFKbjlRRE9pNGU0VG83a1lBOHVNanNUV3ZMNEs2ZjBDNEdwTi0xUnZpYkV6bE9xTWZQcUZST3dWck02UjlwajNUMTBkWmZBSDVueDFtblo1SjRQQmg0MkJtM1pIRGF0ZGlDanh3?oc=5) (MarketsMojo)
-- [Colgate-Palmolive (India) (NSEI:COLPAL) Stock Forecast & Analyst Predictions](https://news.google.com/rss/articles/CBMilAFBVV95cUxOeDM2QzUxemNCSDFTeTF4a0xpYWk3OVdDNlNJX3VaQXowc19YMmhQRFNwemRoUVRoU3R2TkoyY0pYV0ptUTgzOWlUeV9xN3gzX0pQbXB4MWRaN1ZZaTMzS2pzWExTQnJGVU56clp4MElEb2czOExJOERVVDBlYk9qMjA1QVVTa3A2M3BwNktDbnNiMmhG?oc=5) (Simply Wall St)
 
 ## Chemist at Play (1 items)
 - [Body Wash Sale for Soft Healthy Skin | Chemist at Play](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vQ1A1ck5hVEhYNmJtRW5Gb0xFdmhnUVJwMkNjTVM3MDFRM1l6cW5lVnNGN09ZdDJsa2FuOHdCdkpsbjZvOHdJM20xbjgxdGUyQ29kQ0laUGRJb0FPQVNqRVhodExzaEk?oc=5) (Innovist) `Pricing & Promo`
