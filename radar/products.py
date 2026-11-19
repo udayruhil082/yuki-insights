@@ -40,7 +40,6 @@ NOT_BODY = re.compile(r"\b(face|facial|lip|scalp|underarm|hair|shampoo|condition
 # Bundles that mix different products are left out (packs of the same item are kept).
 BUNDLE = re.compile(r"\b(kit|combo|duo|trio|set|gift|essentials)\b|"
                     r"(\d\s*(ml|gm|g|l)\b|\))\s*\+[^|]*?\b(wash|soap|scrub|lotion|shampoo|roll ?on|bar|cream|loofah)", re.I)
-ACCESSORY_TYPE = re.compile(r"accessor|loofah|tool|cap|merch", re.I)
 
 
 def category_of(title):
@@ -57,7 +56,9 @@ def category_of(title):
 
 def classify(title, product_type=""):
     """Returns the category, or None if the item should be left out."""
-    if NOT_BODY.search(title) or BUNDLE.search(title) or ACCESSORY_TYPE.search(product_type or ""):
+    # decided from the product name only: shop "product type" labels proved unreliable
+    # (they hid Fiama's De-Tan Body Scrub)
+    if NOT_BODY.search(title) or BUNDLE.search(title):
         return None
     return category_of(title)
 
