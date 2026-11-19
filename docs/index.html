@@ -166,6 +166,54 @@ select,input,textarea{font:inherit;font-size:13.5px;padding:7px 10px;border-radi
 .fo-take .t{background:var(--p-lav);color:var(--text)}
 .fo-take b{display:block;margin-bottom:3px}
 @media (max-width:700px){.fo-r .who{display:block}.fo-r .num{min-width:48px;font-size:19px}.fo-r{grid-template-columns:1fr;text-align:center}.fo-r .val,.fo-r .val.l{flex-direction:row}.fo-r .mid{order:-1}.fo-side .big{width:58px;height:58px;font-size:18px}.fo-side b{font-size:17px}.fo-vs{font-size:22px}}
+.pbrands{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.pb{display:flex;flex-direction:column;gap:10px;text-align:left;background:var(--glass,var(--surface));border:1px solid var(--line);border-radius:var(--r,14px);padding:18px;box-shadow:var(--shadow);color:var(--text);font:inherit;cursor:pointer;transition:transform .15s,box-shadow .15s;position:relative;overflow:hidden}
+.pb:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(138,63,194,.18)}
+.pb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pb.us{background:linear-gradient(140deg,rgba(138,63,194,.10),rgba(255,154,106,.10)),var(--glass,var(--surface))}
+.pb .top{display:flex;gap:12px;align-items:center}
+.pb .mono{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:16px;flex:none}
+.pb b{font-size:16px;display:block}
+.pb .n{font-size:12.5px;color:var(--muted)}
+.pb .thumbs{display:flex;gap:6px;height:54px}
+.pb .thumbs span{flex:1;border-radius:10px;background:var(--surface-2,rgba(0,0,0,.04));overflow:hidden;display:grid;place-items:center}
+.pb .thumbs img{width:100%;height:100%;object-fit:contain;background:#fff}
+.pb .mix{display:flex;gap:6px;flex-wrap:wrap}
+.pb .mix span{font-size:11.5px;padding:2px 9px;border-radius:99px;background:var(--surface-2,rgba(0,0,0,.05));color:var(--text-2)}
+.pb .foot{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--text-2)}
+.pb .src{font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px}
+.pb .src.live{background:var(--good-soft);color:var(--good)}
+.pb .src.res{background:var(--p-lav);color:var(--p-lav-ink)}
+.phead{display:flex;gap:16px;align-items:center;margin:16px 0 14px;flex-wrap:wrap}
+.phead .mono{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:20px}
+.phead h2{margin:0;font-size:24px}
+.phead p{margin:3px 0 0;color:var(--text-2);font-size:13.5px}
+.ptools{gap:10px}
+.ptools .chips{flex:1 1 320px;min-width:0}
+.ptools .chip{white-space:nowrap}
+.ptools input{flex:1 1 180px}
+@media (max-width:620px){#pGrid.pgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pc .nm{font-size:12.5px}.pc .bd{padding:10px}.phead .mono{width:46px;height:46px}.phead{flex-wrap:nowrap}.phead h2{font-size:20px}}
+.pgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));margin-top:6px}
+.pc{background:var(--glass,var(--surface));border:1px solid var(--line);border-radius:var(--r,14px);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.pc:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(138,63,194,.15)}
+.pc .ph{aspect-ratio:1/1;background:#fff;display:grid;place-items:center;position:relative;border-bottom:1px solid var(--line)}
+.pc .ph img{width:100%;height:100%;object-fit:contain;padding:10px}
+.pc .ph .oos{position:absolute;top:10px;left:10px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--p-pink);color:var(--p-pink-ink)}
+.pc .ph.art{background:linear-gradient(150deg,var(--p-lav),var(--p-pink))}
+.pc .ph.art.c2{background:linear-gradient(150deg,var(--p-mint),var(--p-lav))}
+.pc .ph.art.c3{background:linear-gradient(150deg,var(--p-peach),var(--p-pink))}
+.pc .ph.art svg{width:46%;height:46%;opacity:.9;color:var(--accent)}
+.pc .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pc .cat{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.pc .nm{font-weight:700;font-size:13.5px;line-height:1.35;color:var(--text);text-decoration:none;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pc a.nm:hover{text-decoration:underline}
+.pc .sz{display:flex;gap:5px;flex-wrap:wrap}
+.pc .sz span{font-size:11px;padding:1px 7px;border-radius:6px;border:1px solid var(--line);color:var(--text-2)}
+.pc .pr{margin-top:auto;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pc .pr b{font-family:var(--display);font-size:18px}
+.pc .pr s{color:var(--muted);font-size:12px}
+.pc .pr small{color:var(--muted);font-size:11.5px}
+.pc .so{font-size:11px;color:var(--muted)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
@@ -590,22 +638,23 @@ body.intro-on .app{visibility:hidden}
 </section>
 
 <section class="panel" id="p-products">
-  <div class="box">
-    <div class="box-h"><div><h2>Range at a glance</h2><p class="sub"><span id="prodSource"></span></p></div></div>
-    <div class="box-b "><div class="tablewrap" id="prodSummary"></div></div>
+  <div id="prodHome">
+    <p class="sub" id="prodSource" style="margin-top:0"></p>
+    <div class="pbrands" id="pBrands"></div>
+    <div class="box">
+      <div class="box-h"><div><h2>Recent product changes</h2><p class="sub">New products, price changes and out-of-stock items on brand shops, last 30 days.</p></div></div>
+      <div class="box-b "><div class="feed" id="prodChanges"></div></div>
+    </div>
   </div>
-  <div class="box">
-    <div class="box-h"><div><h2>Recent product changes</h2><p class="sub">New products, price changes and out-of-stock items on brand stores, last 30 days.</p></div></div>
-    <div class="box-b "><div class="feed" id="prodChanges"></div></div>
-  </div>
-  <div class="box">
-    <div class="box-h"><div><h2>Every product</h2></div><span class="count-pill" id="prodCount"></span></div>
-    <div class="box-tools"><div class="filters">
-      <select id="pBrand" aria-label="Brand"><option value="">All brands</option></select>
-      <select id="pCat" aria-label="Category"><option value="">All categories</option></select>
-      <input id="pText" type="search" placeholder="Search products…" aria-label="Search products">
-    </div></div>
-    <div class="box-b "><div class="tablewrap" id="prodTable"></div></div>
+  <div id="prodBrand" hidden>
+    <button class="btn" id="pBack" type="button">← All brands</button>
+    <div class="phead" id="pHead"></div>
+    <div class="filters ptools">
+      <div class="chips" id="pCats"></div>
+      <input id="pText" type="search" placeholder="Search this brand…" aria-label="Search products">
+      <select id="pSort" aria-label="Sort"><option value="name">Sort: A to Z</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+    </div>
+    <div class="pgrid" id="pGrid"></div>
   </div>
 </section>
 
@@ -1094,38 +1143,69 @@ function productRows(){
     url: pick(r, "link", "url", "source")}));
   return [...live, ...fromSeed];
 }
-function renderProducts(){
-  const rows = productRows();
-  const changes = D.items.filter(i => i.kind === "product" && i.published >= daysAgo(30));
-  $("#prodChanges").innerHTML = changes.length ? changes.slice(0, 40).map(i => itemHtml(i, false)).join("") : `<div class="empty">No product changes spotted yet. Changes appear from the second refresh onwards.</div>`;
-  $("#prodSource").textContent = D.products && D.products.updated
-    ? `Live from brand online stores, last checked ${fmtDate(D.products.updated)}. Brands without their own store show your Product Range research.`
-    : "From your Product Range research. Live prices from brand online stores appear after the first refresh.";
-  const brands = [...new Set(rows.map(r => r.brand))];
-  const cats = [...new Set(rows.map(r => r.category).filter(Boolean))].sort();
-  const firstPrices = v => { if (typeof v === "number") return [v];
-    const m = String(v ?? "").replace(/,/g, "").match(/₹\s?(\d+(?:\.\d+)?)(?:\s*[–-]\s*₹?\s?(\d+(?:\.\d+)?))?/); return m ? [m[1], m[2]].filter(Boolean).map(Number) : []; };
-  const summ = brands.map(b => { const br = rows.filter(r => r.brand === b), prices = br.flatMap(r => firstPrices(r.price));
-    const o = {Brand: b, "Total listed": br.length}; cats.forEach(c => o[c] = br.filter(r => r.category === c).length || "");
-    o["Main price range"] = prices.length ? `₹${Math.min(...prices).toLocaleString("en-IN")} – ₹${Math.max(...prices).toLocaleString("en-IN")}` : ""; return o;
-  }).sort((a, b) => b["Total listed"] - a["Total listed"]);
-  $("#prodSummary").innerHTML = table(["Brand", "Total listed", ...cats, "Main price range"], summ, {Brand: v => `<td>${bname(v)}</td>`, ...Object.fromEntries(["Total listed", ...cats].map(c => [c, numCell]))});
-  $("#pBrand").innerHTML = `<option value="">All brands</option>` + brands.map(b => `<option>${esc(b)}</option>`).join("");
-  $("#pCat").innerHTML = `<option value="">All categories</option>` + cats.map(c => `<option>${esc(c)}</option>`).join("");
-  const draw = () => {
-    const b = $("#pBrand").value, c = $("#pCat").value, q = $("#pText").value.toLowerCase();
-    const list = rows.filter(r => (!b || r.brand === b) && (!c || r.category === c) && (!q || (r.product + " " + r.size).toLowerCase().includes(q)));
-    $("#prodCount").textContent = `${list.length} product${list.length === 1 ? "" : "s"}`;
-    $("#prodTable").innerHTML = table(["Brand", "Category", "Product", "Size", "Price", "Stock", "Source"],
-      list.slice(0, 500).map(r => ({Brand: r.brand, Category: r.category, Product: r.product, Size: r.size, url: r.url,
-        Price: typeof r.price === "number" ? "₹" + r.price.toLocaleString("en-IN") + (r.mrp ? ` (MRP ₹${r.mrp})` : "") : (r.price || ""),
-        Stock: r.in_stock === true ? "In stock" : r.in_stock === false ? "Out of stock" : "", Source: r.source})),
-      {Product: (v, r) => `<td>${safeUrl(r.url) ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v)}</td>`,
-       Stock: v => `<td>${v === "Out of stock" ? `<span class="tag big">${v}</span>` : v ? `<span class="tag src-official">${v}</span>` : ""}</td>`});
-  };
-  ["#pBrand", "#pCat", "#pText"].forEach(s => $(s).oninput = draw);
-  draw();
+// ---------- products: brand tiles, then one brand's products with photos ----------
+const CAT_ART = {
+  "Soap / gel bar": ['c1', '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="8" y="20" width="48" height="28" rx="12" fill="rgba(255,255,255,.7)"/><path d="M18 30c6-4 22-4 28 0"/></svg>'],
+  "Body wash / shower gel": ['c2', '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="18" y="18" width="28" height="40" rx="9" fill="rgba(255,255,255,.7)"/><path d="M26 18v-7h12v7M38 11h8"/></svg>'],
+  "Body scrub": ['c3', '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="12" y="26" width="40" height="28" rx="8" fill="rgba(255,255,255,.7)"/><rect x="10" y="16" width="44" height="12" rx="5" fill="rgba(255,255,255,.85)"/><circle cx="26" cy="40" r="2"/><circle cx="36" cy="44" r="2"/><circle cx="40" cy="36" r="2"/></svg>'],
+};
+const imgW = (u, w) => /cdn\.shopify|\/cdn\/shop\//.test(u) ? u + (u.includes("?") ? "&" : "?") + "width=" + w : u;
+const catShort = c => /scrub/i.test(c) ? "Scrub" : /wash|shower/i.test(c) ? "Body wash" : /soap|bar/i.test(c) ? "Soap" : (c || "Other");
+const priceNum = v => typeof v === "number" ? v : firstPrice(v);
+function productGroups(b){
+  const rows = productRows().filter(r => r.brand === b), by = new Map();
+  rows.forEach(r => { const k = String(r.product).trim().toLowerCase();
+    if (!by.has(k)) by.set(k, {brand: b, product: r.product, category: r.category, url: r.url, image: r.image || "", sizes: [], prices: [], mrp: null, stock: [], source: r.source, live: !!r.image || typeof r.price === "number"});
+    const g = by.get(k); if (r.size) g.sizes.push(r.size); const p = priceNum(r.price); if (p) g.prices.push(p);
+    if (r.mrp) g.mrp = Math.max(g.mrp || 0, r.mrp); g.stock.push(r.in_stock); if (!g.image && r.image) g.image = r.image; });
+  return [...by.values()].map(g => ({...g, sizes: [...new Set(g.sizes)], from: g.prices.length ? Math.min(...g.prices) : null,
+    oos: g.stock.length && g.stock.every(x => x === false), priceText: g.prices.length ? null : (rows.find(r => r.product === g.product)?.price || "")}));
 }
+function renderProducts(){
+  const rows = productRows(), live = new Set(((D.products && D.products.products) || []).map(p => p.brand));
+  const changes = D.items.filter(i => i.kind === "product" && i.published >= daysAgo(30));
+  $("#prodChanges").innerHTML = changes.length ? changes.slice(0, 40).map(i => itemHtml(i, false)).join("") : `<div class="empty">No product changes spotted in the last 30 days.</div>`;
+  $("#prodSource").textContent = "Pick a brand to see its soaps, body washes and scrubs." + (D.products && D.products.updated ? ` Brands marked "Live from brand shop" were checked ${fmtDate(D.products.updated)}; the rest come from your verified research.` : "");
+  const brands = D.brands.filter(b => rows.some(r => r.brand === b));
+  $("#pBrands").innerHTML = brands.map((b, k) => { const g = productGroups(b), cats = {}; g.forEach(x => cats[catShort(x.category)] = (cats[catShort(x.category)] || 0) + 1);
+    const ps = g.map(x => x.from).filter(Boolean), imgs = g.filter(x => x.image).slice(0, 4);
+    return `<button class="pb ${b === "Fiama" ? "us" : ""}" type="button" data-pb="${esc(b)}">
+      <div class="top"><span class="mono ic p${k % 4 + 1}">${esc(b.split(/\s+/).map(w => w[0]).join("").slice(0, 3).toUpperCase())}</span><div><b>${esc(b)}</b><span class="n">${pl(g.length, "product")}</span></div></div>
+      ${imgs.length ? `<div class="thumbs">${imgs.map(x => `<span><img src="${esc(imgW(x.image, 120))}" alt="" loading="lazy" onerror="this.remove()"></span>`).join("")}</div>` : ""}
+      <div class="mix">${Object.entries(cats).map(([c, n]) => `<span>${esc(c)} ${n}</span>`).join("")}</div>
+      <div class="foot"><span>${ps.length ? `₹${Math.min(...ps).toLocaleString("en-IN")} – ₹${Math.max(...ps).toLocaleString("en-IN")}` : "Prices in research"}</span><span class="src ${live.has(b) ? "live" : "res"}">${live.has(b) ? "Live from brand shop" : "From research"}</span></div>
+    </button>`; }).join("");
+  const open = store.get("prodBrand", "");
+  open && brands.includes(open) ? showProdBrand(open) : showProdHome();
+}
+function showProdHome(){ $("#prodHome").hidden = false; $("#prodBrand").hidden = true; store.set("prodBrand", ""); }
+let PCAT = "";
+function showProdBrand(b){
+  store.set("prodBrand", b); $("#prodHome").hidden = true; $("#prodBrand").hidden = false;
+  const g = productGroups(b), live = g.some(x => x.live), k = D.brands.indexOf(b);
+  const cats = [...new Set(g.map(x => catShort(x.category)))];
+  if (PCAT && !cats.includes(PCAT)) PCAT = "";
+  $("#pHead").innerHTML = `<span class="mono ic p${k % 4 + 1}">${esc(b.split(/\s+/).map(w => w[0]).join("").slice(0, 3).toUpperCase())}</span><div><h2>${esc(b)}</h2>
+    <p>${pl(g.length, "product")} · ${live ? "Live from the brand's own online shop, with its photos" : "From your verified research (no brand shop to read, so no photos)"}</p></div>`;
+  $("#pCats").innerHTML = [`<button class="chip plain" data-c="" aria-pressed="${!PCAT}">All · ${g.length}</button>`,
+    ...cats.map(c => `<button class="chip plain" data-c="${esc(c)}" aria-pressed="${PCAT === c}">${esc(c)} · ${g.filter(x => catShort(x.category) === c).length}</button>`)].join("");
+  const q = $("#pText").value.toLowerCase(), sort = $("#pSort").value;
+  const list = g.filter(x => (!PCAT || catShort(x.category) === PCAT) && (!q || (x.product + " " + x.sizes.join(" ")).toLowerCase().includes(q)))
+    .sort((x, y) => sort === "low" ? (x.from ?? 1e9) - (y.from ?? 1e9) : sort === "high" ? (y.from ?? -1) - (x.from ?? -1) : String(x.product).localeCompare(String(y.product)));
+  $("#pGrid").innerHTML = list.map(x => { const art = CAT_ART[x.category] || CAT_ART["Soap / gel bar"], url = safeUrl(x.url);
+    const ph = x.image ? `<div class="ph"><img src="${esc(imgW(x.image, 400))}" alt="${esc(x.product)}" loading="lazy" onerror="this.parentNode.classList.add('art');this.outerHTML='${art[1].replace(/"/g, "&quot;")}'">${x.oos ? '<span class="oos">Out of stock</span>' : ""}</div>`
+      : `<div class="ph art ${art[0]}" style="color:var(--accent)">${art[1]}${x.oos ? '<span class="oos">Out of stock</span>' : ""}</div>`;
+    return `<article class="pc">${ph}<div class="bd"><span class="cat">${esc(catShort(x.category))}</span>
+      ${url ? `<a class="nm" href="${esc(url)}" target="_blank" rel="noopener">${esc(x.product)}</a>` : `<span class="nm">${esc(x.product)}</span>`}
+      ${x.sizes.length ? `<div class="sz">${x.sizes.slice(0, 4).map(z => `<span>${esc(z)}</span>`).join("")}${x.sizes.length > 4 ? `<span>+${x.sizes.length - 4}</span>` : ""}</div>` : ""}
+      <div class="pr">${x.from ? `${x.prices.length > 1 ? "<small>from</small>" : ""}<b>₹${x.from.toLocaleString("en-IN")}</b>${x.mrp && x.mrp > x.from ? `<s>₹${x.mrp.toLocaleString("en-IN")}</s>` : ""}` : `<small>${esc(x.priceText || "No price shown")}</small>`}</div>
+      <span class="so">${esc(x.live ? "Brand shop" : x.source || "Research")}</span></div></article>`; }).join("") || `<div class="empty">No products match.</div>`;
+}
+$("#pBrands").addEventListener("click", e => { const t = e.target.closest("[data-pb]"); if (t) { PCAT = ""; $("#pText").value = ""; showProdBrand(t.dataset.pb); scrollTo({top: 0}); } });
+$("#pBack").onclick = () => { showProdHome(); scrollTo({top: 0}); };
+$("#pCats").addEventListener("click", e => { const c = e.target.closest("[data-c]"); if (c) { PCAT = c.dataset.c; showProdBrand(store.get("prodBrand", "")); } });
+$("#pText").addEventListener("input", () => showProdBrand(store.get("prodBrand", "")));
+$("#pSort").addEventListener("change", () => showProdBrand(store.get("prodBrand", "")));
 function renderPrices(){
   const moves = D.items.filter(i => i.kind === "product" && i.tags.includes("Pricing & Promo") && i.published >= daysAgo(90));
   $("#priceMoves").innerHTML = moves.map(i => itemHtml(i, true)).join("") ||

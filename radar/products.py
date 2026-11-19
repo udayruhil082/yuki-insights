@@ -173,6 +173,9 @@ def run(log=print):
             got = shopify(b["name"], cfg["shopify"], cfg.get("vendor")) if cfg.get("shopify") else sitemap(b["name"], cfg)
             if not got:
                 raise RuntimeError("no matching products found")
+            if all(p.get("in_stock") is False for p in got):   # some shops hide stock; "all out of stock" means unknown
+                for p in got:
+                    p["in_stock"] = None
             new += got
             checked.add(b["name"])
             run_log.append({"source": label, "ok": True, "found": len(got)})
