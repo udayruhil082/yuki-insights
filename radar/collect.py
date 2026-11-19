@@ -115,7 +115,7 @@ SKIP_PUBLISHER = re.compile(r"yahoo finance|marketsmojo|simply wall|scanx|moneyc
                             r"tickertape|trendlyne|equitymaster|stock|marketbeat|tradingview", re.I)
 # News about products outside body wash / soap / scrub is marked so the app can hide it.
 OTHER_CAT = re.compile(r"\b(hair\w*|shampoo|conditioner|sunscreen|spf|lip\w*|face ?wash|makeup|fragrance|perfume|"
-                       r"underarm|deo\w*|toothpaste|oral|innerwear|lotion|moistur\w*|serum|mist)\b", re.I)
+                       r"underarm|deo\w*|toothpaste|oral|innerwear|lotion|moistur\w*|serum|mist|cream|creme|grooming)\b", re.I)
 OUR_CAT = re.compile(r"body ?wash|shower|soap|bath\w*|scrub|\bbars?\b|exfoliat\w*|personal wash|skin ?care", re.I)
 
 
@@ -138,6 +138,27 @@ def skip_news(title, publisher="", domain="", brand=None):
 def mentions(title, words):
     """Whole-word match, so 'Lux' does not match 'luxury'."""
     return any(re.search(r"\b" + re.escape(w) + r"\b", title, re.I) for w in words)
+
+
+FOREIGN = re.compile(r"\b(U\.?S\.?A?|UK|U\.K\.|America\w*|Europe\w*|Australia\w*|Canada|Germany|Japan|China|Philippines|"
+                     r"Indonesia|Malaysia|Thailand|Brazil|Mexico|Africa\w*|Pakistan|Bangladesh|Sri Lanka|Nepal|global(ly)?|worldwide)\b")
+AD_LAUNCH = re.compile(r"campaign|\btvc\b|\bad\b|ad film|\bfilm\b|ambassador|collaboration|collab|\bhub\b|lollapalooza|story|stories", re.I)
+INDIA = re.compile(r"\bindia\w*\b|₹|\brs\.?\s?\d|crore|lakh", re.I)
+
+
+def launch_check(i):
+    """How sure we are that a launch is real, in India and in our categories."""
+    if i["kind"] == "product":
+        return "shop"                      # seen on the brand's own online shop
+    if i["kind"] in ("internal", "manual"):
+        return "team"
+    text = i["title"] + " " + (i.get("summary") or "")[:300]
+    in_india = (bool(INDIA.search(text)) or i.get("source_type") in ("Trade press", "Official")
+                or (i.get("source_domain") or "").endswith(".in")) and not FOREIGN.search(i["title"])
+    about_ads = AD_LAUNCH.search(i["title"])   # "launches a campaign / TVC" is a campaign, not a product launch
+    if not (in_india and not other_category(text) and not about_ads):
+        return None
+    return "brand" if i.get("source_type") == "Official" else "news"   # brand's own site or YouTube channel
 
 
 def other_category(text):
@@ -287,6 +308,13 @@ def merge(existing, new):
              and not (i["kind"] == "news" and skip_news(i["title"], i.get("publisher", ""), i.get("source_domain", ""), i["brand"]))
              and not (i["kind"] == "youtube" and AGENCY_NAMES.search(i["title"]))]
     for i in items:   # re-checked every run so rule changes apply to old items too
+        i["tags"] = tag_text(i["title"] + " " + i.get("summary", "")) if i["kind"] in ("news", "youtube") else i["tags"]
+        if "Launch" in i["tags"]:
+            i["launch"] = launch_check(i)
+            if not i["launch"]:            # not clearly an India soap / body wash / scrub launch
+                i["tags"].remove("Launch")
+        else:
+            i.pop("launch", None)
         i["other_category"] = i["kind"] in ("news", "youtube") and other_category(i["title"] + " " + (i.get("summary") or "")[:200])
     items.sort(key=lambda i: i["published"], reverse=True)
     return items, added
