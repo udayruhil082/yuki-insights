@@ -77,8 +77,11 @@ def shopify(brand, base, vendor=None):
             cat = classify(p.get("title", ""), p.get("product_type", ""))
             if not cat:
                 continue
+            imgs = p.get("images") or []
+            main_img = imgs[0].get("src") if imgs and isinstance(imgs[0], dict) else ""
             for v in p.get("variants", []):
                 size = v.get("title") if v.get("title") not in (None, "Default Title") else ""
+                img = ((v.get("featured_image") or {}).get("src") if isinstance(v.get("featured_image"), dict) else "") or main_img
                 out.append({
                     "key": f"{brand}|{p['handle']}|{v.get('id')}",
                     "brand": brand, "product": p.get("title", ""), "size": size,
@@ -87,6 +90,7 @@ def shopify(brand, base, vendor=None):
                     "mrp": float(v["compare_at_price"]) if v.get("compare_at_price") else None,
                     "in_stock": bool(v.get("available", True)),
                     "url": f"{base.rstrip('/')}/products/{p['handle']}",
+                    "image": img,   # the brand's own product photo, shown on the Products page
                     "source": "Brand store",
                 })
         page += 1
