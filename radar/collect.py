@@ -195,6 +195,8 @@ def youtube(handle, brand, cache):
           "yt": "http://www.youtube.com/xml/schemas/2015"}
     root = ET.fromstring(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}"))
     YT_NAMES[brand] = root.findtext("a:title", namespaces=ns) or ""   # shown in Sources so the channel can be checked
+    if brand.split()[0].lower() not in YT_NAMES[brand].lower().replace(" ", ""):
+        raise RuntimeError(f"channel is '{YT_NAMES[brand]}', which does not look like {brand}; skipped")
     out = []
     for e in root.findall("a:entry", ns):
         vid = e.findtext("yt:videoId", namespaces=ns)
