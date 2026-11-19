@@ -13,7 +13,7 @@
 - [Uncomplicated Skincare with NIVEA Soft](https://www.youtube.com/watch?v=1r6-D7NAzoM) (YouTube)
 
 ## Chemist at Play (1 items)
-- [Body Wash Sale for Soft Healthy Skin | Chemist at Play](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vQ1A1ck5hVEhYNmJtRW5Gb0xFdmhnUVJwMkNjTVM3MDFRM1l6cW5lVnNGN09ZdDJsa2FuOHdCdkpsbjZvOHdJM20xbjgxdGUyQ29kQ0laUGRJb0FPQVNqRVhodExzaEk?oc=5) (Innovist) `Pricing & Promo`
+- [Body Wash Sale for Soft Healthy Skin | Chemist at Play](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9vQ1A1ck5hVEhYNmJtRW5Gb0xFdmhnUVJwMkNjTVM3MDFRM1l6cW5lVnNGN09ZdDJsa2FuOHdCdkpsbjZvOHdJM20xbjgxdGUyQ29kQ0laUGRJb0FPQVNqRVhodExzaEk?oc=5) (Brand website) `Pricing & Promo`
 
 ## Love Beauty and Planet (5 items)
 - [Frizz = Cuticle Damage? Here’s the Fix ✨ #lovebeautyandplanet #haircare](https://www.youtube.com/watch?v=43s2hafWjx0) (YouTube) `Influencer, Sustainability`

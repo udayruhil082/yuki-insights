@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:45:14.503010+00:00",
+ "updated": "2026-11-19T21:52:02.864198+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -247,16 +247,16 @@
    "Love Beauty and Planet": 0,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 2,
+   "Mamaearth": 1,
    "Ghar Soaps": 0
   },
   "2026-10-26": {
    "Fiama": 2,
-   "Dove": 10,
+   "Dove": 7,
    "Nivea": 0,
    "Pears": 0,
    "Palmolive": 0,
-   "Chemist at Play": 1,
+   "Chemist at Play": 0,
    "Love Beauty and Planet": 5,
    "Lux": 0,
    "Santoor": 0,
@@ -273,12 +273,12 @@
    "Love Beauty and Planet": 4,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 1,
+   "Mamaearth": 0,
    "Ghar Soaps": 0
   },
   "2026-11-09": {
    "Fiama": 2,
-   "Dove": 4,
+   "Dove": 1,
    "Nivea": 3,
    "Pears": 0,
    "Palmolive": 0,
@@ -286,7 +286,7 @@
    "Love Beauty and Planet": 2,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 2,
+   "Mamaearth": 1,
    "Ghar Soaps": 0
   },
   "2026-11-16": {
@@ -305,10 +305,7 @@
  },
  "tags_90d": {
   "Fiama": {},
-  "Dove": {
-   "Pricing & Promo": 3,
-   "Business": 3
-  },
+  "Dove": {},
   "Nivea": {
    "Campaign": 2,
    "Purpose": 1
@@ -327,7 +324,7 @@
   },
   "Santoor": {},
   "Mamaearth": {
-   "Campaign": 3,
+   "Campaign": 2,
    "Partnership": 1
   },
   "Ghar Soaps": {}
@@ -379,7 +376,7 @@
   {
    "source": "Trade press: Dove",
    "ok": true,
-   "found": 53
+   "found": 54
   },
   {
    "source": "Official: Dove",
