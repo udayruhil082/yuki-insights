@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:57:14.102809+00:00",
+ "updated": "2026-11-19T22:04:11.351943+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -371,7 +371,7 @@
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 10
+   "found": 7
   },
   {
    "source": "Trade press: Dove",
@@ -465,7 +465,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 11
+   "found": 12
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -502,7 +502,7 @@
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 44
+   "found": 29
   },
   {
    "source": "Official: Lux",
@@ -544,12 +544,12 @@
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 56
+   "found": 88
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 9
+   "found": 7
   },
   {
    "source": "YouTube: Mamaearth",
@@ -581,7 +581,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 23
+   "found": 12
   },
   {
    "source": "Logged posts",
