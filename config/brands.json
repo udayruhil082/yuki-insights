@@ -1,0 +1,240 @@
+{
+ "_help": "Edit this file to add or change brands. 'news_query' is what we search on Google News. 'must_mention' words: a headline must contain at least one to be kept. 'youtube_handle' is the brand's YouTube @handle (leave blank to skip).",
+ "region": {
+  "hl": "en-IN",
+  "gl": "IN",
+  "ceid": "IN:en"
+ },
+ "brands": [
+  {
+   "name": "Fiama",
+   "role": "self",
+   "news_query": "Fiama (ITC OR soap OR \"shower gel\" OR \"gel bar\" OR campaign OR ad)",
+   "must_mention": [
+    "Fiama"
+   ],
+   "youtube_handle": "@FiamaIndia",
+   "instagram": "fiama_india",
+   "ad_library_query": "Fiama",
+   "products": {
+    "shopify": "https://www.fiama.in"
+   },
+   "official_sites": [
+    "itcportal.com",
+    "fiama.in"
+   ],
+   "website": "https://www.fiama.in"
+  },
+  {
+   "name": "Dove",
+   "role": "competitor",
+   "news_query": "Dove (HUL OR \"Hindustan Unilever\" OR soap OR \"body wash\" OR \"beauty bar\" OR campaign OR skincare) India",
+   "must_mention": [
+    "Dove"
+   ],
+   "youtube_handle": "@DoveIndia",
+   "instagram": "doveindia",
+   "ad_library_query": "Dove India",
+   "products": {
+    "shopify": "https://www.dove-india.com"
+   },
+   "official_sites": [
+    "hul.co.in",
+    "dove-india.com"
+   ],
+   "website": "https://www.dove-india.com"
+  },
+  {
+   "name": "Nivea",
+   "role": "competitor",
+   "news_query": "Nivea India (campaign OR launch OR ad OR influencer OR \"body wash\" OR lotion OR Beiersdorf)",
+   "must_mention": [
+    "Nivea"
+   ],
+   "youtube_handle": "@NIVEAIndia",
+   "instagram": "niveaindia",
+   "ad_library_query": "Nivea India",
+   "products": {},
+   "official_sites": [
+    "nivea.in",
+    "beiersdorf.com"
+   ],
+   "website": "https://www.nivea.in"
+  },
+  {
+   "name": "Pears",
+   "role": "competitor",
+   "news_query": "\"Pears soap\" OR (Pears HUL) OR (Pears \"Hindustan Unilever\") OR (Pears campaign India)",
+   "must_mention": [
+    "Pears"
+   ],
+   "youtube_handle": "@PearsIndia",
+   "instagram": "pearsindia",
+   "ad_library_query": "Pears soap",
+   "products": {},
+   "official_sites": [
+    "hul.co.in"
+   ],
+   "website": "https://www.hul.co.in/brands/personal-care/pears/"
+  },
+  {
+   "name": "Palmolive",
+   "role": "competitor",
+   "news_query": "Palmolive India (\"body wash\" OR soap OR campaign OR launch OR Colgate-Palmolive)",
+   "must_mention": [
+    "Palmolive"
+   ],
+   "youtube_handle": "@PalmoliveIndia",
+   "instagram": "palmoliveindia",
+   "ad_library_query": "Palmolive India",
+   "products": {},
+   "official_sites": [
+    "colgatepalmolive.co.in",
+    "colgateinvestors.co.in",
+    "colgatepalmolive.com"
+   ],
+   "website": "https://www.colgatepalmolive.co.in"
+  },
+  {
+   "name": "Chemist at Play",
+   "role": "competitor",
+   "news_query": "\"Chemist at Play\"",
+   "must_mention": [
+    "Chemist at Play",
+    "ChemistAtPlay"
+   ],
+   "youtube_handle": "@chemistatplay",
+   "instagram": "chemistatplay.skincare",
+   "ad_library_query": "Chemist at Play",
+   "products": {
+    "shopify": "https://innovist.com",
+    "vendor": "Chemist at Play"
+   },
+   "official_sites": [
+    "innovist.com"
+   ],
+   "website": "https://innovist.com/collections/chemist-at-play"
+  },
+  {
+   "name": "Love Beauty and Planet",
+   "role": "competitor",
+   "news_query": "\"Love Beauty and Planet\" India",
+   "must_mention": [
+    "Love Beauty",
+    "LBP"
+   ],
+   "youtube_handle": "@lovebeautyandplanetindia",
+   "instagram": "lovebeautyandplanet_in",
+   "ad_library_query": "Love Beauty and Planet",
+   "products": {
+    "shopify": "https://lovebeautyandplanet.in"
+   },
+   "official_sites": [
+    "hul.co.in"
+   ],
+   "website": "https://lovebeautyandplanet.in"
+  },
+  {
+   "name": "Lux",
+   "role": "competitor",
+   "news_query": "Lux (soap OR \"body wash\" OR HUL OR \"Hindustan Unilever\" OR campaign OR ambassador) India",
+   "must_mention": [
+    "Lux"
+   ],
+   "youtube_handle": "@LuxIndia",
+   "instagram": "luxindia",
+   "ad_library_query": "Lux soap",
+   "products": {},
+   "official_sites": [
+    "hul.co.in",
+    "lux.com"
+   ],
+   "website": "https://www.lux.com/in/"
+  },
+  {
+   "name": "Santoor",
+   "role": "competitor",
+   "news_query": "Santoor (soap OR Wipro OR \"body wash\" OR campaign OR ambassador)",
+   "must_mention": [
+    "Santoor"
+   ],
+   "youtube_handle": "@SantoorSoap",
+   "instagram": "santoorsoap",
+   "ad_library_query": "Santoor",
+   "products": {},
+   "official_sites": [
+    "wiproconsumercare.com",
+    "wipro.com"
+   ],
+   "website": ""
+  },
+  {
+   "name": "Mamaearth",
+   "role": "competitor",
+   "news_query": "Mamaearth (\"body wash\" OR soap OR \"bathing bar\" OR \"body scrub\" OR campaign OR influencer OR launch OR Honasa)",
+   "must_mention": [
+    "Mamaearth",
+    "Honasa"
+   ],
+   "youtube_handle": "@MamaearthIndia",
+   "instagram": "mamaearth.in",
+   "ad_library_query": "Mamaearth",
+   "products": {
+    "shopify": "https://mamaearth.in"
+   },
+   "official_sites": [
+    "honasa.in",
+    "mamaearth.in"
+   ],
+   "website": "https://mamaearth.in"
+  },
+  {
+   "name": "Ghar Soaps",
+   "role": "competitor",
+   "news_query": "\"Ghar Soaps\" OR \"Ghar Soap\"",
+   "must_mention": [
+    "Ghar"
+   ],
+   "youtube_handle": "@gharsoaps",
+   "instagram": "gharsoaps",
+   "ad_library_query": "Ghar Soaps",
+   "products": {},
+   "official_sites": [
+    "gharsoaps.in"
+   ],
+   "website": ""
+  }
+ ],
+ "category_watch": {
+  "_help": "Category-level news (not tied to one brand) shown under 'Category'.",
+  "news_query": "India (\"body wash\" OR \"bathing soap\" OR \"body scrub\" OR \"personal wash\") (launch OR campaign OR market OR brand)"
+ },
+ "product_keywords": [
+  "soap",
+  "body wash",
+  "bodywash",
+  "shower gel",
+  "shower",
+  "bathing bar",
+  "bath bar",
+  "gel bar",
+  "beauty bar",
+  "body scrub",
+  "scrub",
+  "exfoliat"
+ ],
+ "_help_products": "'products' tells the tool where to read each brand's live range and prices: 'shopify' = the brand's own online store. Brands without one (Nivea, Pears, Palmolive, Lux, Santoor, Ghar Soaps) use your Product Range research until you update it. 'website' = the brand's official site, shown on brand and campaign pages (blank = no official brand site found).",
+ "trade_press": [
+  "afaqs.com",
+  "exchange4media.com",
+  "brandequity.economictimes.indiatimes.com",
+  "campaignindia.in",
+  "bestmediainfo.com",
+  "medianews4u.com",
+  "adgully.com",
+  "indiantelevision.com",
+  "socialsamosa.com",
+  "storyboard18.com"
+ ],
+ "_help_sources": "Each brand is searched three ways: general news, Indian marketing/trade press ('trade_press' sites) and the parent company's official site ('official_sites'). Every item keeps its source link and date."
+}

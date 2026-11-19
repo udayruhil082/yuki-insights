@@ -1,0 +1,6 @@
+config/github_local.json
+__pycache__/
+*.pyc
+# Fiama's own activity and logged posts stay on this computer (the GitHub project is public)
+docs/data/fiama_activity.json
+docs/data/logged_posts.json

@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yuki Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap">
+<style>
+/* Fiama brand style: soft lavender canvas, fresh pastel accents, rounded shapes, purple-to-peach gradient */
+:root{
+  color-scheme:light;
+  --bg:#fdeef4; --bg-glow-1:rgba(255,190,215,.45); --bg-glow-2:rgba(255,205,190,.35); --bg-glow-3:rgba(240,200,235,.35);
+  --surface:#ffffff; --surface-2:#fdf1f6; --surface-3:#f8dfea; --line:#f6dce7;
+  --text:#2e1a2c; --text-2:#62485e; --muted:#977f92;
+  --brand:#7b36b0; --accent:#8a3fc2; --accent-ink:#ffffff; --accent-soft:#f1e5fb;
+  --grad:linear-gradient(120deg,#8a3fc2 0%,#d24f9e 58%,#ff9a6a 100%);
+  --p-lav:#f1e5fb; --p-lav-ink:#7b36b0; --p-pink:#fde6f1; --p-pink-ink:#c2367f; --p-peach:#ffeadf; --p-peach-ink:#c85a24; --p-mint:#dcf5ec; --p-mint-ink:#1f8a68;
+  --side:rgba(255,255,255,.66); --side-2:#fce8f1; --side-ink:#3e2a3c; --side-muted:#a08699; --side-active:#fbdcea; --side-active-ink:#a8306f;
+  --s1:#c3b6d8; --s2:#d6458f; --good:#13875f; --good-soft:#dcf5ec; --info-soft:#e4ecfc; --info:#2d5fb3; --critical:#c23455;
+  --seq-0:#fdf4f8; --seq-1:#e6d5f6; --seq-2:#cdaeee; --seq-3:#ad82e0; --seq-4:#8a57c9; --seq-5:#62329a;
+  --shadow:0 1px 2px rgba(60,20,90,.04),0 6px 20px rgba(60,20,90,.06);
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --display:"Nunito","Inter",system-ui,sans-serif;
+  --r:20px;
+}
+:root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg:#16101c; --bg-glow-1:rgba(160,90,220,.16); --bg-glow-2:rgba(255,140,110,.08); --bg-glow-3:rgba(70,200,160,.07);
+    --surface:#201828; --surface-2:#2a2134; --surface-3:#382c45; --line:#352a42;
+    --text:#f5eefb; --text-2:#cdbfdc; --muted:#9e8fb0;
+    --brand:#c99af0; --accent:#b57ae6; --accent-ink:#ffffff; --accent-soft:#33224a;
+    --grad:linear-gradient(120deg,#7c3bb8 0%,#c2448f 58%,#e98457 100%);
+    --p-lav:#33224a; --p-lav-ink:#d2aef5; --p-pink:#3d1f33; --p-pink-ink:#f59cc6; --p-peach:#3d2820; --p-peach-ink:#ffb48c; --p-mint:#163a30; --p-mint-ink:#6fdcb9;
+    --side:#1b1422; --side-2:#2a2134; --side-ink:#ece2f6; --side-muted:#9e8fb0; --side-active:#33224a; --side-active-ink:#e0c4fa;
+    --s1:#6f6387; --s2:#ef6fae; --good:#4fd39f; --good-soft:#163a30; --info-soft:#1c2a45; --info:#8fb8f5; --critical:#f07a8a;
+    --seq-0:#251d2e; --seq-1:#3b2856; --seq-2:#55357f; --seq-3:#7446ab; --seq-4:#9561d1; --seq-5:#c39af0;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.18);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:14.5px/1.55 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-underline-offset:2px}
+h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:17px;margin:30px 0 4px}
+h3{font-size:15.5px;margin:0}
+.sub{color:var(--text-2);font-size:13.5px;margin:0 0 14px;max-width:75ch}
+svg.i{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* shell */
+.app{display:flex;min-height:100%}
+.side{width:252px;flex:none;background:var(--side);color:var(--side-ink);display:flex;flex-direction:column;position:sticky;top:0;height:100vh;padding:18px 12px 14px}
+.logo{display:flex;gap:11px;align-items:center;padding:2px 10px 20px}
+.logo .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(140deg,var(--accent),#b8467f);display:grid;place-items:center;color:#fff}
+.logo b{display:block;font-family:var(--display);font-size:17px;letter-spacing:-.01em}
+.logo span{font-size:11.5px;color:var(--side-muted)}
+nav.tabs{display:flex;flex-direction:column;gap:1px;overflow-y:auto;flex:1}
+.navlabel{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--side-muted);padding:16px 12px 6px}
+nav.tabs button{display:flex;align-items:center;gap:11px;background:none;border:0;border-radius:9px;padding:8px 12px;font:inherit;font-size:13.8px;color:var(--side-ink);opacity:.78;cursor:pointer;text-align:left;position:relative}
+nav.tabs button:hover{background:var(--side-2);opacity:1}
+nav.tabs button[aria-selected="true"]{background:var(--side-active);opacity:1;font-weight:600}
+nav.tabs button[aria-selected="true"]::before{content:"";position:absolute;left:-12px;top:8px;bottom:8px;width:3px;border-radius:0 3px 3px 0;background:var(--accent)}
+nav.tabs .count{margin-left:auto;font-size:11px;background:var(--side-2);color:var(--side-muted);border-radius:999px;padding:0 7px}
+.sidefoot{border-top:1px solid var(--side-2);padding:14px 4px 0;display:flex;flex-direction:column;gap:8px}
+.sidefoot .upd{font-size:11.5px;color:var(--side-muted);display:flex;align-items:center;gap:6px}
+.sidefoot .dot{width:7px;height:7px;border-radius:50%;background:var(--good)}
+nav.tabs .subnav{display:flex;flex-direction:column;gap:1px;margin:2px 0 4px}
+nav.tabs button.bsub{padding:6px 12px 6px 22px;font-size:13px;gap:9px}
+nav.tabs button.bsub .av{width:20px;height:20px;border-radius:6px;font-size:8.5px;background:var(--side-2);color:var(--side-ink)}
+nav.tabs button.bsub .av.us{background:var(--accent);color:#fff}
+.bhead{display:flex;flex-direction:column;gap:12px}
+.bhead .top{display:flex;gap:14px;align-items:center}
+.bhead .top .av{width:48px;height:48px;border-radius:14px;font-size:16px}
+.bhead h2{margin:0;font-size:22px}
+.bhead .who{font-size:12.5px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:130px 1fr;gap:8px 14px;margin:0;font-size:13.5px}
+.facts dt{color:var(--muted)} .facts dd{margin:0}
+.bhead .links{display:flex;flex-wrap:wrap;gap:6px}
+#refreshMsg:empty{display:none}
+#refreshMsg{font-size:12px;color:var(--side-ink);background:var(--side-2);border-radius:8px;padding:6px 8px}
+.mainwrap{flex:1;min-width:0}
+.topbar{position:sticky;top:0;z-index:6;display:flex;align-items:center;gap:14px;padding:14px 32px;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar h1{margin:0;font-size:21px}
+.crumb{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+.topactions{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+main{padding:20px 32px 56px;max-width:1260px}
+section.panel{display:none}
+section.panel.on{display:block}
+
+/* controls */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit;font-size:13.5px;font-weight:500;cursor:pointer;text-decoration:none;white-space:nowrap;box-shadow:var(--shadow)}
+.btn:hover{border-color:var(--surface-3);background:var(--surface-2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;justify-content:center}
+.btn.primary:hover{filter:brightness(1.05);background:var(--accent)}
+.btn:disabled{opacity:.55;cursor:default}
+.btn.ghost{box-shadow:none;background:transparent}
+.btn.sm{padding:4px 10px;font-size:12.5px}
+.btn.menu{display:none}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+select,input,textarea{font:inherit;font-size:13.5px;padding:7px 10px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--text)}
+.filters input[type=search]{flex:1;min-width:180px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--text-2);border-radius:999px;padding:3px 10px 3px 4px;font:inherit;font-size:12.5px;cursor:pointer}
+.chip.plain{padding-left:10px}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip[aria-pressed="false"]{opacity:.75}
+
+/* objects */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.tile{display:flex;gap:12px;align-items:flex-start}
+.tile .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);flex:none}
+.tile .n{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.tile .l{color:var(--text-2);font-size:12.5px}
+.tile .d{font-size:11.5px;color:var(--muted);margin-top:2px}
+.av{width:30px;height:30px;border-radius:9px;display:inline-grid;place-items:center;font-size:11px;font-weight:700;background:var(--surface-3);color:var(--text-2);flex:none;letter-spacing:.02em}
+.av.us{background:var(--accent);color:#fff}
+.chip .av{width:20px;height:20px;border-radius:50%;font-size:8.5px}
+.tag{display:inline-flex;align-items:center;font-size:11.5px;font-weight:500;padding:1px 8px;border-radius:999px;background:var(--surface-2);color:var(--text-2);margin:0 4px 0 0;white-space:nowrap}
+.tag.big{background:var(--accent-soft);color:var(--accent)}
+.tag.src-official{background:var(--good-soft);color:var(--good)}
+.tag.src-trade{background:var(--info-soft);color:var(--info)}
+.tag.src-fiama{background:var(--accent);color:#fff}
+.tag.us{background:var(--accent);color:#fff}
+
+/* feed items */
+.feed{display:flex;flex-direction:column;gap:10px}
+.item{display:flex;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:13px 15px;box-shadow:var(--shadow)}
+.item .body{flex:1;min-width:0}
+.item .meta{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px}
+.item .meta b{color:var(--text);font-weight:600}
+.item .t{display:block;font-weight:600;font-size:14.5px;color:var(--text);text-decoration:none;margin:3px 0 4px;line-height:1.4}
+.item .t:hover{color:var(--brand)}
+.item .desc{font-size:13px;color:var(--text-2);margin-bottom:6px}
+.item img{width:112px;height:63px;object-fit:cover;border-radius:8px;flex:none;background:var(--surface-2)}
+.item .foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px}
+.note{margin-top:8px}
+.note summary{cursor:pointer;font-size:12.5px;color:var(--brand);font-weight:500;list-style:none;display:inline-flex;align-items:center;gap:5px}
+.note summary::-webkit-details-marker{display:none}
+.note textarea{display:block;width:100%;min-height:42px;margin-top:6px;border-style:dashed;background:var(--bg)}
+.empty{color:var(--muted);padding:18px;text-align:center;border:1px dashed var(--line);border-radius:12px}
+
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:color-mix(in srgb,var(--surface-2) 55%,transparent)}
+th{background:var(--surface-2);font-weight:600;font-size:12px;color:var(--text-2);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.bname{display:flex;align-items:center;gap:9px;font-weight:600;white-space:nowrap}
+.bname .av{width:24px;height:24px;border-radius:7px;font-size:9.5px}
+.heat td.cell{text-align:center;font-variant-numeric:tabular-nums;border:2px solid var(--surface);border-radius:6px}
+.gap-hi{color:var(--critical);font-weight:700}
+.meter{height:8px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.meter div{height:100%;border-radius:4px;background:var(--s1)}
+.chartbox{position:relative}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:8px 10px;font-size:12.5px;box-shadow:0 6px 18px rgba(0,0,0,.15);display:none;z-index:4;min-width:150px}
+
+/* campaigns */
+.camp{display:flex;flex-direction:column;gap:10px}
+.camp .hd{display:flex;gap:10px;align-items:flex-start}
+.camp .hd .who{font-size:12px;color:var(--muted)}
+.camp dl{display:grid;grid-template-columns:96px 1fr;gap:4px 10px;margin:0;font-size:13px}
+.camp dt{color:var(--muted)}
+.camp dd{margin:0}
+.camp .idea{font-size:13.5px;border-left:3px solid var(--surface-3);padding-left:10px;color:var(--text-2)}
+.camp .links{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px;border-top:1px solid var(--line)}
+.camp.fiama{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+
+/* compare */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kv{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:7px 0;font-size:13.5px}
+.kv:last-child{border-bottom:0}
+.kv b{font-variant-numeric:tabular-nums}
+.kv .sub2{color:var(--muted);padding-left:12px}
+
+/* forms & dialogs */
+dialog{max-width:560px;width:calc(100% - 32px);border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--text);padding:22px}
+dialog::backdrop{background:rgba(20,10,18,.5)}
+.form label{display:flex;flex-direction:column;gap:4px;font-size:12.5px;font-weight:600;color:var(--text-2)}
+.form label input,.form label select,.form label textarea{font-weight:400;color:var(--text)}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.formgrid .wide{grid-column:1/-1}
+.status{font-size:13px}
+.status .ok{color:var(--good)} .status .bad{color:var(--critical)}
+[hidden]{display:none!important}
+/* organised panels */
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);margin-top:18px;overflow:hidden;min-width:0}
+.box-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.box-h h2{margin:0;font-size:15px}
+.box-h .sub{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+.box-tools{padding:10px 18px;border-bottom:1px solid var(--line);background:var(--surface-2);display:flex;flex-direction:column;gap:8px}
+.box-tools .chips,.box-tools .filters{margin:0}
+.box-b.pad{padding:16px 18px}
+.box-b.soft{background:var(--bg)}
+.box .feed{gap:0}
+.box .item{border:0;border-radius:0;box-shadow:none;border-bottom:1px solid var(--line);padding:13px 18px}
+.box .item:last-child{border-bottom:0}
+.box .tablewrap{border:0;border-radius:0;box-shadow:none}
+.box .empty{border:0;border-radius:0}
+.count-pill{font-size:12px;color:var(--text-2);background:var(--surface-2);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.cols{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:18px;align-items:start}
+.cols>.box{margin-top:18px}
+section.panel>.box:first-child{margin-top:0}
+.glance{display:flex;align-items:center;gap:10px;width:100%;padding:10px 18px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--text);font:inherit;text-align:left;cursor:pointer}
+.glance:last-child{border-bottom:0}
+.glance:hover{background:var(--surface-2)}
+.glance .nm{font-weight:600;font-size:13.5px;flex:1;min-width:0}
+.glance .nm small{display:block;font-weight:400;color:var(--muted);font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.glance .bar{width:70px;height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden;flex:none}
+.glance .bar div{height:100%;background:var(--s1);border-radius:3px}
+.glance.us .bar div{background:var(--accent)}
+.glance .n{font-variant-numeric:tabular-nums;font-weight:600;width:28px;text-align:right;font-size:13px}
+.pdesc{font-size:12.5px;color:var(--muted);margin-top:1px}
+.cmpbar{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow)}
+.cmpbar .vs{color:var(--muted);font-size:13px}
+.btabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin:18px 0 0;overflow-x:auto}
+.btabs button{background:none;border:0;border-bottom:2px solid transparent;padding:9px 14px;font:inherit;font-size:13.5px;color:var(--text-2);cursor:pointer;white-space:nowrap;display:inline-flex;gap:6px;align-items:center}
+.btabs button[aria-selected="true"]{color:var(--text);border-bottom-color:var(--accent);font-weight:600}
+.btabs .c{font-size:11px;background:var(--surface-2);border-radius:999px;padding:0 7px;color:var(--muted)}
+.bpane{display:none}.bpane.on{display:block}
+nav.tabs .grouphd{display:flex;align-items:center;gap:11px}
+nav.tabs .caret{margin-left:auto;transition:transform .15s;opacity:.7}
+nav.tabs .collapsed .caret{transform:rotate(-90deg)}
+@media (max-width:1000px){.cols{grid-template-columns:1fr}}
+.banner{display:flex;gap:10px;align-items:flex-start;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);color:var(--text);border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:18px}
+
+@media (max-width:900px){
+  .side{position:fixed;z-index:20;left:0;transform:translateX(-100%);transition:transform .2s}
+  .side.open{transform:none;box-shadow:0 0 40px rgba(0,0,0,.35)}
+  .btn.menu{display:inline-flex}
+  .topbar{padding:12px 16px}
+  .crumb{display:none}
+  .topactions .btn:not(#themeBtn){display:none}
+  main{padding:16px 16px 40px}
+  .cmp,.formgrid{grid-template-columns:1fr}
+  .item img{width:80px;height:45px}
+}
+@media (max-width:560px){
+  .tiles{grid-template-columns:1fr 1fr;gap:10px}
+  .tile{flex-direction:column;gap:8px;padding:12px}
+  .tile .n{font-size:22px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* ---- Fiama brand style overrides ---- */
+body{background:var(--bg) radial-gradient(900px 500px at 105% -10%,var(--bg-glow-2),transparent 60%) fixed,
+  radial-gradient(800px 600px at -10% 110%,var(--bg-glow-3),transparent 60%) fixed,
+  radial-gradient(700px 500px at 40% -20%,var(--bg-glow-1),transparent 60%) fixed;background-color:var(--bg)}
+h1,h2,h3{font-weight:800;letter-spacing:-.005em}
+.side{background:var(--side);backdrop-filter:blur(16px);border-right:1px solid var(--line);color:var(--side-ink)}
+.logo .mark{border-radius:50%;background:var(--grad);box-shadow:0 6px 16px rgba(138,63,194,.35)}
+.logo b{font-size:19px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav.tabs button{opacity:1;color:var(--side-ink);border-radius:12px}
+nav.tabs button svg.i{color:var(--side-muted)}
+nav.tabs button:hover{background:var(--side-2)}
+nav.tabs button[aria-selected="true"]{background:var(--side-active);color:var(--side-active-ink)}
+nav.tabs button[aria-selected="true"] svg.i{color:var(--side-active-ink)}
+nav.tabs button[aria-selected="true"]::before{display:none}
+nav.tabs button.bsub .av{background:var(--surface-2);color:var(--side-muted)}
+nav.tabs button.bsub .av.us{background:var(--grad);color:#fff}
+.sidefoot{border-top-color:var(--line)}
+#refreshMsg{background:var(--side-2);color:var(--side-ink)}
+.topbar{background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom-color:transparent}
+.topbar h1{font-size:24px}
+.btn{border-radius:999px;box-shadow:none}
+.btn.primary{background:var(--grad);border:0;color:#fff;box-shadow:0 6px 16px rgba(138,63,194,.28)}
+.btn.primary:hover{background:var(--grad);filter:brightness(1.06)}
+select,input,textarea{border-radius:12px;background:var(--surface)}
+.card,.box,.cmpbar{border-radius:var(--r);border-color:var(--line)}
+.box-h h2{font-size:16.5px}
+.box-tools{background:var(--surface-2)}
+.tablewrap{border-radius:var(--r)}
+.box .tablewrap{border-radius:0}
+th{background:var(--surface-2);color:var(--muted)}
+.tile{border-radius:var(--r);position:relative;overflow:hidden}
+.tile .ic{width:42px;height:42px;border-radius:14px}
+.tile .n{font-size:30px;font-weight:900}
+.tiles>.tile:nth-child(4n+1) .ic{background:var(--p-lav);color:var(--p-lav-ink)}
+.tiles>.tile:nth-child(4n+2) .ic{background:var(--p-pink);color:var(--p-pink-ink)}
+.tiles>.tile:nth-child(4n+3) .ic{background:var(--p-peach);color:var(--p-peach-ink)}
+.tiles>.tile:nth-child(4n+4) .ic{background:var(--p-mint);color:var(--p-mint-ink)}
+.av{border-radius:50%;background:var(--surface-2);color:var(--text-2)}
+.av.us,.tag.us,.tag.src-fiama{background:var(--grad);color:#fff}
+.tag{border-radius:999px}
+.tag.big{background:var(--p-pink);color:var(--p-pink-ink)}
+.chip{border-radius:999px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.camp.fiama{border:1.5px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,var(--grad) border-box}
+.camp .idea{border-left-color:var(--p-pink-ink);border-left-width:3px}
+.glance.us .bar div,.meter div{border-radius:99px}
+.glance .bar,.meter{border-radius:99px}
+.btabs{border-bottom:0;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px;width:max-content;max-width:100%}
+.btabs button{border:0;border-radius:999px;padding:7px 14px}
+.btabs button[aria-selected="true"]{background:var(--grad);color:#fff}
+.btabs button[aria-selected="true"] .c{background:rgba(255,255,255,.25);color:#fff}
+.banner{border-radius:16px;background:var(--p-peach);border-color:transparent}
+.empty{border-radius:16px}
+.heat td.cell{border-radius:10px}
+/* hero on Home and brand pages */
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:26px 28px;color:#fff;background:var(--grad);box-shadow:0 14px 34px rgba(138,63,194,.25);margin-bottom:18px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.14)}
+.hero::before{width:220px;height:220px;right:-50px;top:-80px}
+.hero::after{width:120px;height:120px;right:150px;bottom:-60px;background:rgba(255,255,255,.1)}
+.hero h2{margin:0 0 4px;font-size:26px;color:#fff;position:relative}
+.hero p{margin:0;opacity:.92;max-width:62ch;position:relative}
+.hero .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative}
+.hero .pill{background:rgba(255,255,255,.2);backdrop-filter:blur(4px);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:600}
+.bhead.us{background:var(--grad);color:#fff;border:0}
+.bhead.us .who,.bhead.us h2{color:#fff}
+.bhead.us .who{opacity:.85}
+.bhead.us .idea{color:#fff;border-left-color:rgba(255,255,255,.6)}
+.bhead.us .av{background:#fff;color:var(--accent)}
+.bhead.us .btn{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35);color:#fff}
+.bhead.us .btn.primary{background:#fff;color:var(--accent)}
+.bhead .top .av{width:56px;height:56px;font-size:18px}
+@media (max-width:900px){.side{background:var(--surface)} .switch .lbl{display:none}}
+.switch{gap:9px}
+.switch .track{width:34px;height:20px;border-radius:999px;background:var(--surface-3);position:relative;transition:background .2s;flex:none}
+.switch .knob{position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.switch[aria-checked="true"] .track{background:var(--grad)}
+.switch[aria-checked="true"] .knob{transform:translateX(14px)}
+
+/* background scene */
+:root{--glass:rgba(255,255,255,.7);--cloud:#fff;--cloud-o:.95}
+:root[data-theme="dark"]{--glass:rgba(32,24,40,.86);--cloud:#a77bd8;--cloud-o:.14}
+.card,.box,.cmpbar,.item{background-color:var(--glass);backdrop-filter:blur(8px)}
+.camp.fiama{background:linear-gradient(var(--glass),var(--glass)) padding-box,var(--grad) border-box}
+.box .item{background:transparent;backdrop-filter:none}
+.bhead.us{background:var(--grad)}
+.sky{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.app{position:relative;z-index:1}
+.clouds,.stars{position:absolute;inset:0;transition:opacity .6s}
+.stars{opacity:0}
+:root[data-theme="dark"] .clouds{opacity:1}
+:root[data-theme="dark"] .stars{opacity:1}
+.cloud{position:absolute;left:0;width:320px;height:95px;border-radius:999px;background:var(--cloud);filter:blur(5px) drop-shadow(0 10px 20px rgba(205,110,160,.38));opacity:var(--cloud-o);
+  transform:translateX(var(--x)) scale(var(--s));animation:drift linear infinite}
+.cloud::before,.cloud::after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cloud::before{width:150px;height:150px;left:50px;top:-70px}
+.cloud::after{width:115px;height:115px;left:165px;top:-48px}
+@keyframes drift{from{transform:translateX(-320px) scale(var(--s))}to{transform:translateX(110vw) scale(var(--s))}}
+.stars{animation:skydrift 240s linear infinite alternate}
+@keyframes skydrift{from{transform:translate(0,0)}to{transform:translate(-60px,-30px)}}
+.shoot{position:absolute;width:120px;height:1.5px;border-radius:2px;background:linear-gradient(90deg,rgba(255,240,180,0),rgba(255,240,180,.95));
+  box-shadow:0 0 6px rgba(255,236,150,.8);opacity:0;transform-origin:right center}
+.stars i{position:absolute;border-radius:50%;background:#fff3b8;box-shadow:0 0 6px 1px rgba(255,236,150,.75);animation:twinkle ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+@media (prefers-reduced-motion: reduce){.cloud,.stars,.stars i{animation:none}.shoot{display:none}}
+
+/* intro / welcome page */
+.intro{position:fixed;inset:0;z-index:60;overflow-y:auto;display:grid;place-items:center;padding:32px 16px;
+  background:transparent;transition:opacity .5s,transform .5s}
+body.intro-on .app{visibility:hidden}
+.intro.out{opacity:0;transform:scale(1.03);pointer-events:none}
+.intro-in{max-width:880px;width:100%;text-align:center;display:flex;flex-direction:column;align-items:center}
+.intro-logo{width:76px;height:76px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;box-shadow:0 14px 34px rgba(138,63,194,.35);animation:bob 3.5s ease-in-out infinite}
+.intro-logo svg.i{width:36px;height:36px;stroke-width:2.2}
+.intro h1{font-family:var(--display);font-size:clamp(38px,6vw,58px);font-weight:900;margin:16px 0 6px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em}
+.intro-tag{font-size:17px;color:var(--text-2);max-width:56ch;margin:0 0 26px}
+.intro-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;width:100%;text-align:left}
+.icard{background:var(--glass);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow);
+  opacity:0;transform:translateY(14px);animation:pop .6s cubic-bezier(.2,.8,.3,1.2) forwards;transition:transform .2s}
+.icard:hover{transform:translateY(-4px) rotate(-.5deg)}
+.icard:nth-child(1){animation-delay:.15s}.icard:nth-child(2){animation-delay:.3s}.icard:nth-child(3){animation-delay:.45s}.icard:nth-child(4){animation-delay:.6s}
+.icard b{font-family:var(--display);font-size:16px}
+.icard>span:last-child{font-size:13px;color:var(--text-2)}
+.icard .ic{width:40px;height:40px;border-radius:14px;display:grid;place-items:center}
+.ic.p1{background:var(--p-lav);color:var(--p-lav-ink)}.ic.p2{background:var(--p-pink);color:var(--p-pink-ink)}.ic.p3{background:var(--p-peach);color:var(--p-peach-ink)}.ic.p4{background:var(--p-mint);color:var(--p-mint-ink)}
+.intro-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%;margin:22px 0 28px;opacity:0;animation:pop .6s .8s forwards}
+.intro-steps div{display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 6px}
+.intro-steps i{font-style:normal;width:32px;height:32px;border-radius:50%;background:var(--grad);color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:4px}
+.intro-steps b{font-family:var(--display);font-size:15px}
+.intro-steps span{font-size:13px;color:var(--text-2);max-width:30ch}
+.intro-go{font-size:17px;padding:14px 34px;opacity:0;animation:pop .6s 1s forwards,glow 2.4s 1.6s ease-in-out infinite}
+.intro-skip{margin-top:14px;font-size:12.5px;color:var(--muted);display:flex;gap:6px;align-items:center;cursor:pointer}
+@keyframes pop{to{opacity:1;transform:none}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes glow{0%,100%{box-shadow:0 6px 16px rgba(138,63,194,.28)}50%{box-shadow:0 8px 30px rgba(210,79,158,.55)}}
+@media (max-width:820px){.intro-cards{grid-template-columns:1fr 1fr}.intro-steps{grid-template-columns:1fr}}
+@media (max-width:480px){.intro-cards{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){.intro-logo,.icard,.intro-steps,.intro-go{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2M9 13l2 2M14.5 4.5C17 2 21 3 21 3s1 4-1.5 6.5L13 16l-5-5z"/><circle cx="15.5" cy="8.5" r="1.5"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h3l6 4V5L7 9H4a1 1 0 0 0-1 1zM17 8a5 5 0 0 1 0 8"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-rupee" viewBox="0 0 24 24"><path d="M6 4h12M6 9h12M14 4c3 0 3 10-3 10H6l9 7"/></symbol>
+  <symbol id="i-compare" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16M15 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14.9-3M4 4v4h4M4 13a8 8 0 0 0 14.9 3M20 20v-4h-4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 4 14h7l-1 7 9-11h-7z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+</svg>
+
+<div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+  <div class="intro-in">
+    <div class="intro-logo"><svg class="i"><use href="#i-trend"/></svg></div>
+    <h1 id="introTitle">Yuki Insights</h1>
+    <p class="intro-tag">Your little helper for knowing what every soap and body wash brand is up to, so Fiama can stay one step ahead.</p>
+    <div class="intro-cards">
+      <div class="icard"><span class="ic p1"><svg class="i"><use href="#i-rocket"/></svg></span><b>Spot every launch</b><span>New bars, gels and scrubs from 10 competitors, the moment they are announced or appear on brand stores.</span></div>
+      <div class="icard"><span class="ic p2"><svg class="i"><use href="#i-star"/></svg></span><b>Follow campaigns and creators</b><span>Who signed which celebrity, which creators are posting, and the idea behind each campaign.</span></div>
+      <div class="icard"><span class="ic p3"><svg class="i"><use href="#i-rupee"/></svg></span><b>Watch products and prices</b><span>Every brand's range and price ladder side by side, with price changes flagged.</span></div>
+      <div class="icard"><span class="ic p4"><svg class="i"><use href="#i-flag"/></svg></span><b>Find Fiama's next move</b><span>Compare Fiama with any brand, see the gaps, and jot down ideas as you read.</span></div>
+    </div>
+    <div class="intro-steps">
+      <div><i>1</i><b>We gather</b><span>News, brand sites, trade press, YouTube and brand stores, every morning.</span></div>
+      <div><i>2</i><b>You explore</b><span>One page per brand, every item with its source link and date.</span></div>
+      <div><i>3</i><b>Fiama wins</b><span>Turn what competitors do into ideas for your next campaign.</span></div>
+    </div>
+    <button class="btn primary intro-go" id="introGo" type="button">Enter Yuki Insights <span aria-hidden="true">→</span></button>
+    <label class="intro-skip"><input type="checkbox" id="introSkip"> Don't show this next time</label>
+  </div>
+</div>
+<div class="app">
+<aside class="side" id="side">
+  <div class="logo">
+    <div class="mark"><svg class="i" style="width:20px;height:20px;stroke-width:2.2"><use href="#i-trend"/></svg></div>
+    <div><b>Yuki Insights</b><span>Competitor intelligence · Fiama</span></div>
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <div class="navlabel">Insights</div>
+    <button data-tab="overview" aria-selected="true"><svg class="i"><use href="#i-home"/></svg>Home</button>
+    <div class="subnav" id="brandNav" aria-label="Brands"></div>
+    <button data-tab="launches" aria-selected="false"><svg class="i"><use href="#i-rocket"/></svg>Launches</button>
+    <button data-tab="feed" aria-selected="false"><svg class="i"><use href="#i-mega"/></svg>Marketing &amp; PR</button>
+    <button data-tab="campaigns" aria-selected="false"><svg class="i"><use href="#i-star"/></svg>Campaigns &amp; creators</button>
+    <div class="navlabel">Market</div>
+    <button data-tab="products" aria-selected="false"><svg class="i"><use href="#i-box"/></svg>Products</button>
+    <button data-tab="prices" aria-selected="false"><svg class="i"><use href="#i-rupee"/></svg>Prices</button>
+    <button data-tab="compare" aria-selected="false"><svg class="i"><use href="#i-compare"/></svg>Compare brands</button>
+    <div class="navlabel">Fiama</div>
+    <button data-tab="fiama" aria-selected="false"><svg class="i"><use href="#i-bolt"/></svg>Fiama activity<span class="count" id="fiamaCount"></span></button>
+    <button data-tab="gaps" aria-selected="false"><svg class="i"><use href="#i-flag"/></svg>Opportunities</button>
+    <button data-tab="about" aria-selected="false"><svg class="i"><use href="#i-help"/></svg>Sources &amp; help</button>
+  </nav>
+  <div class="sidefoot">
+    <button class="btn primary" id="refreshBtn" type="button"><svg class="i"><use href="#i-refresh"/></svg>Refresh everything</button>
+    <div class="upd"><span class="dot"></span><span id="updated">Loading…</span></div>
+    <div id="refreshMsg" role="status"></div>
+  </div>
+</aside>
+
+<div class="mainwrap">
+<div class="topbar">
+  <button class="btn menu" id="menuBtn" type="button" aria-label="Open menu"><svg class="i"><use href="#i-menu"/></svg></button>
+  <div><div class="crumb" id="crumb">Fiama · Personal wash · India</div><h1 id="pageTitle">Home</h1><div class="pdesc" id="pageDesc"></div></div>
+  <div class="topactions">
+    <button class="btn" id="logBtn" type="button"><svg class="i"><use href="#i-plus"/></svg>Log a post</button>
+    <a class="btn" id="excelBtn" href="data/competitor_radar.xlsx" download><svg class="i"><use href="#i-down"/></svg>Export Excel</a>
+    <button class="btn switch" id="themeBtn" type="button" role="switch" aria-checked="false"><svg class="i"><use href="#i-moon"/></svg><span class="lbl">Dark mode</span><span class="track"><span class="knob"></span></span></button>
+  </div>
+</div>
+<main>
+<div class="banner" id="previewBanner" hidden><svg class="i"><use href="#i-help"/></svg><div id="bannerText"></div></div>
+
+<section class="panel on" id="p-overview">
+  <div class="hero" id="hero"></div>
+  <div class="tiles" id="tiles"></div>
+  <div class="cols">
+  <div class="box">
+    <div class="box-h"><div><h2>Big moves this week</h2><p class="sub">Launches, campaigns, signings and partnerships in the last 7 days.</p></div></div>
+    <div class="box-b "><div class="feed" id="bigMoves"></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Brands at a glance</h2><p class="sub">Activity in the last 30 days. Click a brand to open its page.</p></div></div>
+    <div class="box-b "><div id="brandGlance"></div></div>
+  </div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Who is talked about most</h2><p class="sub">News, press releases and videos per brand, per week, last 12 weeks. Fiama is in orange.</p></div></div>
+    <div class="box-b pad"><div class="chartbox" id="sovBox"><div class="tip" id="sovTip"></div></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>What each brand is focusing on</h2><p class="sub">Items in the last 90 days with each label. Darker means more.</p></div></div>
+    <div class="box-b "><div class="tablewrap"><table class="heat" id="heat"></table></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-launches">
+  <div class="tiles" id="launchTiles"></div>
+  <div class="box">
+    <div class="box-h"><div><h2>New launches</h2><p class="sub">Last 12 months, from official sites, the press, brand stores and your team.</p></div></div>
+    <div class="box-tools"><div class="chips" id="launchChips"></div></div>
+    <div class="box-b "><div class="feed" id="launchList"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-feed">
+  <div class="box">
+    <div class="box-h"><div><h2>All news and PR</h2></div><span class="count-pill" id="feedCount"></span></div>
+    <div class="box-tools"><div class="chips" id="brandChips"></div>
+    <div class="filters">
+      <select id="fTag" aria-label="Label"><option value="">All labels</option></select>
+      <select id="fKind" aria-label="Type"><option value="">All types</option><option value="news">News</option><option value="youtube">YouTube</option><option value="manual">Logged posts</option><option value="product">Product changes</option><option value="internal">Fiama activity</option></select>
+      <select id="fSrc" aria-label="Source"><option value="">All sources</option><option>Official</option><option>Trade press</option><option>News</option><option>Logged by team</option><option>Fiama team</option></select>
+      <select id="fDays" aria-label="Period"><option value="7">Last 7 days</option><option value="30" selected>Last 30 days</option><option value="90">Last 90 days</option><option value="9999">Everything</option></select>
+      <input id="fText" type="search" placeholder="Search headlines…" aria-label="Search headlines">
+    </div></div>
+    <div class="box-b "><div class="feed" id="feed"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-campaigns">
+  <div class="box">
+    <div class="box-h"><div><h2>Campaigns</h2><p class="sub">Each card links to the brand's official website and to where the campaign was reported.</p></div></div>
+    <div class="box-tools"><div class="chips" id="campChips"></div></div>
+    <div class="box-b pad soft"><div class="grid" id="campCards"></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Creator posts</h2><p class="sub">Sponsored creator posts from your research, plus any you log with Log a post.</p></div></div>
+    <div class="box-b "><div class="tablewrap" id="inflTable"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-products">
+  <div class="box">
+    <div class="box-h"><div><h2>Range at a glance</h2><p class="sub"><span id="prodSource"></span></p></div></div>
+    <div class="box-b "><div class="tablewrap" id="prodSummary"></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Recent product changes</h2><p class="sub">New products, price changes and out-of-stock items on brand stores, last 30 days.</p></div></div>
+    <div class="box-b "><div class="feed" id="prodChanges"></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Every product</h2></div><span class="count-pill" id="prodCount"></span></div>
+    <div class="box-tools"><div class="filters">
+      <select id="pBrand" aria-label="Brand"><option value="">All brands</option></select>
+      <select id="pCat" aria-label="Category"><option value="">All categories</option></select>
+      <input id="pText" type="search" placeholder="Search products…" aria-label="Search products">
+    </div></div>
+    <div class="box-b "><div class="tablewrap" id="prodTable"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-prices">
+  <div class="box">
+    <div class="box-h"><div><h2>Price ladder</h2><p class="sub">Lowest and typical price per brand and category, from the first price listed for each product.</p></div></div>
+    <div class="box-tools"><div class="filters"><select id="ladderCat" aria-label="Category"></select></div></div>
+    <div class="box-b "><div class="tablewrap" id="ladder"></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Price moves</h2><p class="sub">Price rises and drops spotted on brand stores, last 90 days.</p></div></div>
+    <div class="box-b "><div class="feed" id="priceMoves"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-compare">
+  <div class="filters cmpbar"><select id="cmpA" aria-label="First brand"></select><span class="vs">vs</span><select id="cmpB" aria-label="Second brand"></select></div>
+  <div class="cmp" id="cmpOut"></div>
+</section>
+
+<section class="panel" id="p-brand"><div id="brandPage"></div></section>
+
+<section class="panel" id="p-fiama">
+  <div class="card form" id="fiamaForm">
+    <h3 style="margin-bottom:12px">Add Fiama activity</h3>
+    <div class="formgrid">
+      <label>Type<select id="faType"><option>Campaign</option><option>Launch</option><option>PR / news</option><option>Influencer activity</option><option>Event</option></select></label>
+      <label>Date<input id="faDate" type="date"></label>
+      <label class="wide">Name*<input id="faName" placeholder="e.g. Happy Naturals summer campaign"></label>
+      <label>Product / category<input id="faProduct" placeholder="e.g. Shower gel, Gel bar"></label>
+      <label>Channels<input id="faChannels" placeholder="e.g. TV, YouTube, Instagram reels"></label>
+      <label class="wide">Talent / creators<input id="faTalent" placeholder="e.g. Rashmika Mandanna, 40 micro creators"></label>
+      <label class="wide">Core idea<textarea id="faIdea" rows="2" placeholder="The one-line message"></textarea></label>
+      <label class="wide">Results (if known)<input id="faResults" placeholder="e.g. 12M views, 4.1% engagement"></label>
+      <label class="wide">Link<input id="faLink" placeholder="https://…"></label>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center;justify-content:flex-end;margin-top:14px">
+      <span class="sub" id="faMsg" style="margin:0" role="status"></span>
+      <button class="btn primary" type="button" id="faSave"><svg class="i"><use href="#i-plus"/></svg>Add to Yuki Insights</button>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Added by your team</h2></div></div>
+    <div class="box-b "><div class="feed" id="fiamaList"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-gaps">
+  <div class="box">
+    <div class="box-h"><div><h2>Where Fiama can win</h2><p class="sub">1 = absent, 5 = best in class. A gap of 3 or more is a priority. Scores are analyst judgement.</p></div></div>
+    <div class="box-b "><div class="tablewrap" id="gapTable"></div></div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Your Fiama ideas</h2><p class="sub">Every idea you wrote under a news item. Saved on this computer.</p></div></div>
+    <div class="box-b "><div class="feed" id="notesList"></div></div>
+  </div>
+</section>
+
+<section class="panel" id="p-about">
+  <div class="card">
+    <h3 style="margin-bottom:8px">Where the information comes from</h3>
+    <p>Each brand is searched three ways: general news, Indian marketing press (afaqs!, exchange4media, ET BrandEquity, Campaign India, BestMediaInfo and others) and the brand's or parent company's own website (HUL, ITC, Wipro, Colgate-Palmolive, Nivea, Honasa). YouTube channels and brand online stores are checked too. Every item links to its original source with its date, and is labelled <span class="tag src-official">Official</span>, <span class="tag src-trade">Trade press</span>, <span class="tag">News</span>, <span class="tag">Logged by team</span> or <span class="tag src-fiama">Fiama team</span>.</p>
+    <p style="margin-bottom:0">Labels such as Launch or Campaign are picked from keywords, so open the source before quoting a claim in a report. Instagram is never scraped. Use <b>Log a post</b> for reels and creators you spot.</p>
+  </div>
+  <p style="margin:12px 0 0"><button class="btn" type="button" id="introAgain">Show the welcome page again</button></p>
+  <div id="ghConnect" hidden>
+  <h2 style="margin-top:24px">Connect to your GitHub</h2>
+  <div class="card form">
+    <p id="ghState" style="margin-top:0">Connect once so this app downloads the daily updates from your GitHub project, and so Refresh and Log a post work from here. Fiama activity stays on this laptop.</p>
+    <ol style="padding-left:18px;margin:8px 0">
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub key settings</a> and name the key “Yuki Insights”.</li>
+      <li>Repository access: <b>Only select repositories</b>, then pick your project.</li>
+      <li>Permissions: <b>Actions</b>, <b>Contents</b> and <b>Issues</b>, each set to <b>Read and write</b>. Click Generate and copy the key.</li>
+    </ol>
+    <div class="filters" style="margin-top:10px">
+      <input id="ghRepo" placeholder="yourname/yuki-insights" aria-label="GitHub project">
+      <input id="ghKey" type="password" placeholder="github_pat_…" aria-label="GitHub key">
+      <button class="btn primary" type="button" id="ghSave">Connect</button>
+    </div>
+    <div class="sub" id="ghMsg" role="status"></div>
+  </div>
+  </div>
+  <div class="box">
+    <div class="box-h"><div><h2>Last update</h2></div></div>
+    <div class="box-b pad"><div class="status" id="runLog"></div></div>
+  </div>
+</section>
+</main>
+</div></div>
+
+<dialog id="logDlg" class="form">
+  <h3>Log a competitor post</h3>
+  <p class="sub" style="margin-top:4px">Spotted a reel, creator post, ad or shelf display? Record it and it appears in Marketing &amp; PR.</p>
+  <div class="formgrid">
+    <label>Brand<select id="lBrand"></select></label>
+    <label>Platform<select id="lPlatform"><option>Instagram</option><option>YouTube</option><option>Facebook</option><option>X / Twitter</option><option>LinkedIn</option><option>Print / TV</option><option>Store / Shelf</option><option>Other</option></select></label>
+    <label class="wide">What happened (one line)*<input id="lWhat" placeholder="e.g. Dove creator reel: serum bar vs regular soap test"></label>
+    <label class="wide">Link to the post<input id="lLink" placeholder="https://www.instagram.com/reel/…"></label>
+    <label>Date posted<input id="lDate" type="date"></label>
+    <label>Creator handle<input id="lCreator" placeholder="@creatorname"></label>
+    <label class="wide">Likes / comments / views<input id="lMetrics" placeholder="12k likes, 300 comments, 450k views"></label>
+    <label class="wide">Notes / why it matters<textarea id="lNotes" rows="3" placeholder="What is clever about it? What could Fiama do?"></textarea></label>
+  </div>
+  <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:14px">
+    <button class="btn" type="button" id="logCancel">Cancel</button>
+    <button class="btn primary" type="button" id="logSave">Save post</button>
+  </div>
+</dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "";
+const icon = (n, cls = "i") => `<svg class="${cls}"><use href="#i-${n}"/></svg>`;
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+const fmtDate = iso => { const d = new Date(iso); return isNaN(d) ? "" : d.toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"}); };
+const daysAgo = n => new Date(Date.now() - n*864e5).toISOString();
+const msg = t => $("#refreshMsg").textContent = t;
+const initials = b => b === "Love Beauty and Planet" ? "LBP" : b === "Chemist at Play" ? "CaP" : b.split(/\s+/).map(w => w[0]).join("").slice(0, 2).toUpperCase();
+const av = b => `<span class="av ${b === "Fiama" ? "us" : ""}" aria-hidden="true">${esc(initials(b || "?"))}</span>`;
+const bname = b => `<span class="bname">${av(b)}${esc(b)}${b === "Fiama" ? ' <span class="tag us">Us</span>' : ""}</span>`;
+const host = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
+
+// theme
+(function(){
+  const t = store.get("theme", null);
+  const apply = th => { document.documentElement.dataset.theme = th; $("#themeBtn").setAttribute("aria-checked", th === "dark"); };
+  apply(t === "dark" ? "dark" : "light");
+  $("#themeBtn").onclick = () => { const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark"; apply(next); store.set("theme", next); };
+})();
+
+// navigation
+document.querySelector("nav.tabs").onclick = e => { const b = e.target.closest("button[data-tab]"); if (!b) return; showTab(b.dataset.tab); $("#side").classList.remove("open"); };
+$("#menuBtn").onclick = () => $("#side").classList.toggle("open");
+function showTab(id){
+  const sel = b => [...document.querySelectorAll("nav.tabs button[data-tab]")].find(x => x.dataset.tab === b);
+  if (!sel(id)) id = "overview";
+  const btn = sel(id);
+  $("#pageTitle").textContent = btn.childNodes[1].textContent.trim();
+  const DESC = {overview: "This week across Fiama and 10 competitors", launches: "New products and launch news from every brand", feed: "Every news story, press release, video and logged post",
+    campaigns: "Campaigns and creator posts, with official links", products: "Every brand's range, with sources", prices: "Who charges what, per category",
+    compare: "Two brands side by side", fiama: "Fiama's own campaigns and launches, so the comparison is fair", gaps: "Where Fiama can win, and your ideas", about: "Where the information comes from"};
+  $("#pageDesc").textContent = id.startsWith("brand:") ? (D.brandInfo[id.slice(6)]?.role === "self" ? "Our brand" : "Competitor profile") : (DESC[id] || "");
+  $("#crumb").textContent = id.startsWith("brand:") ? "Home · Brands" : "Fiama · Personal wash · India";
+  document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b === btn));
+  const isBrand = id.startsWith("brand:");
+  if (isBrand) renderBrandPage(id.slice(6));
+  document.querySelectorAll("section.panel").forEach(p => p.classList.toggle("on", p.id === (isBrand ? "p-brand" : "p-" + id)));
+  store.set("tab", id); scrollTo(0, 0);
+  if (id === "gaps") renderNotes();
+}
+
+// ---------- app mode: desktop app (local server) or preview ----------
+let LOCAL = false, GITHUB = null;
+async function api(path, body){
+  const r = await fetch(path, body === undefined ? {cache: "no-store"} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+  return r.json();
+}
+async function watchLocal(){
+  $("#refreshBtn").disabled = true;
+  for (;;) {
+    await new Promise(r => setTimeout(r, 3000));
+    const st = await api("api/status").catch(() => null);
+    if (st && !st.running) {
+      if (st.ok) { msg("Done. Loading the new data…"); setTimeout(() => location.reload(), 800); }
+      else { msg(st.github && st.log ? "Refresh problem: " + st.log : "The refresh hit a problem. Check your internet connection and try again."); $("#refreshBtn").disabled = false; }
+      return;
+    }
+  }
+}
+$("#refreshBtn").onclick = () => {
+  if (!LOCAL) { msg(D.stats.sample ? "Refresh works in the installed app. This preview uses saved data." : "This online view updates itself every morning at 8 AM."); return; }
+  api("api/refresh", {}).then(() => { msg(GITHUB ? "Asking GitHub to update… usually 3 to 5 minutes." : "Fetching the latest news, launches and prices… usually 1 to 3 minutes."); watchLocal(); });
+};
+$("#logBtn").onclick = () => {
+  $("#lBrand").innerHTML = [...D.brands, "Other"].map(b => `<option>${esc(b)}</option>`).join("");
+  $("#logDlg").showModal();
+};
+$("#logCancel").onclick = () => $("#logDlg").close();
+$("#logSave").onclick = async () => {
+  const f = Object.fromEntries(["brand","platform","what","link","date","creator","metrics","notes"].map(k => [k, $("#l" + k[0].toUpperCase() + k.slice(1)).value.trim()]));
+  if (!f.what) { $("#lWhat").focus(); return; }
+  if (!LOCAL) { $("#logDlg").close(); msg("Logging posts works in the installed app."); return; }
+  const res = await api("api/log", f).catch(() => ({saved: false}));
+  if (!res.saved) { msg(res.error || "Couldn't save the post."); return; }
+  $("#logDlg").close(); document.querySelectorAll("#logDlg input, #logDlg textarea").forEach(x => x.value = "");
+  msg("Saved. Updating the app…"); watchLocal();
+};
+$("#ghSave").onclick = async () => {
+  $("#ghMsg").textContent = "Checking…";
+  const r = await api("api/github", {repo: $("#ghRepo").value, token: $("#ghKey").value}).catch(() => ({ok: false, error: "The app isn't responding."}));
+  $("#ghKey").value = "";
+  $("#ghMsg").textContent = r.ok ? "Connected. Loading your data…" : r.error;
+  if (r.ok) setTimeout(() => location.reload(), 800);
+};
+
+// ---------- Fiama activity (the team's own campaigns and launches) ----------
+let FIAMA = [];
+async function saveFiama(list){
+  if (LOCAL) {
+    const r = await api("api/fiama", {items: list}).catch(() => ({ok: false, error: "The app isn't responding."}));
+    if (!r.ok) throw new Error(r.error || "Couldn't save.");
+    if (r.warning) msg(r.warning);
+  } else store.set("fiamaActivity", list);
+  FIAMA = list; mergeFiama(); render();
+}
+function mergeFiama(){
+  D.items = D.items.filter(i => i.kind !== "internal");
+  FIAMA.forEach(a => D.items.push({
+    id: "fa-" + a.id, brand: "Fiama", kind: "internal", title: a.name, url: a.link || "", publisher: a.type,
+    published: (a.date ? new Date(a.date + "T12:00:00") : new Date(a.added)).toISOString(),
+    summary: [a.product, a.channels, a.talent && "Talent: " + a.talent, a.results && "Results: " + a.results].filter(Boolean).join(" · "),
+    tags: a.type === "Launch" ? ["Launch"] : a.type === "Campaign" ? ["Campaign"] : a.type === "Influencer activity" ? ["Influencer"] : [],
+    source_type: "Fiama team", fa: a }));
+  D.items.sort((a, b) => b.published.localeCompare(a.published));
+  $("#fiamaCount").textContent = FIAMA.length || "";
+}
+$("#faSave").onclick = async () => {
+  const v = id => $("#" + id).value.trim();
+  if (!v("faName")) { $("#faName").focus(); $("#faMsg").textContent = "Add a name first."; return; }
+  const a = {id: Date.now().toString(36), added: new Date().toISOString(), type: v("faType"), date: v("faDate"), name: v("faName"), product: v("faProduct"),
+    channels: v("faChannels"), talent: v("faTalent"), idea: v("faIdea"), results: v("faResults"), link: safeUrl(v("faLink"))};
+  $("#faMsg").textContent = "Saving…";
+  try {
+    await saveFiama([a, ...FIAMA]);
+    document.querySelectorAll("#fiamaForm input, #fiamaForm textarea").forEach(x => x.value = "");
+    $("#faMsg").textContent = "Added. It now shows in Launches, Campaigns and Compare.";
+  } catch (e) { $("#faMsg").textContent = e.message; }
+};
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-del]"); if (!b) return;
+  if (b.dataset.armed !== "1") { b.dataset.armed = "1"; b.lastChild.textContent = "Click again to remove"; return; }
+  try { await saveFiama(FIAMA.filter(a => a.id !== b.dataset.del)); } catch (err) { msg(err.message); }
+});
+
+// ---------- load data ----------
+let D = {};
+Promise.all(["stats","items","seed","products","fiama_activity"].map(n =>
+  fetch(`data/${n}.json`, {cache:"no-store"}).then(r => r.ok ? r.json() : null).catch(() => null)
+)).then(async ([stats, items, seed, products, fiama]) => {
+  const st = await api("api/status").catch(() => null);
+  LOCAL = !!(st && st.local); GITHUB = st && st.github;
+  D.products = products;
+  D.stats = stats || {brands:[], weeks:[], share_of_voice:{}, tags_90d:{}, tag_names:[], big_move_tags:["Launch","Campaign","Celebrity","Partnership"], run_log:[]};
+  D.items = items || [];
+  D.seed = seed || {sheets:{}};
+  if (!D.stats.brands.length) D.stats.brands = D.seed.brands || [...new Set(rowsOf("Product Range").map(r => r.Brand).filter(Boolean))].map(n => ({name: n, role: n === "Fiama" ? "self" : "competitor"}));
+  D.brands = D.stats.brands.map(b => b.name);
+  const seedInfo = Object.fromEntries((D.seed.brands || []).map(b => [b.name, b]));
+  D.brandInfo = Object.fromEntries(D.stats.brands.map(b => [b.name, {...seedInfo[b.name], ...b}]));
+  FIAMA = LOCAL ? (fiama || []) : store.get("fiamaActivity", fiama || []);
+  mergeFiama();
+  const sample = !!D.stats.sample;
+  $("#previewBanner").hidden = LOCAL && !sample;
+  $("#bannerText").innerHTML = sample
+    ? "<b>Preview with sample headlines.</b> News, launches and videos are made-up examples to show how the app works. Products, prices, campaigns, creators and Fiama scores are your real research. In this preview, Fiama activity you add is kept in this browser only."
+    : "<b>Online view.</b> Updates itself every morning at 8 AM. Fiama activity you add here stays in this browser only and is never put online.";
+  $("#excelBtn").hidden = !LOCAL;
+  if (!LOCAL) fetch("data/competitor_radar.xlsx", {method: "HEAD"}).then(r => { if (r.ok) $("#excelBtn").hidden = false; }).catch(() => {});
+  if (LOCAL) {
+    $("#ghConnect").hidden = false;
+    if (GITHUB) { $("#ghState").textContent = `Connected to ${GITHUB}. The latest daily update downloads each time you open the app.`; $("#ghRepo").value = GITHUB; }
+    if (st.running) { msg("Refreshing… fetching the latest news, launches and prices."); watchLocal(); }
+  }
+  render();
+  showTab(store.get("tab", "overview"));
+});
+
+function rowsOf(sheet){ return ((D.seed.sheets || {})[sheet] || {rows:[]}).rows; }
+function isBig(i){ return i.tags.some(t => D.stats.big_move_tags.includes(t)); }
+
+function render(){
+  $("#updated").textContent = D.stats.updated ? "Updated " + new Date(D.stats.updated).toLocaleString("en-IN", {day:"numeric", month:"short", hour:"numeric", minute:"2-digit"}) : "Not updated yet";
+  const cur = store.get("tab", "overview");
+  $("#brandNav").innerHTML = D.brands.map(b => `<button class="bsub" data-tab="brand:${esc(b)}" aria-selected="${cur === "brand:" + b}">${av(b)}<span>${esc(b)}</span></button>`).join("");
+  if (cur.startsWith("brand:")) renderBrandPage(cur.slice(6));
+  renderHero(); renderTiles(); renderBig(); renderGlance(); renderSov(); renderHeat(); setupFeed(); renderLaunches(); renderCampaigns(); renderProducts(); renderPrices(); setupCompare(); renderFiama(); renderGaps(); renderRunLog();
+}
+
+// ---------- items ----------
+const KIND = {news:"News", youtube:"YouTube", manual:"Logged post", product:"Product", internal:"Fiama activity"};
+const srcClass = s => ({"Official":"src-official","Trade press":"src-trade","Fiama team":"src-fiama"})[s] || "";
+function itemHtml(i, withNote){
+  const img = i.thumb ? `<img src="${esc(i.thumb)}" alt="" loading="lazy" onerror="this.remove()">` : "";
+  const tags = i.tags.map(t => `<span class="tag ${D.stats.big_move_tags.includes(t) ? "big" : ""}">${esc(t)}</span>`).join("");
+  const views = i.views ? `<span>· ${i.views.toLocaleString("en-IN")} views</span>` : "";
+  const url = safeUrl(i.url);
+  const saved = store.get("note:" + i.id, "");
+  const note = withNote && i.kind !== "internal" ? `<details class="note" ${saved ? "open" : ""}><summary>${icon("bulb")}${saved ? "Fiama idea" : "Add a Fiama idea"}</summary><textarea data-id="${esc(i.id)}" aria-label="Fiama idea" placeholder="What could Fiama do about this?">${esc(saved)}</textarea></details>` : "";
+  const del = i.kind === "internal" && i.fa ? `<button class="btn ghost sm" data-del="${esc(i.fa.id)}" type="button">${icon("trash")}<span>Remove</span></button>` : "";
+  return `<article class="item">${av(i.brand)}<div class="body">
+    <div class="meta"><b>${esc(i.brand)}</b><span>· ${KIND[i.kind] || esc(i.kind)}</span>${i.source_type ? `<span class="tag ${srcClass(i.source_type)}">${esc(i.source_type)}</span>` : ""}<span>${esc(i.publisher)}</span><span>· ${fmtDate(i.published)}</span>${views}</div>
+    ${url ? `<a class="t" href="${esc(url)}" target="_blank" rel="noopener">${esc(i.title)}</a>` : `<span class="t">${esc(i.title)}</span>`}
+    ${i.summary && i.kind !== "news" ? `<div class="desc">${esc(i.summary.slice(0, 220))}</div>` : ""}
+    <div class="foot">${tags}${del}</div>${note}</div>${img}</article>`;
+}
+document.addEventListener("input", e => {
+  if (e.target.matches(".note textarea")) {
+    store.set("note:" + e.target.dataset.id, e.target.value);
+    const ids = new Set(store.get("noteIds", []));
+    e.target.value.trim() ? ids.add(e.target.dataset.id) : ids.delete(e.target.dataset.id);
+    store.set("noteIds", [...ids]);
+  }
+});
+
+// ---------- home ----------
+const tile = (ic, n, l, d = "") => `<div class="card tile"><div class="ic">${icon(ic)}</div><div><div class="n">${esc(n)}</div><div class="l">${esc(l)}</div>${d ? `<div class="d">${esc(d)}</div>` : ""}</div></div>`;
+function renderTiles(){
+  const ext = D.items.filter(i => i.brand !== "Category" && i.kind !== "internal");
+  const wk = ext.filter(i => i.published >= daysAgo(7)), prev = ext.filter(i => i.published >= daysAgo(14) && i.published < daysAgo(7));
+  const counts = {}; wk.forEach(i => counts[i.brand] = (counts[i.brand] || 0) + 1);
+  const top = Object.entries(counts).filter(([b]) => b !== "Fiama").sort((a, b) => b[1] - a[1])[0];
+  const diff = wk.length - prev.length;
+  $("#tiles").innerHTML = [
+    tile("mega", wk.length, "news, PR and videos this week", `${diff >= 0 ? "+" : ""}${diff} vs last week`),
+    tile("bolt", wk.filter(isBig).length, "big moves this week", "launches, campaigns, signings"),
+    tile("trend", top ? top[0] : "–", "most active competitor", top ? `${top[1]} items this week` : ""),
+    tile("star", counts["Fiama"] || 0, "Fiama mentions this week", `${FIAMA.length} activities added by your team`),
+  ].join("");
+}
+function renderBig(){
+  const big = D.items.filter(i => i.published >= daysAgo(7) && isBig(i) && i.brand !== "Category" && i.kind !== "internal").slice(0, 8);
+  $("#bigMoves").innerHTML = big.length ? big.map(i => itemHtml(i, true)).join("") : `<div class="empty">No big moves found in the last 7 days.</div>`;
+}
+function renderSov(){
+  const box = $("#sovBox"), tip = $("#sovTip");
+  const weeks = D.stats.weeks || [], sov = D.stats.share_of_voice || {};
+  box.querySelectorAll(".tablewrap,.empty").forEach(n => n.remove());
+  if (!weeks.length) { box.insertAdjacentHTML("beforeend", `<div class="empty">Appears after the first refresh.</div>`); return; }
+  let max = 1; D.brands.forEach(b => weeks.forEach(w => max = Math.max(max, (sov[w] || {})[b] || 0)));
+  const rows = D.brands.map(b => ({b, vals: weeks.map(w => (sov[w] || {})[b] || 0)}))
+    .map(r => ({...r, total: r.vals.reduce((a, v) => a + v, 0), last: r.vals[r.vals.length - 1]})).sort((a, b) => b.total - a.total);
+  const BW = 14, GAP = 3, H = 30, W = weeks.length * (BW + GAP);
+  const spark = r => `<svg width="${W}" height="${H}" aria-hidden="true">` + r.vals.map((v, i) => {
+    const h = v ? Math.max(3, v / max * (H - 2)) : 0, x = i * (BW + GAP);
+    return `<rect class="hit" data-b="${esc(r.b)}" data-wi="${i}" x="${x}" y="0" width="${BW}" height="${H}" fill="transparent"/>` +
+      (h ? `<path d="M${x},${H} V${H-h+3} q0,-3 3,-3 H${x+BW-3} q3,0 3,3 V${H} Z" fill="${r.b === "Fiama" ? "var(--s2)" : "var(--s1)"}" pointer-events="none"/>` : "");
+  }).join("") + `<line x1="0" x2="${W}" y1="${H-0.5}" y2="${H-0.5}" stroke="var(--line)"/></svg>`;
+  box.insertAdjacentHTML("beforeend", `<div class="tablewrap"><table>
+    <thead><tr><th>Brand</th><th>Weekly items since ${new Date(weeks[0]).toLocaleDateString("en-IN",{day:"numeric",month:"short"})}</th><th class="num">This week</th><th class="num">12 weeks</th></tr></thead>
+    <tbody>${rows.map(r => `<tr><td>${bname(r.b)}</td><td>${spark(r)}</td><td class="num">${r.last}</td><td class="num">${r.total}</td></tr>`).join("")}</tbody></table></div>`);
+  box.querySelectorAll(".hit").forEach(el => {
+    el.addEventListener("mousemove", e => {
+      const w = weeks[+el.dataset.wi], b = el.dataset.b;
+      tip.innerHTML = `<b>${esc(b)}</b><div>Week of ${new Date(w).toLocaleDateString("en-IN",{day:"numeric",month:"short"})}: <b>${(sov[w] || {})[b] || 0}</b> items</div>`;
+      const bx = box.getBoundingClientRect();
+      let lx = e.clientX - bx.left + 14; if (lx + 190 > bx.width) lx = e.clientX - bx.left - 200;
+      tip.style.left = lx + "px"; tip.style.top = Math.max(0, e.clientY - bx.top - 50) + "px"; tip.style.display = "block";
+    });
+    el.addEventListener("mouseleave", () => tip.style.display = "none");
+  });
+}
+let rT; addEventListener("resize", () => { clearTimeout(rT); rT = setTimeout(renderSov, 150); });
+function renderHeat(){
+  const tags = D.stats.tag_names || [], t90 = D.stats.tags_90d || {};
+  if (!tags.length) { $("#heat").innerHTML = `<tbody><tr><td class="empty" style="border:0">Appears after the first refresh.</td></tr></tbody>`; return; }
+  let max = 1; D.brands.forEach(b => tags.forEach(t => max = Math.max(max, (t90[b] || {})[t] || 0)));
+  const k = v => Math.min(5, Math.ceil(v / max * 5));
+  $("#heat").innerHTML = `<thead><tr><th>Brand</th>${tags.map(t => `<th>${esc(t)}</th>`).join("")}</tr></thead><tbody>` +
+    D.brands.map(b => `<tr><td>${bname(b)}</td>` + tags.map(t => { const v = (t90[b] || {})[t] || 0;
+      return `<td class="cell" title="${esc(b)} · ${esc(t)}: ${v}" style="background:var(--seq-${v ? k(v) : 0});${v && k(v) >= 4 ? "color:#fff" : ""}">${v || ""}</td>`; }).join("") + `</tr>`).join("") + `</tbody>`;
+}
+
+// ---------- feed ----------
+let active = new Set();
+function setupFeed(){
+  const all = [...D.brands, "Category"];
+  active = new Set(store.get("feedBrands", all).filter(b => all.includes(b)));
+  if (!active.size) active = new Set(all);
+  $("#brandChips").innerHTML = all.map(b => `<button class="chip" data-b="${esc(b)}" aria-pressed="${active.has(b)}">${av(b)}${esc(b)}</button>`).join("");
+  $("#brandChips").onclick = e => { const c = e.target.closest(".chip"); if (!c) return;
+    const b = c.dataset.b; active.has(b) ? active.delete(b) : active.add(b);
+    c.setAttribute("aria-pressed", active.has(b)); store.set("feedBrands", [...active]); renderFeed(); };
+  $("#fTag").innerHTML = `<option value="">All labels</option>` + (D.stats.tag_names || []).map(t => `<option>${esc(t)}</option>`).join("");
+  ["#fTag","#fKind","#fSrc","#fDays","#fText"].forEach(s => $(s).oninput = renderFeed);
+  renderFeed();
+}
+function renderFeed(){
+  const src = $("#fSrc").value, tag = $("#fTag").value, kind = $("#fKind").value, since = daysAgo(+$("#fDays").value), q = $("#fText").value.toLowerCase();
+  const list = D.items.filter(i => active.has(i.brand) && (!tag || i.tags.includes(tag)) && (!kind || i.kind === kind) && (!src || i.source_type === src)
+    && i.published >= since && (!q || (i.title + " " + i.publisher).toLowerCase().includes(q)));
+  $("#feedCount").textContent = `${list.length} item${list.length === 1 ? "" : "s"}`;
+  $("#feed").innerHTML = list.slice(0, 200).map(i => itemHtml(i, true)).join("") || `<div class="empty">Nothing matches these filters.</div>`;
+}
+
+// ---------- launches ----------
+function renderLaunches(){
+  const all = D.items.filter(i => i.tags.includes("Launch") && i.brand !== "Category" && i.published >= daysAgo(365));
+  const by = {}; all.forEach(i => by[i.brand] = (by[i.brand] || 0) + 1);
+  const top = Object.entries(by).filter(([b]) => b !== "Fiama").sort((a, b) => b[1] - a[1])[0];
+  $("#launchTiles").innerHTML = [
+    tile("rocket", all.filter(i => i.published >= daysAgo(30) && i.kind !== "internal").length, "competitor launch signals, 30 days"),
+    tile("box", all.filter(i => i.kind === "product").length, "new products spotted on stores"),
+    tile("trend", top ? top[0] : "–", "most active launcher", top ? `${top[1]} in 12 months` : ""),
+    tile("bolt", by["Fiama"] || 0, "Fiama launches", "from news and your team"),
+  ].join("");
+  let pick = "";
+  const draw = () => { const list = all.filter(i => !pick || i.brand === pick);
+    $("#launchList").innerHTML = list.map(i => itemHtml(i, true)).join("") || `<div class="empty">No launches found yet.</div>`; };
+  const brands = Object.keys(by).sort((a, b) => by[b] - by[a]);
+  $("#launchChips").innerHTML = [`<button class="chip plain" data-b="" aria-pressed="true">All brands</button>`,
+    ...brands.map(b => `<button class="chip" data-b="${esc(b)}" aria-pressed="false">${av(b)}${esc(b)} · ${by[b]}</button>`)].join("");
+  $("#launchChips").onclick = e => { const c = e.target.closest(".chip"); if (!c) return; pick = c.dataset.b;
+    $("#launchChips").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === c)); draw(); };
+  draw();
+}
+
+// ---------- campaigns ----------
+function sourceLabel(url, brand){
+  const h = host(url); if (!h) return "";
+  const info = D.brandInfo[brand] || {};
+  if ((info.official_sites || []).some(o => h.endsWith(o)) || (info.website && h === host(info.website))) return "Official";
+  if (/afaqs|exchange4media|brandequity|campaignindia|bestmediainfo|medianews4u|adgully|socialsamosa|storyboard18|indiantelevision|mediainfoline|eventfaqs/.test(h)) return "Trade press";
+  if (/modash|netinfluencer/.test(h)) return "Data tool";
+  return "Third-party";
+}
+function campaignList(){
+  const research = rowsOf("Campaigns").map(r => ({brand: r.Brand, name: r["Campaign / property"], date: r["Launch date"], product: r["Category / product"],
+    channels: r["Format & channels"], talent: r["Talent / creators"], idea: r["Core message / idea"], results: r["Reported results"], link: r.Link, team: false}));
+  const team = FIAMA.filter(a => a.type === "Campaign" || a.type === "Launch" || a.type === "Event").map(a => ({brand: "Fiama", name: a.name, date: a.date ? fmtDate(a.date) : "", product: a.product,
+    channels: a.channels, talent: a.talent, idea: a.idea, results: a.results, link: a.link, team: true}));
+  return [...team, ...research];
+}
+let campPick = "";
+const dd = (k, v) => v && v !== "–" ? `<dt>${k}</dt><dd>${esc(v)}</dd>` : "";
+function campCard(c){
+    const info = D.brandInfo[c.brand] || {};
+    const src = safeUrl(c.link), lbl = src ? sourceLabel(src, c.brand) : "";
+    return `<article class="card camp ${c.team ? "fiama" : ""}">
+      <div class="hd">${av(c.brand)}<div><div class="who">${esc(c.brand)} · ${esc(c.date || "date not known")}${c.team ? ' · <span class="tag src-fiama">Fiama team</span>' : ""}</div><h3>${esc(c.name)}</h3></div></div>
+      ${c.idea ? `<div class="idea">${esc(c.idea)}</div>` : ""}
+      <dl>${dd("Product", c.product)}${dd("Channels", c.channels)}${dd("Talent", c.talent)}${dd("Results", c.results)}</dl>
+      <div class="links">
+        ${info.website ? `<a class="btn sm" href="${esc(info.website)}" target="_blank" rel="noopener">${icon("globe")}${esc(host(info.website))}</a>` : `<span class="tag">No official brand site</span>`}
+        ${src ? `<a class="btn sm" href="${esc(src)}" target="_blank" rel="noopener">${icon("ext")}Source: ${esc(host(src))}</a><span class="tag ${srcClass(lbl)}">${esc(lbl)}</span>` : ""}
+      </div></article>`;
+}
+function renderCampaigns(){
+  const list = campaignList();
+  const by = {}; list.forEach(c => by[c.brand] = (by[c.brand] || 0) + 1);
+  $("#campChips").innerHTML = [`<button class="chip plain" data-b="" aria-pressed="${!campPick}">All brands · ${list.length}</button>`,
+    ...D.brands.filter(b => by[b]).map(b => `<button class="chip" data-b="${esc(b)}" aria-pressed="${campPick === b}">${av(b)}${esc(b)} · ${by[b]}</button>`)].join("");
+  $("#campChips").onclick = e => { const c = e.target.closest(".chip"); if (!c) return; campPick = c.dataset.b; renderCampaigns(); };
+  $("#campCards").innerHTML = list.filter(c => !campPick || c.brand === campPick).map(campCard).join("") || `<div class="empty">No campaigns yet.</div>`;
+  const logged = D.items.filter(i => i.kind === "manual").map(i => ({Brand: i.brand, Creator: i.creator || "", "Instagram handle": i.creator || "",
+    "Post date": fmtDate(i.published), "Product / hook": i.title, Views: i.metrics || "", "Data status": "LOGGED"}));
+  $("#inflTable").innerHTML = table(["Brand","Creator","Instagram handle","Post date","Product / hook","Likes","Comments","Views","Data status"],
+    [...logged, ...rowsOf("Influencer Tracker")], {Brand: v => `<td>${bname(v)}</td>`, Likes: numCell, Comments: numCell, Views: numCell});
+}
+
+// ---------- products & prices ----------
+function median(a){ const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor((s.length - 1) / 2)] : null; }
+function firstPrice(v){ if (typeof v === "number") return v; const m = String(v ?? "").replace(/,/g, "").match(/₹\s?(\d+(?:\.\d+)?)/); return m ? +m[1] : null; }
+function productRows(){
+  const live = (D.products && D.products.products) || [];
+  const liveBrands = new Set(live.map(p => p.brand));
+  const pick = (r, ...keys) => { for (const k of Object.keys(r)) if (keys.some(x => k.toLowerCase().includes(x))) return r[k]; return ""; };
+  const fromSeed = rowsOf("Product Range").filter(r => !liveBrands.has(r.Brand)).map(r => ({brand: r.Brand, category: pick(r, "category"), product: pick(r, "product", "variant", "name"),
+    size: pick(r, "size", "pack"), price: pick(r, "price"), mrp: "", in_stock: /OUT OF STOCK/i.test(r["Data status"] || "") ? false : null,
+    source: "Research, " + (r["Last checked"] || D.seed.imported || "") + (r["Data status"] && !/^VERIFIED$/i.test(String(r["Data status"]).trim()) ? " (" + String(r["Data status"]).toLowerCase() + ")" : ""),
+    url: pick(r, "link", "url", "source")}));
+  return [...live, ...fromSeed];
+}
+function renderProducts(){
+  const rows = productRows();
+  const changes = D.items.filter(i => i.kind === "product" && i.published >= daysAgo(30));
+  $("#prodChanges").innerHTML = changes.length ? changes.slice(0, 40).map(i => itemHtml(i, false)).join("") : `<div class="empty">No product changes spotted yet. Changes appear from the second refresh onwards.</div>`;
+  $("#prodSource").textContent = D.products && D.products.updated
+    ? `Live from brand online stores, last checked ${fmtDate(D.products.updated)}. Brands without their own store show your Product Range research.`
+    : "From your Product Range research. Live prices from brand online stores appear after the first refresh.";
+  const brands = [...new Set(rows.map(r => r.brand))];
+  const cats = [...new Set(rows.map(r => r.category).filter(Boolean))].sort();
+  const firstPrices = v => { if (typeof v === "number") return [v];
+    const m = String(v ?? "").replace(/,/g, "").match(/₹\s?(\d+(?:\.\d+)?)(?:\s*[–-]\s*₹?\s?(\d+(?:\.\d+)?))?/); return m ? [m[1], m[2]].filter(Boolean).map(Number) : []; };
+  const summ = brands.map(b => { const br = rows.filter(r => r.brand === b), prices = br.flatMap(r => firstPrices(r.price));
+    const o = {Brand: b, "Total listed": br.length}; cats.forEach(c => o[c] = br.filter(r => r.category === c).length || "");
+    o["Main price range"] = prices.length ? `₹${Math.min(...prices).toLocaleString("en-IN")} – ₹${Math.max(...prices).toLocaleString("en-IN")}` : ""; return o;
+  }).sort((a, b) => b["Total listed"] - a["Total listed"]);
+  $("#prodSummary").innerHTML = table(["Brand", "Total listed", ...cats, "Main price range"], summ, {Brand: v => `<td>${bname(v)}</td>`, ...Object.fromEntries(["Total listed", ...cats].map(c => [c, numCell]))});
+  $("#pBrand").innerHTML = `<option value="">All brands</option>` + brands.map(b => `<option>${esc(b)}</option>`).join("");
+  $("#pCat").innerHTML = `<option value="">All categories</option>` + cats.map(c => `<option>${esc(c)}</option>`).join("");
+  const draw = () => {
+    const b = $("#pBrand").value, c = $("#pCat").value, q = $("#pText").value.toLowerCase();
+    const list = rows.filter(r => (!b || r.brand === b) && (!c || r.category === c) && (!q || (r.product + " " + r.size).toLowerCase().includes(q)));
+    $("#prodCount").textContent = `${list.length} product${list.length === 1 ? "" : "s"}`;
+    $("#prodTable").innerHTML = table(["Brand", "Category", "Product", "Size", "Price", "Stock", "Source"],
+      list.slice(0, 500).map(r => ({Brand: r.brand, Category: r.category, Product: r.product, Size: r.size, url: r.url,
+        Price: typeof r.price === "number" ? "₹" + r.price.toLocaleString("en-IN") + (r.mrp ? ` (MRP ₹${r.mrp})` : "") : (r.price || ""),
+        Stock: r.in_stock === true ? "In stock" : r.in_stock === false ? "Out of stock" : "", Source: r.source})),
+      {Product: (v, r) => `<td>${safeUrl(r.url) ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v)}</td>`,
+       Stock: v => `<td>${v === "Out of stock" ? `<span class="tag big">${v}</span>` : v ? `<span class="tag src-official">${v}</span>` : ""}</td>`});
+  };
+  ["#pBrand", "#pCat", "#pText"].forEach(s => $(s).oninput = draw);
+  draw();
+}
+function renderPrices(){
+  const moves = D.items.filter(i => i.kind === "product" && i.tags.includes("Pricing & Promo") && i.published >= daysAgo(90));
+  $("#priceMoves").innerHTML = moves.map(i => itemHtml(i, true)).join("") ||
+    `<div class="empty">No price changes spotted yet. Live prices are read from brand online stores (Fiama, Dove, Mamaearth, Chemist at Play, Love Beauty and Planet); changes appear from the second refresh.</div>`;
+  const rows = productRows();
+  const cats = [...new Set(rows.map(r => r.category).filter(Boolean))].sort();
+  const keep = $("#ladderCat").value;
+  $("#ladderCat").innerHTML = cats.map(c => `<option>${esc(c)}</option>`).join("");
+  if (keep && cats.includes(keep)) $("#ladderCat").value = keep;
+  else if (cats.some(c => /body wash/i.test(c))) $("#ladderCat").value = cats.find(c => /body wash/i.test(c));
+  const draw = () => {
+    const c = $("#ladderCat").value;
+    const data = [...new Set(rows.map(r => r.brand))].map(b => { const p = rows.filter(r => r.brand === b && r.category === c).map(r => firstPrice(r.price)).filter(v => v != null);
+      return {b, n: p.length, lo: p.length ? Math.min(...p) : null, mid: median(p)}; }).filter(d => d.n).sort((a, b) => a.mid - b.mid);
+    const max = Math.max(1, ...data.map(d => d.mid));
+    $("#ladder").innerHTML = data.length ? `<table><thead><tr><th>Brand</th><th class="num">Priced</th><th class="num">Lowest</th><th class="num">Typical</th><th style="width:38%">Typical price</th></tr></thead><tbody>` +
+      data.map(d => `<tr><td>${bname(d.b)}</td><td class="num">${d.n}</td><td class="num">₹${d.lo.toLocaleString("en-IN")}</td><td class="num"><b>₹${d.mid.toLocaleString("en-IN")}</b></td>
+        <td style="vertical-align:middle"><div class="meter" title="₹${d.mid}"><div style="width:${d.mid / max * 100}%;background:${d.b === "Fiama" ? "var(--s2)" : "var(--s1)"}"></div></div></td></tr>`).join("") + `</tbody></table>`
+      : `<div class="empty" style="border:0">No prices for this category yet.</div>`;
+  };
+  $("#ladderCat").oninput = draw; draw();
+}
+
+// ---------- compare ----------
+function setupCompare(){
+  const opts = D.brands.map(b => `<option>${esc(b)}</option>`).join("");
+  const a0 = $("#cmpA").value || store.get("cmpA", "Fiama"), b0 = $("#cmpB").value || store.get("cmpB", D.brands.find(b => b !== "Fiama") || D.brands[0]);
+  $("#cmpA").innerHTML = opts; $("#cmpB").innerHTML = opts; $("#cmpA").value = a0; $("#cmpB").value = b0;
+  const draw = () => {
+    store.set("cmpA", $("#cmpA").value); store.set("cmpB", $("#cmpB").value);
+    const prods = productRows(), camps = campaignList();
+    const gap = rowsOf("Gap Matrix").filter(r => !/^Total/.test(r["Marketing lever"]));
+    const pair = [$("#cmpA").value, $("#cmpB").value];
+    const S = pair.map(b => {
+      const it = D.items.filter(i => i.brand === b && i.published >= daysAgo(30));
+      const yr = D.items.filter(i => i.brand === b && i.published >= daysAgo(365));
+      const tags = {}; it.forEach(i => i.tags.forEach(t => tags[t] = (tags[t] || 0) + 1));
+      const pr = prods.filter(r => r.brand === b);
+      return {it, tags, pr, prices: pr.map(r => firstPrice(r.price)).filter(v => v != null),
+        launches: yr.filter(i => i.tags.includes("Launch")).length, camps: camps.filter(c => c.brand === b).length};
+    });
+    const maxItems = Math.max(1, ...S.map(s => s.it.length));
+    $("#cmpOut").innerHTML = pair.map((b, k) => { const s = S[k];
+      const cats = {}; s.pr.forEach(r => cats[r.category] = (cats[r.category] || 0) + 1);
+      const topTags = Object.entries(s.tags).sort((x, y) => y[1] - x[1]).slice(0, 4);
+      const g = gap.filter(r => r[b] !== undefined && r[b] !== "");
+      return `<div class="card"><div class="hd" style="display:flex;gap:10px;align-items:center;margin-bottom:10px">${av(b)}<h3>${esc(b)}</h3>${b === "Fiama" ? '<span class="tag us">Us</span>' : ""}</div>
+        <div class="kv"><span>News, PR &amp; videos (30 days)</span><b>${s.it.length}</b></div>
+        <div class="meter"><div style="width:${s.it.length / maxItems * 100}%;background:${b === "Fiama" ? "var(--s2)" : "var(--s1)"}"></div></div>
+        <div class="kv"><span>Big moves (30 days)</span><b>${s.it.filter(isBig).length}</b></div>
+        <div class="kv"><span>Official announcements (30 days)</span><b>${s.it.filter(i => i.source_type === "Official").length}</b></div>
+        <div class="kv"><span>Launches (12 months)</span><b>${s.launches}</b></div>
+        <div class="kv"><span>Campaigns on record</span><b>${s.camps}</b></div>
+        <div class="kv"><span>Focus</span><span>${topTags.map(([t, n]) => `<span class="tag">${esc(t)} ${n}</span>`).join("") || "–"}</span></div>
+        <div class="kv"><span>Products listed</span><b>${s.pr.length}</b></div>
+        ${Object.entries(cats).map(([c, n]) => `<div class="kv"><span class="sub2">${esc(c)}</span><b>${n}</b></div>`).join("")}
+        <div class="kv"><span>Typical price</span><b>${s.prices.length ? "₹" + median(s.prices).toLocaleString("en-IN") : "–"}</b></div>
+        ${g.length ? `<h4 style="margin:16px 0 2px">Marketing strengths (1 to 5)</h4>` + g.map(r => `<div class="kv"><span>${esc(r["Marketing lever"])}</span><b>${esc(r[b])}</b></div>`).join("") : `<p class="sub" style="margin-top:14px">No marketing scores yet for this brand.</p>`}
+        <h4 style="margin:16px 0 8px">Latest</h4><div class="feed">${s.it.slice(0, 3).map(i => itemHtml(i, false)).join("") || `<div class="empty">Nothing in the last 30 days.</div>`}</div>
+      </div>`; }).join("");
+  };
+  $("#cmpA").oninput = draw; $("#cmpB").oninput = draw; draw();
+}
+
+// ---------- one page per brand ----------
+let BTAB = store.get("btab", "overview");
+function renderBrandPage(name){
+  const b = D.brandInfo[name] || {name};
+  const pos = rowsOf("Brand Positioning").find(r => r.Brand === name) || {};
+  const ig = rowsOf("Instagram Strategy").find(r => r.Brand === name) || {};
+  const its = D.items.filter(i => i.brand === name);
+  const news = its.filter(i => i.kind !== "internal" && i.kind !== "product" && i.published >= daysAgo(30));
+  const launches = its.filter(i => i.tags.includes("Launch") && i.published >= daysAgo(365));
+  const camps = campaignList().filter(c => c.brand === name);
+  const prods = productRows().filter(r => r.brand === name);
+  const strat = rowsOf("Product Strategy").filter(r => r.Brand === name);
+  const creators = rowsOf("Influencer Tracker").filter(r => r.Brand === name);
+  const ad = `https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=IN&search_type=keyword_unordered&q=${encodeURIComponent(b.ad_library_query || name)}`;
+  const empty = t => `<div class="empty">${t}</div>`;
+  const bx = (title, sub, body, cls = "") => `<div class="box"><div class="box-h"><div><h2>${title}</h2>${sub ? `<p class="sub">${sub}</p>` : ""}</div></div><div class="box-b ${cls}">${body}</div></div>`;
+  const price = r => typeof r.price === "number" ? "₹" + r.price.toLocaleString("en-IN") + (r.mrp ? ` (MRP ₹${r.mrp})` : "") : (r.price || "");
+  const facts = `<dl class="facts">${dd("Promise", pos["Core consumer promise"])}${dd("Tagline", pos["Current tagline / platform"])}${dd("Faces", pos["Faces (celebrity)"])}${dd("Role in category", pos["Strategic role in category"])}${dd("Price tier", pos["Price tier"])}</dl>`;
+  const panes = {
+    overview: ["Overview", null, `<div class="cols">
+        ${bx("Latest", "Newest news, PR and videos.", `<div class="feed">${its.filter(i => i.kind !== "internal").slice(0, 5).map(i => itemHtml(i, false)).join("") || empty("Nothing yet.")}</div>`)}
+        ${bx("Key facts", "From your research.", facts.includes("<dt>") ? facts : empty("No profile in the research yet."), "pad")}
+      </div>`],
+    news: ["News & PR", news.length, bx("News &amp; PR", "Last 30 days, newest first. The label shows who published it.", `<div class="feed">${news.slice(0, 30).map(i => itemHtml(i, true)).join("") || empty("Nothing in the last 30 days.")}</div>`)],
+    launches: ["Launches", launches.length, bx("Launches", "Launch news and new products on the brand's store, last 12 months.", `<div class="feed">${launches.slice(0, 30).map(i => itemHtml(i, true)).join("") || empty("No launches found yet.")}</div>`)],
+    campaigns: ["Campaigns", camps.length, bx("Campaigns", "", `<div class="grid">${camps.map(campCard).join("") || empty("No campaigns on record yet.")}</div>`, "pad soft")],
+    products: ["Products & prices", prods.length,
+      (strat.length ? bx("Hero products and claims", "From your Product Strategy research.", `<div class="tablewrap">${table(["Category","Hero product / range","Key ingredients","Claims","USP","Price (INR)"], strat)}</div>`) : "") +
+      bx("Every product", `${prods.length} products. ${D.products && D.products.updated && prods.some(r => !/^Research/.test(r.source || "")) ? "Live from the brand's online store." : "From your Product Range research."}`,
+        `<div class="tablewrap">${table(["Category","Product","Size","Price","Source"], prods.map(r => ({Category: r.category, Product: r.product, Size: r.size, Price: price(r), Source: r.source, url: r.url})),
+          {Product: (v, r) => `<td>${safeUrl(r.url) ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v)}</td>`})}</div>`)],
+    creators: ["Instagram & creators", creators.length,
+      (ig.Brand ? bx("Instagram approach", "", `<dl class="facts">${dd("Handle", ig["India Instagram handle"])}${dd("Content pillars", ig["Content pillars"])}${dd("Formats", ig["Dominant formats"])}${dd("Hooks & trends", ig["Trends / hooks used"])}${dd("Creative devices", ig["Creative devices"])}${dd("Creator cadence", ig["Observed creator cadence"])}</dl>`, "pad") : "") +
+      bx("Creator posts", "", creators.length ? `<div class="tablewrap">${table(["Creator","Instagram handle","Post date","Product / hook","Likes","Comments","Views"], creators, {Likes: numCell, Comments: numCell, Views: numCell})}</div>` : empty("No creator posts on record yet."))],
+  };
+  if (!panes[BTAB]) BTAB = "overview";
+  $("#brandPage").innerHTML = `
+    <div class="card bhead ${b.role === "self" ? "us" : ""}">
+      <div class="top">${av(name)}<div style="flex:1;min-width:0"><h2>${esc(name)}${b.role === "self" ? ' <span class="tag us">Us</span>' : ""}</h2>
+        <div class="who">${[pos.Parent, pos["Price tier"]].filter(Boolean).map(esc).join(" · ") || "Competitor"}</div></div>
+        ${b.role === "self" ? `<button class="btn primary" type="button" data-tab="fiama">${icon("plus")}Add Fiama activity</button>` : ""}</div>
+      ${pos["Positioning (one line)"] ? `<div class="camp"><div class="idea">${esc(pos["Positioning (one line)"])}</div></div>` : ""}
+      <div class="links">
+        ${b.website ? `<a class="btn sm" href="${esc(b.website)}" target="_blank" rel="noopener">${icon("globe")}${esc(host(b.website))}</a>` : `<span class="tag">No official website found</span>`}
+        <a class="btn sm" href="${ad}" target="_blank" rel="noopener">${icon("mega")}Live ads</a>
+        ${b.instagram ? `<a class="btn sm" href="https://www.instagram.com/${encodeURIComponent(b.instagram)}/" target="_blank" rel="noopener">${icon("star")}Instagram</a>` : ""}
+        ${b.youtube_handle ? `<a class="btn sm" href="https://www.youtube.com/${encodeURIComponent(b.youtube_handle)}/videos" target="_blank" rel="noopener">${icon("play")}YouTube</a>` : ""}
+      </div>
+    </div>
+    <div class="tiles" style="margin-top:14px">
+      ${tile("mega", news.length, "news, PR and videos", "last 30 days")}
+      ${tile("rocket", launches.length, "launch signals", "last 12 months")}
+      ${tile("star", camps.length, "campaigns on record")}
+      ${tile("box", prods.length, "products listed")}
+    </div>
+    <div class="btabs" role="tablist">${Object.entries(panes).map(([k, [l, n]]) => `<button role="tab" data-btab="${k}" aria-selected="${k === BTAB}">${esc(l)}${n != null ? `<span class="c">${n}</span>` : ""}</button>`).join("")}</div>
+    ${Object.entries(panes).map(([k, [, , html]]) => `<div class="bpane ${k === BTAB ? "on" : ""}" data-pane="${k}">${html}</div>`).join("")}
+  `;  const on = $("#brandPage").querySelector('.btabs [aria-selected="true"]'); if (on) on.parentNode.scrollLeft = on.offsetLeft - 16;
+}
+$("#brandPage").addEventListener("click", e => {
+  const bt = e.target.closest("[data-btab]");
+  if (bt) { BTAB = bt.dataset.btab; store.set("btab", BTAB);
+    $("#brandPage").querySelectorAll("[data-btab]").forEach(x => x.setAttribute("aria-selected", x === bt));
+    $("#brandPage").querySelectorAll(".bpane").forEach(x => x.classList.toggle("on", x.dataset.pane === BTAB)); return; }
+  const t = e.target.closest("button[data-tab]"); if (t) showTab(t.dataset.tab);
+});
+
+// ---------- welcome banner (home) ----------
+function renderHero(){
+  const h = new Date().getHours(), hi = h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening";
+  const wk = D.items.filter(i => i.brand !== "Category" && i.kind !== "internal" && i.published >= daysAgo(7));
+  const launches = wk.filter(i => i.tags.includes("Launch")).length, camps = wk.filter(i => i.tags.includes("Campaign")).length;
+  $("#hero").innerHTML = `<h2>${hi}, team Fiama</h2>
+    <p>Here's what moved in personal wash this week across Fiama and 10 competitors.</p>
+    <div class="pills"><span class="pill">${wk.length} stories</span><span class="pill">${launches} launches</span><span class="pill">${camps} campaigns</span><span class="pill">${FIAMA.length} Fiama activities logged</span></div>`;
+}
+
+// ---------- brands at a glance (home) ----------
+function renderGlance(){
+  const n = b => D.items.filter(i => i.brand === b && i.kind !== "internal" && i.published >= daysAgo(30)).length;
+  const rows = D.brands.map(b => ({b, n: n(b), last: D.items.find(i => i.brand === b && i.kind !== "internal")})).sort((x, y) => (y.b === "Fiama") - (x.b === "Fiama") || y.n - x.n);
+  const max = Math.max(1, ...rows.map(r => r.n));
+  $("#brandGlance").innerHTML = rows.map(r => `<button class="glance ${r.b === "Fiama" ? "us" : ""}" type="button" data-tab="brand:${esc(r.b)}">${av(r.b)}
+    <span class="nm">${esc(r.b)}<small>${r.last ? esc(r.last.title) : "No news yet"}</small></span>
+    <span class="bar"><div style="width:${Math.round(r.n / max * 100)}%"></div></span><span class="n">${r.n}</span></button>`).join("");
+}
+$("#brandGlance").addEventListener("click", e => { const t = e.target.closest("[data-tab]"); if (t) showTab(t.dataset.tab); });
+
+// ---------- Fiama activity list, opportunities, help ----------
+function renderFiama(){
+  $("#fiamaList").innerHTML = D.items.filter(i => i.kind === "internal").map(i => itemHtml(i, false)).join("") ||
+    `<div class="empty">Nothing added yet. Add Fiama's latest campaign or launch above, and it will sit next to the competition everywhere in the app.</div>`;
+}
+function table(cols, rows, fmt = {}){
+  if (!rows.length) return `<div class="empty" style="border:0">No rows.</div>`;
+  return `<table><thead><tr>${cols.map(c => `<th${fmt[c] === numCell ? ' class="num"' : ""}>${esc(c)}</th>`).join("")}</tr></thead><tbody>` +
+    rows.map(r => `<tr>${cols.map(c => fmt[c] ? fmt[c](r[c], r) : `<td>${esc(r[c])}</td>`).join("")}</tr>`).join("") + `</tbody></table>`;
+}
+const numCell = v => `<td class="num">${v === "" || v == null ? "" : isNaN(+v) ? esc(v) : (+v).toLocaleString("en-IN")}</td>`;
+function renderGaps(){
+  const brands = ["Fiama","Dove","Nivea","Pears","Palmolive","Chemist at Play","Love Beauty and Planet"];
+  const score = v => `<td class="num">${esc(v)}</td>`;
+  $("#gapTable").innerHTML = table(["Marketing lever", ...brands, "Fiama gap vs best", "Priority"], rowsOf("Gap Matrix"), {
+    ...Object.fromEntries(brands.map(b => [b, score])),
+    "Fiama gap vs best": v => `<td class="num ${+v >= 3 ? "gap-hi" : ""}">${esc(v)}</td>`,
+    Priority: v => `<td>${v === "HIGH" ? '<span class="tag big">High</span>' : v === "MEDIUM" ? '<span class="tag">Medium</span>' : esc(v)}</td>`});
+}
+function renderNotes(){
+  const byId = Object.fromEntries(D.items.map(i => [i.id, i]));
+  const list = store.get("noteIds", []).map(id => byId[id]).filter(Boolean);
+  $("#notesList").innerHTML = list.length ? list.map(i => itemHtml(i, true)).join("") : `<div class="empty">No ideas yet. Add one under any news item.</div>`;
+}
+function renderRunLog(){
+  const log = D.stats.run_log || [];
+  $("#runLog").innerHTML = log.length ? log.map(l => `<div>${l.ok ? '<span class="ok">✔</span>' : '<span class="bad">✖</span>'} ${esc(l.source)}: ${l.ok ? l.found + " found" : "failed (" + esc(l.error) + ")"}</div>`).join("") : "No refresh has run yet.";
+}
+
+// ---------- pixie dust on every click ----------
+(function(){
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const layer = document.createElement("div");
+  layer.setAttribute("aria-hidden", "true");
+  layer.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:9999;overflow:hidden";
+  document.body.appendChild(layer);
+  const dark = () => document.documentElement.dataset.theme === "dark";
+  const GOLD_L = ["#ffc93c", "#f5b301", "#ffd86b", "#ffb347", "#f7a8d0", "#ffe08a"], GOLD_D = ["#fff6c9", "#ffe58a", "#ffd65c", "#fff", "#ffeab0", "#ffc8e4"];
+  document.addEventListener("pointerdown", e => {
+    const n = 55, GOLD = dark() ? GOLD_D : GOLD_L;
+    for (let k = 0; k < n; k++) {
+      const d = document.createElement("span"), size = 1.5 + Math.random() * 3, c = GOLD[(Math.random() * GOLD.length) | 0];
+      d.style.cssText = `position:absolute;left:${e.clientX}px;top:${e.clientY}px;width:${size}px;height:${size}px;border-radius:50%;background:${c};` +
+        `box-shadow:0 0 ${3 + size * 2}px ${size / 2}px ${c}`;
+      layer.appendChild(d);
+      const ang = Math.random() * Math.PI * 2, burst = 8 + Math.random() * 38;
+      const dx = Math.cos(ang) * burst, dy = Math.sin(ang) * burst * .7;
+      const fall = 40 + Math.random() * 90, sway = (Math.random() - .5) * 40, dur = 900 + Math.random() * 1100;
+      d.animate([
+        {transform: "translate(-50%,-50%) scale(.6)", opacity: 0},
+        {transform: `translate(calc(-50% + ${dx}px),calc(-50% + ${dy}px)) scale(1)`, opacity: 1, offset: .15},
+        {transform: `translate(calc(-50% + ${dx + sway * .5}px),calc(-50% + ${dy + fall * .45}px)) scale(.9)`, opacity: .35, offset: .45},
+        {transform: `translate(calc(-50% + ${dx + sway * .8}px),calc(-50% + ${dy + fall * .7}px)) scale(.8)`, opacity: .95, offset: .62},
+        {transform: `translate(calc(-50% + ${dx + sway}px),calc(-50% + ${dy + fall}px)) scale(.3)`, opacity: 0}
+      ], {duration: dur, delay: Math.random() * 120, easing: "cubic-bezier(.25,.6,.4,1)", fill: "backwards"}).onfinish = () => d.remove();
+    }
+  }, {passive: true});
+})();
+
+// ---------- background scene: drifting clouds (light) / twinkling stars (dark) ----------
+(function(){
+  const sky = document.createElement("div");
+  sky.className = "sky"; sky.setAttribute("aria-hidden", "true");
+  const clouds = [[6, 70, 1.0, 90], [22, 40, .7, 120], [40, 85, 1.2, 140], [58, 30, .8, 105], [76, 60, .9, 130], [92, 20, 1.1, 115], [32, 10, .6, 100]]
+    .map(([top, left, sc, dur], k) => `<div class="cloud" style="top:${top}%;--x:${left}vw;--s:${sc};animation-duration:${dur}s;animation-delay:-${k * 23}s"></div>`).join("");
+  let stars = "";
+  for (let k = 0; k < 90; k++) {
+    const sz = Math.random() < .15 ? 3 : Math.random() < .5 ? 2 : 1.3;
+    stars += `<i style="left:${(Math.random() * 100).toFixed(2)}%;top:${(Math.random() * 100).toFixed(2)}%;width:${sz}px;height:${sz}px;animation-duration:${(2.5 + Math.random() * 4).toFixed(1)}s;animation-delay:-${(Math.random() * 6).toFixed(1)}s"></i>`;
+  }
+  sky.innerHTML = `<div class="clouds">${clouds}</div><div class="stars">${stars}</div>`;
+  document.body.prepend(sky);
+  // an occasional shooting star in dark mode
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const shootLayer = sky.querySelector(".stars");
+  setInterval(() => {
+    if (document.documentElement.dataset.theme !== "dark" || document.hidden) return;
+    const st = document.createElement("span"); st.className = "shoot";
+    st.style.left = (30 + Math.random() * 65) + "%"; st.style.top = (Math.random() * 45) + "%";
+    shootLayer.appendChild(st);
+    st.animate([{transform: "rotate(-24deg) translateX(0)", opacity: 0}, {opacity: 1, offset: .2},
+      {transform: "rotate(-24deg) translateX(-320px)", opacity: 0}], {duration: 1300, easing: "ease-out"}).onfinish = () => st.remove();
+  }, 5500);
+})();
+
+// ---------- welcome page ----------
+(function(){
+  const intro = $("#intro");
+  if (store.get("skipIntro", false)) { intro.remove(); return; }
+  document.body.style.overflow = "hidden"; document.body.classList.add("intro-on");
+  const enter = () => {
+    if ($("#introSkip").checked) store.set("skipIntro", true);
+    intro.classList.add("out"); document.body.style.overflow = ""; document.body.classList.remove("intro-on");
+    setTimeout(() => intro.remove(), 520);
+  };
+  $("#introGo").onclick = enter;
+  document.addEventListener("keydown", function k(e){ if (e.key === "Enter" && document.body.contains(intro)) { enter(); document.removeEventListener("keydown", k); } });
+  $("#introGo").focus({preventScroll: true});
+})();
+$("#introAgain").onclick = () => { store.set("skipIntro", false); location.reload(); };
+</script>
+</body>
+</html>

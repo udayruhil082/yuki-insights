@@ -1,0 +1,48 @@
+name: Log a competitor post
+description: Record an Instagram reel, creator post or ad you spotted. It appears on the dashboard after the next update.
+title: "[Post] "
+labels: ["post-log"]
+body:
+  - type: dropdown
+    id: brand
+    attributes:
+      label: Brand
+      options: [Fiama, Dove, Nivea, Pears, Palmolive, Chemist at Play, Love Beauty and Planet, Lux, Santoor, Mamaearth, Ghar Soaps, Other]
+    validations: {required: true}
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Instagram, YouTube, Facebook, X / Twitter, LinkedIn, Print / TV, Store / Shelf, Other]
+    validations: {required: true}
+  - type: input
+    id: what
+    attributes:
+      label: What happened (one line)
+      placeholder: "e.g. Dove creator reel: serum bar vs regular soap test"
+    validations: {required: true}
+  - type: input
+    id: link
+    attributes:
+      label: Link to the post
+      placeholder: https://www.instagram.com/reel/...
+  - type: input
+    id: date
+    attributes:
+      label: Date posted
+      placeholder: "2026-11-18"
+  - type: input
+    id: creator
+    attributes:
+      label: Creator handle (if any)
+      placeholder: "@creatorname"
+  - type: input
+    id: metrics
+    attributes:
+      label: Likes / comments / views (if visible)
+      placeholder: "12k likes, 300 comments, 450k views"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / why it matters
+      placeholder: What is clever about it? What could Fiama do?
