@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:52:02.864198+00:00",
+ "updated": "2026-11-19T21:57:14.102809+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -376,7 +376,7 @@
   {
    "source": "Trade press: Dove",
    "ok": true,
-   "found": 54
+   "found": 53
   },
   {
    "source": "Official: Dove",
@@ -502,7 +502,7 @@
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 29
+   "found": 44
   },
   {
    "source": "Official: Lux",
@@ -581,7 +581,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 12
+   "found": 23
   },
   {
    "source": "Logged posts",
