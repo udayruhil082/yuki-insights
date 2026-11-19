@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:32:28.505894+00:00",
+ "updated": "2026-11-19T21:34:48.757335+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -290,7 +290,7 @@
    "Ghar Soaps": 0
   },
   "2026-11-16": {
-   "Fiama": 3,
+   "Fiama": 1,
    "Dove": 1,
    "Nivea": 1,
    "Pears": 0,
@@ -304,9 +304,7 @@
   }
  },
  "tags_90d": {
-  "Fiama": {
-   "Product": 2
-  },
+  "Fiama": {},
   "Dove": {
    "Pricing & Promo": 3,
    "Business": 3,
@@ -471,7 +469,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 12
+   "found": 11
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -587,7 +585,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 23
+   "found": 12
   },
   {
    "source": "Logged posts",
@@ -597,7 +595,7 @@
   {
    "source": "Products: Fiama",
    "ok": true,
-   "found": 71
+   "found": 73
   },
   {
    "source": "Products: Dove",

@@ -1,10 +1,8 @@
 # Yuki Insights weekly digest (12 Nov to 19 Nov 2026)
 
-**Mentions this week:** Category 19, Love Beauty and Planet 5, Fiama 4, Ghar Soaps 3, Nivea 1, Dove 1, Chemist at Play 1, Mamaearth 1
+**Mentions this week:** Category 19, Love Beauty and Planet 5, Ghar Soaps 3, Fiama 2, Nivea 1, Dove 1, Chemist at Play 1, Mamaearth 1
 
-## Fiama (4 items)
-- [Product no longer listed: Fiama Detan Body Scrub 200g](https://www.fiama.in/products/fiama-detan-body-scrub-200g) (Brand store) `Product`
-- [Product no longer listed: Foamy Soap Pocket](https://www.fiama.in/products/foamy-soap-pocket) (Brand store) `Product`
+## Fiama (2 items)
 - [🫧 + ✨ + 🚿 = Feel-good shower vibes with Fiama Brightening Bodywash! 💗 #FiamaByITC](https://www.youtube.com/watch?v=5U3_I1D3WrU) (YouTube)
 - [Wedding invites are in, group chats are buzzing, and the prep has officially begun. 💌✨ #FiamaByITC](https://www.youtube.com/watch?v=NRnEbtXLElY) (YouTube)
 
