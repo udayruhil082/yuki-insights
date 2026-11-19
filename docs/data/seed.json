@@ -4,7 +4,6 @@
   "Brand Positioning": {
    "columns": [
     "Brand",
-    "Parent",
     "Positioning (one line)",
     "Core consumer promise",
     "Current tagline / platform",
@@ -16,18 +15,16 @@
    "rows": [
     {
      "Brand": "Fiama",
-     "Parent": "ITC",
      "Positioning (one line)": "Joy of bathing for the 'young at heart'; fun, vibrant, sensorial gel bars and shower gels",
      "Core consumer promise": "Happy skin and mood lift from bathing; natural-origin ingredients",
      "Current tagline / platform": "'Joy of bathing'; 'Happy Naturals for Happy Skin'; 'Nature ki Happy, Happy Feeling'",
      "Faces (celebrity)": "Rashmika Mandanna (2023–); Sara Ali Khan (2020–23); Shubman Gill (Fiama Men, 2023)",
      "Price tier": "Masstige / premium",
-     "Strategic role in category": "Gel-bar pioneer in India; scaling premium reach (ITC, Apr 2026)",
+     "Strategic role in category": "Gel-bar pioneer in India; scaling premium reach (company report, Apr 2026)",
      "Data status": "VERIFIED"
     },
     {
      "Brand": "Dove",
-     "Parent": "HUL (Unilever)",
      "Positioning (one line)": "Care, not just cleansing: 1/4 moisturising cream; 'Real Beauty' purpose",
      "Core consumer promise": "Moisturises like lotion, cleans like soap; serum-infused bars",
      "Current tagline / platform": "Real Beauty; #MyFirstSerumBar; BYOB (Bring Your Own Bar) proof",
@@ -38,7 +35,6 @@
     },
     {
      "Brand": "Nivea",
-     "Parent": "Beiersdorf",
      "Positioning (one line)": "Skincare expert bringing face-grade actives to body care",
      "Core consumer promise": "Deep care ('10 layers deep'), dermatology trust",
      "Current tagline / platform": "'No more Upar Upar Se' (Jun 2026); Nivea Soft Fresh Batch",
@@ -49,7 +45,6 @@
     },
     {
      "Brand": "Pears",
-     "Parent": "HUL (Unilever)",
      "Positioning (one line)": "Transparent, pure, gentle – 200-year heritage glycerin bar",
      "Core consumer promise": "98% pure glycerin; 'nothing to hide'",
      "Current tagline / platform": "'Farak Clear Hai' / 'The Pears Truth' (Aug 2026)",
@@ -60,7 +55,6 @@
     },
     {
      "Brand": "Palmolive",
-     "Parent": "Colgate-Palmolive",
      "Positioning (one line)": "Premium naturals; elevated, mood-led bathing experience",
      "Core consumer promise": "Aroma / mood benefits from natural extracts",
      "Current tagline / platform": "'Savour the feeling' (2024); Moments body wash (2025)",
@@ -71,7 +65,6 @@
     },
     {
      "Brand": "Chemist at Play",
-     "Parent": "Innovist (D2C)",
      "Positioning (one line)": "Science-first, ingredient-led body care that fixes specific concerns",
      "Core consumer promise": "Targeted actives: AHA/BHA, ceramides, niacinamide for body acne, tan, pigmentation",
      "Current tagline / platform": "Ingredient % on pack; #BodyAcne, #detan",
@@ -82,7 +75,6 @@
     },
     {
      "Brand": "Love Beauty and Planet",
-     "Parent": "HUL (Unilever)",
      "Positioning (one line)": "Planet-first, vegan, cruelty-free beauty",
      "Core consumer promise": "100% vegan, PETA cruelty-free, natural oils",
      "Current tagline / platform": "Small Acts of Love; Pet Rave (2025); #wavescampaign (2026)",
@@ -237,7 +229,7 @@
      "Price (INR)": "To verify",
      "Format": "Body wash",
      "Data status": "VERIFIED",
-     "Source": "Colgate-Palmolive release Apr 2024"
+     "Source": "Company release Apr 2024"
     },
     {
      "Brand": "Palmolive",
@@ -309,7 +301,7 @@
      "Price (INR)": "To verify",
      "Format": "Body wash",
      "Data status": "TO VERIFY",
-     "Source": "HUL brand page"
+     "Source": "Brand page"
     }
    ]
   },
@@ -332,7 +324,7 @@
      "Campaign / property": "Joy of Bathing – brand story",
      "Launch date": "May 2026",
      "Category / product": "Portfolio",
-     "Format & channels": "ITC corporate & social",
+     "Format & channels": "Corporate & social",
      "Talent / creators": "–",
      "Core message / idea": "Bathing as something to look forward to; 'young at heart'",
      "Reported results": "None public",
@@ -2827,7 +2819,7 @@
      "For": "Unisex",
      "Size": "236ml; 473ml",
      "Price": "₹399 / ₹799",
-     "Source": "Innovist, BigBasket, Nykaa",
+     "Source": "Brand shop, BigBasket, Nykaa",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -2839,7 +2831,7 @@
      "For": "Unisex",
      "Size": "236ml; 473ml",
      "Price": "₹349 / ₹699",
-     "Source": "Innovist, BigBasket, Nykaa",
+     "Source": "Brand shop, BigBasket, Nykaa",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -2851,7 +2843,7 @@
      "For": "Unisex",
      "Size": "236ml; 473ml",
      "Price": "₹399 / ₹699",
-     "Source": "Innovist, BigBasket, Nykaa",
+     "Source": "Brand shop, BigBasket, Nykaa",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -2863,7 +2855,7 @@
      "For": "Unisex",
      "Size": "236ml",
      "Price": "₹349–399",
-     "Source": "Innovist, BigBasket",
+     "Source": "Brand shop, BigBasket",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -2875,7 +2867,7 @@
      "For": "Unisex",
      "Size": "236ml",
      "Price": "₹399",
-     "Source": "Innovist",
+     "Source": "Brand shop",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -2887,7 +2879,7 @@
      "For": "Unisex",
      "Size": "236ml",
      "Price": "₹399",
-     "Source": "Innovist",
+     "Source": "Brand shop",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -2899,7 +2891,7 @@
      "For": "Unisex",
      "Size": "236ml",
      "Price": "₹449",
-     "Source": "Innovist",
+     "Source": "Brand shop",
      "Data status": "VERIFIED",
      "Last checked": "18 Nov 2026"
     },
@@ -4131,14 +4123,14 @@
    "rows": [
     {
      "Brand": "Fiama",
-     "Source": "ITC – Fiama: Bringing the Joy in Bathing",
+     "Source": "Company website – Fiama: Bringing the Joy in Bathing",
      "Date": "20 May 2026",
      "Supports": "Positioning",
      "URL": "https://itcportal.com/media-centre/itc-stories/itc-fiama-bringing-the-joy-in-bathing.html"
     },
     {
      "Brand": "Fiama",
-     "Source": "ITC press report – Fiama lathering up premium reach (BusinessLine reprint)",
+     "Source": "Company report – Fiama lathering up premium reach (BusinessLine reprint)",
      "Date": "20 Apr 2026",
      "Supports": "Positioning, strategy",
      "URL": "https://itcportal.com/media-centre/press-report/itc-fiama-is-lathering-up-its-premium-reach.html"
@@ -4173,7 +4165,7 @@
     },
     {
      "Brand": "Dove",
-     "Source": "HUL – How our brands connect with digital-first consumers",
+     "Source": "Company website – How our brands connect with digital-first consumers",
      "Date": "6 Nov 2025",
      "Supports": "BYOB, Lifebuoy benchmark",
      "URL": "https://www.hul.co.in/news/2025/know-how-our-brands-connect-with-digital-first-consumers"
@@ -4201,7 +4193,7 @@
     },
     {
      "Brand": "Dove",
-     "Source": "Mint – How Unilever used AI to make soap go viral",
+     "Source": "Mint – How the parent company used AI to make soap go viral",
      "Date": "9 Jul 2025",
      "Supports": "Trend: AI + influencer scale",
      "URL": "https://www.magzter.com/en/stories/newspaper/Mint-Kolkata/HOW-UNILEVER-USED-ARTIFICIAL-INTELLIGENCE-TO-MAKE-SOAP-GO-VIRAL"
@@ -4250,7 +4242,7 @@
     },
     {
      "Brand": "Palmolive",
-     "Source": "Colgate-Palmolive India – Savour the feeling",
+     "Source": "Company website – Savour the feeling",
      "Date": "29 Apr 2024",
      "Supports": "Campaign",
      "URL": "https://www.colgateinvestors.co.in/news/Palmolive-unveils-body-wash-campaign,-giving-consumers-a-moment-to-slow-down-and-lsquo;savour-the-feelingrsquo;-in-their-rushed-lives"
@@ -4313,7 +4305,7 @@
     },
     {
      "Brand": "Market",
-     "Source": "Unilever – Lux and the skinification trend",
+     "Source": "Company website – Lux and the skinification trend",
      "Date": "3 Nov 2025",
      "Supports": "Trend: shift to liquids",
      "URL": "https://www.unilever.co.za/news/2025/science-sensorials-and-the-skinification-trend-sparking-growth-for-lux/"
@@ -4326,7 +4318,7 @@
    "name": "Fiama",
    "role": "self",
    "instagram": "fiamaindia",
-   "youtube_handle": "@fiamadiwills",
+   "youtube_handle": "UCwq4kpb0q9f-s84dOVlf_xw",
    "website": "https://www.fiama.in",
    "official_sites": [
     "itcportal.com",

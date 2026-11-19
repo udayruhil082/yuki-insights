@@ -42,6 +42,25 @@ def scrub(v):
     return ("Case study, " + v) if re.match(r"[A-Z][a-z]{2} \d{4}$", v.strip()) else ("Case study: " + v if "case" not in v.lower() else v)
 
 
+# Team rule: no parent company names in the app (links are kept so sources stay checkable).
+PARENT_FIXES = [
+    (r"^(ITC|HUL|Hindustan Unilever|Unilever|Colgate-Palmolive India|Colgate-Palmolive|Wipro|Beiersdorf)\s*[–-]\s*", "Company website – "),
+    (r"\bITC press report\b", "Company report"), (r"\(ITC, ", "(company report, "), (r"\bITC corporate\b", "Corporate"),
+    (r"\bHUL brand page\b", "Brand page"), (r"\bColgate-Palmolive release\b", "Company release"),
+    (r"\bInnovist\b", "Brand shop"),
+    (r"\b(Hindustan Unilever|Unilever|HUL|ITC|Wipro|Colgate-Palmolive|Beiersdorf|Honasa)['’]s\b", "the parent company's"),
+    (r"\b(Hindustan Unilever|Unilever|HUL|ITC|Wipro|Colgate-Palmolive|Beiersdorf|Honasa)\b", "the parent company"),
+]
+
+
+def no_parent(v):
+    if not isinstance(v, str) or re.match(r"https?://", v.strip()):
+        return v
+    for pat, new in PARENT_FIXES:
+        v = re.sub(pat, new, v)
+    return v
+
+
 def clean(v):
     if v is None:
         return ""
@@ -63,13 +82,13 @@ def main(path):
         if not rows:
             continue
         headers = [str(h).strip() if h else f"col{i}" for i, h in enumerate(rows[0])]
-        keep = [i for i, h in enumerate(headers) if "agenc" not in h.lower()]   # agency names are left out on purpose
+        keep = [i for i, h in enumerate(headers) if "agenc" not in h.lower() and h.lower() != "parent"]   # agency and parent company names are left out on purpose
         headers = [headers[i] for i in keep]
         records = []
         for r in rows[1:]:
             if not any(x not in (None, "") for x in r):
                 continue
-            rec = {h: scrub(clean(r[i])) for h, i in zip(headers, keep)}
+            rec = {h: no_parent(scrub(clean(r[i]))) for h, i in zip(headers, keep)}
             first = str(r[0] or "")
             if first.startswith("[Add") or "creator]" in str(r[1] or ""):
                 continue

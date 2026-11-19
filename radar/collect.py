@@ -119,6 +119,23 @@ OTHER_CAT = re.compile(r"\b(hair\w*|shampoo|conditioner|sunscreen|spf|lip\w*|fac
 OUR_CAT = re.compile(r"body ?wash|shower|soap|bath\w*|scrub|\bbars?\b|exfoliat\w*|personal wash|skin ?care", re.I)
 
 
+# Team rule: no parent company names in the app.
+PARENT = re.compile(r"\b(ITC|HUL|Hindustan Unilever( Limited)?|Unilever|Wipro( Consumer Care)?|Colgate[- ]Palmolive( India)?|"
+                    r"Beiersdorf|Honasa( Consumer)?|L['’]Or[eé]al( India)?|Innovist)\b", re.I)
+BRAND_NAMES = "|".join(re.escape(b["name"]) for b in CONFIG["brands"])
+PARENT_PREFIX = re.compile(r"\b(ITC|HUL['’]s|Unilever['’]s|Wipro['’]s)\s+(?=(" + BRAND_NAMES + r")\b)", re.I)
+
+
+def hide_parent(i):
+    """Removes parent company names. Returns False if the headline only makes sense with them (then it is left out)."""
+    if PARENT.search(i.get("publisher", "")):
+        i["publisher"] = "Brand website" if i.get("source_type") == "Official" else "Company website"
+    i["title"] = PARENT_PREFIX.sub("", i["title"])       # "ITC Fiama ..." -> "Fiama ..."
+    if i.get("summary"):
+        i["summary"] = re.sub(r"\s{2,}", " ", PARENT.sub("", re.sub(r"#\w*(ITC|HUL)\w*", "", i["summary"]))).strip()
+    return not PARENT.search(i["title"])
+
+
 def skip_news(title, publisher="", domain="", brand=None):
     """True if a news headline should be left out."""
     if BLOG.search(title) or SKIP_TITLE.search(title) or AGENCY_NAMES.search(title):
@@ -307,6 +324,7 @@ def merge(existing, new):
     items = [i for i in by_id.values() if i["published"] >= cutoff
              and not (i["kind"] == "news" and skip_news(i["title"], i.get("publisher", ""), i.get("source_domain", ""), i["brand"]))
              and not (i["kind"] == "youtube" and AGENCY_NAMES.search(i["title"]))]
+    items = [i for i in items if i["kind"] in ("internal", "manual") or hide_parent(i)]
     for i in items:   # re-checked every run so rule changes apply to old items too
         i["tags"] = tag_text(i["title"] + " " + i.get("summary", "")) if i["kind"] in ("news", "youtube") else i["tags"]
         if "Launch" in i["tags"]:
