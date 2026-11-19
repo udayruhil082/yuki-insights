@@ -93,6 +93,14 @@ def source_type(publisher, domain, brand=None):
     return "News"
 
 
+# Headlines left out on purpose: agency appointments (team rule, no agency names) and stock-market chatter.
+SKIP_TITLE = re.compile(r"\b(agency|agencies|AOR|account win|wins .{0,40} account|creative mandate|media mandate|"
+                        r"share price|stock|shares|target price|rated (buy|sell|hold)|investor|dividend|Q[1-4] results|quarterly results|"
+                        r"seasonal returns|analyst)\b", re.I)
+SKIP_PUBLISHER = re.compile(r"yahoo finance|marketsmojo|simply wall|scanx|moneycontrol|marketscreener|investing\.com|"
+                            r"tickertape|trendlyne|equitymaster|stock|marketbeat", re.I)
+
+
 def google_news(query, brand, must=None):
     r = CONFIG["region"]
     url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
@@ -108,6 +116,8 @@ def google_news(query, brand, must=None):
             title = title[: -len(publisher) - 3]
         if must and not any(m.lower() in title.lower() for m in must):
             continue
+        if SKIP_TITLE.search(title) or SKIP_PUBLISHER.search(publisher + " " + domain):
+            continue   # agency news (team rule: no agency names) and share-price noise
         link = it.findtext("link") or ""
         summary = strip_html(it.findtext("description"))
         if summary.startswith(title):
@@ -222,7 +232,8 @@ def merge(existing, new):
         by_id[it["id"]] = it
         added += 1
     cutoff = (NOW - timedelta(days=KEEP_DAYS)).isoformat()
-    items = [i for i in by_id.values() if i["published"] >= cutoff]
+    items = [i for i in by_id.values() if i["published"] >= cutoff
+             and not (i["kind"] == "news" and (SKIP_TITLE.search(i["title"]) or SKIP_PUBLISHER.search(i.get("publisher", "") + " " + i.get("source_domain", ""))))]
     items.sort(key=lambda i: i["published"], reverse=True)
     return items, added
 
