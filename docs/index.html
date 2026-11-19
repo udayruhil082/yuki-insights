@@ -771,7 +771,7 @@ function showTab(id){
   $("#pageTitle").textContent = btn.childNodes[1].textContent.trim();
   const DESC = {overview: "Your starting point: what changed, and where to go next", launches: "New products and launch news from every brand", feed: "Every news story, press release, video and logged post",
     campaigns: "Campaigns and creator posts, with official links", products: "Every brand's range, with sources", prices: "Who charges what, per category",
-    compare: "Two brands side by side, plus who is talked about most", faceoff: "Two brands, seven rounds, real data", fiama: "Fiama's own campaigns and launches, so the comparison is fair", gaps: "Where Fiama can win, and your ideas", about: "Where the information comes from"};
+    compare: "Two brands side by side, plus who is talked about most", faceoff: "Two brands, eight rounds, real data", fiama: "Fiama's own campaigns and launches, so the comparison is fair", gaps: "Where Fiama can win, and your ideas", about: "Where the information comes from"};
   $("#pageDesc").textContent = id.startsWith("brand:") ? (D.brandInfo[id.slice(6)]?.role === "self" ? "Our brand" : "Competitor profile") : (DESC[id] || "");
   $("#crumb").textContent = id.startsWith("brand:") ? "Home · Brands" : "Fiama · Personal wash · India";
   document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b === btn));
@@ -1277,7 +1277,7 @@ const ACTS = [
   {ic: "rupee", c: "p3", t: "Check prices", w: "Who is cheaper or pricier than Fiama, per category.", go: "prices", b: "Open prices"},
   {ic: "star", c: "p4", t: "Get campaign and creator ideas", w: "Rivals' recent campaigns and the creators they used.", go: "campaigns", b: "Open campaigns"},
   {ic: "flag", c: "p1", t: "Find where Fiama can win", w: "Gaps where competitors are strong and Fiama is not.", go: "gaps", b: "Open opportunities"},
-  {ic: "bolt", c: "p2", t: "Brand face-off", w: "Fiama vs any rival in 7 quick rounds. See who wins, and where Fiama should push.", go: "faceoff", b: "Start a face-off"},
+  {ic: "bolt", c: "p2", t: "Brand face-off", w: "Fiama vs any rival in 8 quick rounds. See who wins, and where Fiama should push.", go: "faceoff", b: "Start a face-off"},
 ];
 function renderActs(){
   $("#acts").innerHTML = ACTS.map((a, k) => `<button class="act" type="button" data-act="${k}"><span class="ic ${a.c}">${icon(a.ic)}</span>
@@ -1365,22 +1365,25 @@ function foStats(b){
   const prods = rowsOf("Product Range").filter(r => r.Brand === b).map(r => ({product: r.Product, size: r.Size, price: r.Price}));
   const vals = prods.map(per100).filter(v => v != null);
   return {
-    buzz: d30.length,
+    buzz: d30.filter(i => i.kind === "news" && i.source_type !== "Official").length,      // what others write about the brand
+    own: d30.filter(i => i.kind === "youtube" || i.source_type === "Official").length,    // what the brand posts itself
     launch: yr.filter(i => i.tags.includes("Launch")).length,
     celeb: yr.filter(i => i.tags.includes("Celebrity")).length,
-    camp: campaignList().filter(c => c.brand === b).length,
+    camp: yr.filter(i => i.tags.includes("Campaign") && i.kind === "news").length,
     range: new Set(prods.map(r => String(r.product).toLowerCase().replace(/\(.*?\)|\|.*$|pack of \d+|\d+(\.\d+)?\s*(ml|gm|g|kg|l)\b.*$|[^a-z ]/g, " ").replace(/\s+/g, " ").trim())).size,
     value: vals.length >= 2 ? Math.round(median(vals)) : null,
     views: it.filter(i => i.kind === "youtube" && i.published >= daysAgo(90)).reduce((a, i) => a + (i.views || 0), 0),
   };
 }
+// Every round uses the same source for every brand, so no brand gets a head start.
 const FO_ROUNDS = [
-  {k: "buzz", t: "Buzz", d: "News, PR and videos in the last 30 days", fmt: v => v},
+  {k: "buzz", t: "Press buzz", d: "News and trade-press stories in the last 30 days (not the brand's own posts)", fmt: v => v},
+  {k: "own", t: "Own content", d: "Posts on the brand's own website and YouTube, last 30 days", fmt: v => v},
   {k: "launch", t: "Launches", d: "Launches in the last 12 months", fmt: v => v},
   {k: "celeb", t: "Star power", d: "Celebrity and ambassador moves, 12 months", fmt: v => v},
-  {k: "camp", t: "Campaigns", d: "Campaigns on record in your research", fmt: v => v},
+  {k: "camp", t: "Campaigns", d: "Campaign stories in the press, last 12 months", fmt: v => v},
   {k: "range", t: "Range size", d: "Different soaps, body washes and scrubs, from your research", fmt: v => v},
-  {k: "value", t: "Better value", d: "Typical price per 100 g or ml, from your research. Lower wins", fmt: v => "₹" + v, low: true},
+  {k: "value", t: "Price check", d: "Typical price per 100 g or ml, from your research. No points: cheaper is not always better", fmt: v => "₹" + v, low: true, info: true},
   {k: "views", t: "YouTube reach", d: "Views on videos posted in the last 90 days", fmt: v => v >= 1e5 ? (v / 1e5).toFixed(1) + "L" : v.toLocaleString("en-IN")},
 ];
 const foBig = b => `<span class="big">${esc(b.split(/\s+/).map(w => w[0]).join("").slice(0, 3).toUpperCase())}</span>`;
@@ -1408,7 +1411,7 @@ $("#foGo").onclick = () => {
   FO_ROUNDS.forEach((r, n) => setTimeout(() => {
     const va = sa[r.k], vb = sb[r.k], has = va != null && vb != null;
     let w = 0;
-    if (has && va !== vb) w = (r.low ? va < vb : va > vb) ? 1 : 2;
+    if (has && va !== vb && !r.info) w = (r.low ? va < vb : va > vb) ? 1 : 2;
     if (w === 1) wa++; if (w === 2) wb++;
     res.push({r, va, vb, w, has});
     const max = has ? Math.max(va, vb, 1) : 1;
@@ -1426,7 +1429,7 @@ function foFinish(A, B, wa, wb, res){
   const us = A === "Fiama" ? 1 : B === "Fiama" ? 2 : 1, me = us === 1 ? A : B, them = us === 1 ? B : A;
   const lead = res.filter(x => x.w === us).map(x => x.r.t), lag = res.filter(x => x.has && x.w && x.w !== us);
   const worst = lag.sort((x, y) => { const g = z => { const a = us === 1 ? z.va : z.vb, b = us === 1 ? z.vb : z.va; return z.r.low ? a / Math.max(b, 1) : b / Math.max(a, 1); }; return g(y) - g(x); })[0];
-  const TIP = {buzz: "Get talked about more: PR stories, creator posts and news hooks.", launch: "Plan a visible launch or new variant, and announce it officially.",
+  const TIP = {buzz: "Get talked about more: PR stories, media interviews and news hooks.", own: "Post more on the brand's own channels: shorts, product demos and creator collaborations.", launch: "Plan a visible launch or new variant, and announce it officially.",
     celeb: "Consider a celebrity or ambassador moment to match their star power.", camp: "Build a stronger campaign calendar with clear themes.",
     range: "Look at range gaps, for example scrubs or new body wash variants.", value: "Check pricing or pack sizes; their price per 100 g or ml is lower.",
     views: "Invest in YouTube: shorts, creator collaborations and product demos."};
