@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T22:04:11.351943+00:00",
+ "updated": "2026-11-20T10:20:07.106754+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -295,12 +295,12 @@
    "Nivea": 1,
    "Pears": 0,
    "Palmolive": 0,
-   "Chemist at Play": 0,
+   "Chemist at Play": 16,
    "Love Beauty and Planet": 4,
    "Lux": 0,
    "Santoor": 0,
    "Mamaearth": 0,
-   "Ghar Soaps": 3
+   "Ghar Soaps": 4
   }
  },
  "tags_90d": {
@@ -313,7 +313,8 @@
   "Pears": {},
   "Palmolive": {},
   "Chemist at Play": {
-   "Pricing & Promo": 3
+   "Pricing & Promo": 19,
+   "Product": 16
   },
   "Love Beauty and Planet": {
    "Influencer": 1,
@@ -396,8 +397,8 @@
   },
   {
    "source": "Trade press: Nivea",
-   "ok": true,
-   "found": 53
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Official: Nivea",
@@ -455,7 +456,7 @@
   {
    "source": "News: Chemist at Play",
    "ok": true,
-   "found": 1
+   "found": 0
   },
   {
    "source": "Trade press: Chemist at Play",
@@ -502,7 +503,7 @@
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 29
+   "found": 30
   },
   {
    "source": "Official: Lux",
@@ -544,12 +545,12 @@
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 88
+   "found": 56
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 7
+   "found": 13
   },
   {
    "source": "YouTube: Mamaearth",
@@ -581,7 +582,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 12
+   "found": 17
   },
   {
    "source": "Logged posts",
