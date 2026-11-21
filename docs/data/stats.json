@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T10:20:07.106754+00:00",
+ "updated": "2026-11-21T10:04:36.235766+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -290,16 +290,16 @@
    "Ghar Soaps": 0
   },
   "2026-11-16": {
-   "Fiama": 1,
+   "Fiama": 2,
    "Dove": 1,
-   "Nivea": 1,
-   "Pears": 0,
+   "Nivea": 2,
+   "Pears": 1,
    "Palmolive": 0,
    "Chemist at Play": 16,
    "Love Beauty and Planet": 4,
-   "Lux": 0,
+   "Lux": 1,
    "Santoor": 0,
-   "Mamaearth": 0,
+   "Mamaearth": 2,
    "Ghar Soaps": 4
   }
  },
@@ -325,6 +325,7 @@
   },
   "Santoor": {},
   "Mamaearth": {
+   "Product": 1,
    "Campaign": 2,
    "Partnership": 1
   },
@@ -356,12 +357,12 @@
   {
    "source": "Trade press: Fiama",
    "ok": true,
-   "found": 27
+   "found": 25
   },
   {
    "source": "Official: Fiama",
    "ok": true,
-   "found": 5
+   "found": 4
   },
   {
    "source": "YouTube: Fiama",
@@ -372,7 +373,7 @@
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 7
+   "found": 8
   },
   {
    "source": "Trade press: Dove",
@@ -393,12 +394,12 @@
   {
    "source": "News: Nivea",
    "ok": true,
-   "found": 3
+   "found": 4
   },
   {
    "source": "Trade press: Nivea",
-   "ok": false,
-   "error": "HTTP Error 429: Too Many Requests"
+   "ok": true,
+   "found": 55
   },
   {
    "source": "Official: Nivea",
@@ -414,7 +415,7 @@
   {
    "source": "News: Pears",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "Trade press: Pears",
@@ -466,7 +467,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 12
+   "found": 11
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -498,12 +499,12 @@
   {
    "source": "News: Lux",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 30
+   "found": 44
   },
   {
    "source": "Official: Lux",
@@ -540,7 +541,7 @@
   {
    "source": "News: Mamaearth",
    "ok": true,
-   "found": 4
+   "found": 15
   },
   {
    "source": "Trade press: Mamaearth",
@@ -550,7 +551,7 @@
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 13
+   "found": 11
   },
   {
    "source": "YouTube: Mamaearth",
@@ -582,7 +583,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 17
+   "found": 20
   },
   {
    "source": "Logged posts",
