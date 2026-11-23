@@ -1,6 +1,6 @@
-# Yuki Insights weekly digest (15 Nov to 22 Nov 2026)
+# Yuki Insights weekly digest (16 Nov to 23 Nov 2026)
 
-**Mentions this week:** Category 18, Chemist at Play 16, Ghar Soaps 4, Love Beauty and Planet 4, Mamaearth 3, Fiama 2, Pears 2, Nivea 2, Lux 1, Dove 1
+**Mentions this week:** Category 19, Chemist at Play 16, Love Beauty and Planet 4, Mamaearth 3, Fiama 2, Ghar Soaps 2, Pears 2, Nivea 2, Lux 1, Dove 1
 
 ## Fiama (2 items)
 - [Winter-ready skin starts with Fiama! 🫧 Pro-Ceramides for soft, nourished skin in just 8 washes.](https://www.youtube.com/watch?v=xkTxEgprYV4) (YouTube)
@@ -39,10 +39,8 @@
 - [Out of stock: Multani Mitti Moisturizing Lotion Soap (3 + 1 Free) (125g x 4)](https://mamaearth.in/products/multani-mitti-soap-1) (Brand store) `Product`
 - [Mamaearth's parent company still in talks with Sebi on IPO; awaits approval](https://news.google.com/rss/articles/CBMi3wFBVV95cUxOTm8ybzlVRlEyTUx2NlVvSEZzMEU5c1Z4M1J6dV8tRXZlS2twTjAtYm03TnJUd2JUcVc5VzVQQ1dZVmFTRGxvZm8wZjdpcUl6eWl1cEJxa3VhZlk2Z0QycWhnUU1YNldac05SbEJqRGo4TnBrb04tSEFRMEFVNGZqRG1GeEZtVW5yc1dWSVhjWWZMb0dwMnhZanU0UG5ZbDdCVE5WVlk1NnEza0VtUDFFd05HSktyOUFxWTFEMmZaWEpxVzdVMmtJVFByOTU1cmM2bkQxdHJteGNDbnRZODg40gHaAUFVX3lxTFB0UGFYNnp5V0M4SmZuOXBhSkp0Y085N0NWYXZYdXBKcjhZcXJUNENhM2dDY3h3dGFXYkhkZFo0cV9Ic2Y1a2gxR3NnaTlZV2VRWXNJaDJrZzVNZGVOSnZVamJHQmpYTURFOUVxbGx5bktCT003V0IxbUdaR2xFRTJTNnB4SXBJY0d6bzNIR05hZGF2bVQ5TDB1QW4yT1BWYlZZbWJFTDFqaGZuNWZaWXF4Z1pjTEhmMlViRTI5TTZLWm9qdzdjQTViOHZ1cDRFTVZuVXZXWU4tdTN3?oc=5) (ETLegalWorld.com)
 
-## Ghar Soaps (4 items)
+## Ghar Soaps (2 items)
 - [Ranvijay Singha x Ghar Soaps – The Magic of De-Tanning](https://www.youtube.com/watch?v=OSsIHvzhFPI) (YouTube)
 - [Shabeer's Skincare Secret – Magic Soap](https://www.youtube.com/watch?v=U5Yp4OyzGXA) (YouTube)
-- [Krushna Abhishek X Ghar Soaps | Tan Ki Tension Chhodo, Magic Soap Se Naata Jodo](https://www.youtube.com/watch?v=by9qppkD6YU) (YouTube)
-- [Ravi Dubey X Ghar soaps Magic Facewash](https://www.youtube.com/watch?v=KTF58yQCrFY) (YouTube)
 
 Open the dashboard for everything, and add your 'what Fiama should do' notes there.

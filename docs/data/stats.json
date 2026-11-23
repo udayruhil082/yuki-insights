@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T10:07:41.405035+00:00",
+ "updated": "2026-11-23T11:04:41.631020+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -252,7 +252,7 @@
   },
   "2026-10-26": {
    "Fiama": 2,
-   "Dove": 7,
+   "Dove": 8,
    "Nivea": 0,
    "Pears": 0,
    "Palmolive": 0,
@@ -353,12 +353,12 @@
   {
    "source": "News: Fiama",
    "ok": true,
-   "found": 1
+   "found": 2
   },
   {
    "source": "Trade press: Fiama",
    "ok": true,
-   "found": 24
+   "found": 27
   },
   {
    "source": "Official: Fiama",
@@ -379,12 +379,12 @@
   {
    "source": "Trade press: Dove",
    "ok": true,
-   "found": 54
+   "found": 55
   },
   {
    "source": "Official: Dove",
    "ok": true,
-   "found": 10
+   "found": 11
   },
   {
    "source": "YouTube: Dove",
@@ -400,7 +400,7 @@
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 55
+   "found": 54
   },
   {
    "source": "Official: Nivea",
@@ -468,7 +468,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 9
+   "found": 8
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -500,12 +500,12 @@
   {
    "source": "News: Lux",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 43
+   "found": 25
   },
   {
    "source": "Official: Lux",
@@ -526,7 +526,7 @@
   {
    "source": "Trade press: Santoor",
    "ok": true,
-   "found": 53
+   "found": 52
   },
   {
    "source": "Official: Santoor",
@@ -542,7 +542,7 @@
   {
    "source": "News: Mamaearth",
    "ok": true,
-   "found": 5
+   "found": 3
   },
   {
    "source": "Trade press: Mamaearth",
@@ -552,7 +552,7 @@
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 8
+   "found": 9
   },
   {
    "source": "YouTube: Mamaearth",
@@ -584,7 +584,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 21
+   "found": 23
   },
   {
    "source": "Logged posts",
