@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T11:04:41.631020+00:00",
+ "updated": "2026-11-24T12:49:57.780971+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -132,7 +132,6 @@
   }
  ],
  "weeks": [
-  "2026-08-31",
   "2026-09-07",
   "2026-09-14",
   "2026-09-21",
@@ -143,22 +142,10 @@
   "2026-10-26",
   "2026-11-02",
   "2026-11-09",
-  "2026-11-16"
+  "2026-11-16",
+  "2026-11-23"
  ],
  "share_of_voice": {
-  "2026-08-31": {
-   "Fiama": 0,
-   "Dove": 0,
-   "Nivea": 1,
-   "Pears": 0,
-   "Palmolive": 0,
-   "Chemist at Play": 0,
-   "Love Beauty and Planet": 0,
-   "Lux": 0,
-   "Santoor": 0,
-   "Mamaearth": 2,
-   "Ghar Soaps": 0
-  },
   "2026-09-07": {
    "Fiama": 0,
    "Dove": 0,
@@ -260,13 +247,13 @@
    "Love Beauty and Planet": 5,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 1,
+   "Mamaearth": 2,
    "Ghar Soaps": 1
   },
   "2026-11-02": {
    "Fiama": 4,
    "Dove": 5,
-   "Nivea": 1,
+   "Nivea": 2,
    "Pears": 0,
    "Palmolive": 0,
    "Chemist at Play": 1,
@@ -279,20 +266,20 @@
   "2026-11-09": {
    "Fiama": 2,
    "Dove": 1,
-   "Nivea": 3,
+   "Nivea": 4,
    "Pears": 0,
    "Palmolive": 0,
    "Chemist at Play": 1,
    "Love Beauty and Planet": 2,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 1,
+   "Mamaearth": 2,
    "Ghar Soaps": 0
   },
   "2026-11-16": {
    "Fiama": 2,
    "Dove": 1,
-   "Nivea": 2,
+   "Nivea": 3,
    "Pears": 2,
    "Palmolive": 0,
    "Chemist at Play": 16,
@@ -301,6 +288,19 @@
    "Santoor": 0,
    "Mamaearth": 3,
    "Ghar Soaps": 4
+  },
+  "2026-11-23": {
+   "Fiama": 0,
+   "Dove": 0,
+   "Nivea": 0,
+   "Pears": 0,
+   "Palmolive": 0,
+   "Chemist at Play": 12,
+   "Love Beauty and Planet": 0,
+   "Lux": 0,
+   "Santoor": 0,
+   "Mamaearth": 0,
+   "Ghar Soaps": 0
   }
  },
  "tags_90d": {
@@ -308,13 +308,14 @@
   "Dove": {},
   "Nivea": {
    "Campaign": 2,
+   "Partnership": 1,
    "Purpose": 1
   },
   "Pears": {},
   "Palmolive": {},
   "Chemist at Play": {
-   "Pricing & Promo": 19,
-   "Product": 16
+   "Pricing & Promo": 31,
+   "Product": 28
   },
   "Love Beauty and Planet": {
    "Influencer": 1,
@@ -325,7 +326,7 @@
   },
   "Santoor": {},
   "Mamaearth": {
-   "Pricing & Promo": 1,
+   "Pricing & Promo": 2,
    "Product": 1,
    "Campaign": 2,
    "Partnership": 1
@@ -358,7 +359,7 @@
   {
    "source": "Trade press: Fiama",
    "ok": true,
-   "found": 27
+   "found": 24
   },
   {
    "source": "Official: Fiama",
@@ -374,7 +375,7 @@
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 8
+   "found": 5
   },
   {
    "source": "Trade press: Dove",
@@ -395,17 +396,17 @@
   {
    "source": "News: Nivea",
    "ok": true,
-   "found": 4
+   "found": 8
   },
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 54
+   "found": 53
   },
   {
    "source": "Official: Nivea",
    "ok": true,
-   "found": 13
+   "found": 12
   },
   {
    "source": "YouTube: Nivea",
@@ -421,7 +422,7 @@
   {
    "source": "Trade press: Pears",
    "ok": true,
-   "found": 12
+   "found": 9
   },
   {
    "source": "Official: Pears",
@@ -468,7 +469,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 8
+   "found": 10
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -500,12 +501,12 @@
   {
    "source": "News: Lux",
    "ok": true,
-   "found": 1
+   "found": 0
   },
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 25
+   "found": 44
   },
   {
    "source": "Official: Lux",
@@ -526,7 +527,7 @@
   {
    "source": "Trade press: Santoor",
    "ok": true,
-   "found": 52
+   "found": 54
   },
   {
    "source": "Official: Santoor",
@@ -547,12 +548,12 @@
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 57
+   "found": 91
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 9
+   "found": 10
   },
   {
    "source": "YouTube: Mamaearth",
@@ -584,7 +585,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 23
+   "found": 20
   },
   {
    "source": "Logged posts",
