@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T12:49:57.780971+00:00",
+ "updated": "2026-11-25T11:36:24.517838+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -266,7 +266,7 @@
   "2026-11-09": {
    "Fiama": 2,
    "Dove": 1,
-   "Nivea": 4,
+   "Nivea": 5,
    "Pears": 0,
    "Palmolive": 0,
    "Chemist at Play": 1,
@@ -279,7 +279,7 @@
   "2026-11-16": {
    "Fiama": 2,
    "Dove": 1,
-   "Nivea": 3,
+   "Nivea": 4,
    "Pears": 2,
    "Palmolive": 0,
    "Chemist at Play": 16,
@@ -292,11 +292,11 @@
   "2026-11-23": {
    "Fiama": 0,
    "Dove": 0,
-   "Nivea": 0,
+   "Nivea": 15,
    "Pears": 0,
    "Palmolive": 0,
    "Chemist at Play": 12,
-   "Love Beauty and Planet": 0,
+   "Love Beauty and Planet": 1,
    "Lux": 0,
    "Santoor": 0,
    "Mamaearth": 0,
@@ -307,7 +307,7 @@
   "Fiama": {},
   "Dove": {},
   "Nivea": {
-   "Campaign": 2,
+   "Campaign": 3,
    "Partnership": 1,
    "Purpose": 1
   },
@@ -318,8 +318,8 @@
    "Product": 28
   },
   "Love Beauty and Planet": {
-   "Influencer": 1,
-   "Sustainability": 15
+   "Sustainability": 16,
+   "Influencer": 1
   },
   "Lux": {
    "Campaign": 2
@@ -353,13 +353,13 @@
  "run_log": [
   {
    "source": "News: Fiama",
-   "ok": true,
-   "found": 2
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Trade press: Fiama",
    "ok": true,
-   "found": 24
+   "found": 25
   },
   {
    "source": "Official: Fiama",
@@ -375,12 +375,12 @@
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 5
+   "found": 6
   },
   {
    "source": "Trade press: Dove",
-   "ok": true,
-   "found": 55
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Official: Dove",
@@ -396,17 +396,17 @@
   {
    "source": "News: Nivea",
    "ok": true,
-   "found": 8
+   "found": 5
   },
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 53
+   "found": 90
   },
   {
    "source": "Official: Nivea",
    "ok": true,
-   "found": 12
+   "found": 13
   },
   {
    "source": "YouTube: Nivea",
@@ -416,13 +416,13 @@
   },
   {
    "source": "News: Pears",
-   "ok": true,
-   "found": 1
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Trade press: Pears",
-   "ok": true,
-   "found": 9
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Official: Pears",
@@ -443,7 +443,7 @@
   {
    "source": "Trade press: Palmolive",
    "ok": true,
-   "found": 4
+   "found": 3
   },
   {
    "source": "Official: Palmolive",
@@ -469,7 +469,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 10
+   "found": 9
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -506,7 +506,7 @@
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 44
+   "found": 46
   },
   {
    "source": "Official: Lux",
@@ -521,13 +521,13 @@
   },
   {
    "source": "News: Santoor",
-   "ok": true,
-   "found": 0
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Trade press: Santoor",
-   "ok": true,
-   "found": 54
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Official: Santoor",
@@ -543,17 +543,17 @@
   {
    "source": "News: Mamaearth",
    "ok": true,
-   "found": 3
+   "found": 12
   },
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 91
+   "found": 56
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 10
+   "found": 13
   },
   {
    "source": "YouTube: Mamaearth",
@@ -568,8 +568,8 @@
   },
   {
    "source": "Trade press: Ghar Soaps",
-   "ok": true,
-   "found": 3
+   "ok": false,
+   "error": "HTTP Error 429: Too Many Requests"
   },
   {
    "source": "Official: Ghar Soaps",
@@ -585,7 +585,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 20
+   "found": 23
   },
   {
    "source": "Logged posts",

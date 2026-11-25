@@ -1,12 +1,17 @@
-# Yuki Insights weekly digest (17 Nov to 24 Nov 2026)
+# Yuki Insights weekly digest (18 Nov to 25 Nov 2026)
 
-**Mentions this week:** Chemist at Play 28, Category 13, Love Beauty and Planet 4, Mamaearth 3, Pears 2, Lux 1, Fiama 1, Ghar Soaps 1, Nivea 1
+**Mentions this week:** Chemist at Play 28, Nivea 17, Love Beauty and Planet 5, Category 4, Mamaearth 3, Pears 2, Lux 1, Fiama 1, Ghar Soaps 1
 
 ## Fiama (1 items)
 - [Winter-ready skin starts with Fiama! 🫧 Pro-Ceramides for soft, nourished skin in just 8 washes.](https://www.youtube.com/watch?v=xkTxEgprYV4) (YouTube)
 
-## Nivea (1 items)
-- [Uncomplicated Skincare with NIVEA Soft](https://www.youtube.com/watch?v=1r6-D7NAzoM) (YouTube)
+## Nivea (17 items)
+- [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel |Malayalam 10s](https://www.youtube.com/watch?v=mYhodANQw88) (YouTube)
+- [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel |Malayalam 15s](https://www.youtube.com/watch?v=73v85yxrD3I) (YouTube)
+- [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel |Malayalam 20s](https://www.youtube.com/watch?v=1yBKdP0_8RI) (YouTube)
+- [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel | Kannada 10s](https://www.youtube.com/watch?v=2qdWhp-qp6U) (YouTube)
+- [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel | Kannada 15s](https://www.youtube.com/watch?v=75FQtV61beI) (YouTube)
+- [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel | Kannada 20s](https://www.youtube.com/watch?v=WL5Ujgk-hH4) (YouTube)
 
 ## Pears (2 items)
 - [Sundance-Winning 'Cactus Pears' Producer's 'Nisa' at WAVES Film Bazaar](https://news.google.com/rss/articles/CBMivgFBVV95cUxPTmZWRDNLSzFNVzZnS2RwdjFnLTE4d3Fvd21JU3U3VlVIM2FUZVlNUlFmc25RTXlhZ0hOdkVOYXNReHRIQ0lldklqeHhmQUZSS1piN09BeVRJcDZUQXZNanNpeFhxVDg1R3lDY2w2dW5meVppeElhNlpHSVNpbkd4Q0thLTM2aHBER2RUeFU0WjduQ0ZMOUZEeF9Wcy1iVmszbzZkTl9CaXRsUk1TN24xeVcxVThZcVh2RVMwTUx3?oc=5) (Variety)
@@ -20,7 +25,8 @@
 - [Price down: Hydrating Body Wash with Hyaluronic Acid & Coconut Oil - 236 ml | Pack of 3 ₹1047 → ₹949](https://innovist.com/products/hydrating-body-wash-with-hyaluronic-acid-coconut-oil-236-ml-pack-of-3) (Brand store) `Pricing & Promo, Product`
 - [Price down: Hydrating Body Wash with Hyaluronic Acid & Coconut Oil - 236 mlHydrating Body Wash with Hyaluronic Acid & Coconut Oil - 236 ml | Pack of 2 ₹698 → ₹628](https://innovist.com/products/hydrating-body-wash-with-hyaluronic-acid-coconut-oil-236-ml-pack-of-2) (Brand store) `Pricing & Promo, Product`
 
-## Love Beauty and Planet (4 items)
+## Love Beauty and Planet (5 items)
+- [Tag the friend who needs this wave-saving hair routine💚](https://www.youtube.com/watch?v=yccPNqMExVQ) (YouTube) `Sustainability`
 - [Frizz = Cuticle Damage? Here’s the Fix ✨ #lovebeautyandplanet #haircare](https://www.youtube.com/watch?v=43s2hafWjx0) (YouTube) `Influencer, Sustainability`
 - [Fix Cuticle Damage with Argan Hair Mask ✨ #lovebeautyandplanet #haircare](https://www.youtube.com/watch?v=Yi0pkPnfwLw) (YouTube) `Sustainability`
 - [Your Hair Has a Barrier Too! Here’s Why It Matters 👀 #lovebeautyandplanet](https://www.youtube.com/watch?v=N4KsYEkPvlQ) (YouTube) `Sustainability`
