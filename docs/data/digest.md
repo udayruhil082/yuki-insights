@@ -1,6 +1,6 @@
-# Yuki Insights weekly digest (18 Nov to 25 Nov 2026)
+# Yuki Insights weekly digest (19 Nov to 26 Nov 2026)
 
-**Mentions this week:** Chemist at Play 28, Nivea 17, Love Beauty and Planet 5, Category 4, Mamaearth 3, Pears 2, Lux 1, Fiama 1, Ghar Soaps 1
+**Mentions this week:** Chemist at Play 28, Nivea 17, Pears 3, Mamaearth 3, Category 3, Love Beauty and Planet 2, Lux 1, Fiama 1, Ghar Soaps 1
 
 ## Fiama (1 items)
 - [Winter-ready skin starts with Fiama! 🫧 Pro-Ceramides for soft, nourished skin in just 8 washes.](https://www.youtube.com/watch?v=xkTxEgprYV4) (YouTube)
@@ -13,7 +13,8 @@
 - [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel | Kannada 15s](https://www.youtube.com/watch?v=75FQtV61beI) (YouTube)
 - [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel | Kannada 20s](https://www.youtube.com/watch?v=WL5Ujgk-hH4) (YouTube)
 
-## Pears (2 items)
+## Pears (3 items)
+- [Calls to investigate alleged genetic modification of African pears in Nigeria](https://news.google.com/rss/articles/CBMi0AFBVV95cUxNcUxKdTNseVlMX3UyNlo5ZE5Jc1c3RzFBSGVMZ014am9lOVI3TEVwbXhpVkxfbWdKbWFEQWtCS2ZzR3RMVl81TnRINVVEWU1kdEk1ZXB1LWoxRHMtTnBhVk1UVDV1THZkQzJ1U2lqb3VVekVmZFU5TEgwTHBQV0JMaXpFSGt3WFNKR2lGYTZsVnMtU1ZDajhyUGlUaEdOMldnWjdYcUJyU0tXTFNMUERndDhuUHA2aE44T1MzczlJX1hmSVpuMWJyaTJvOHd4Z3NW?oc=5) (FreshPlaza)
 - [Sundance-Winning 'Cactus Pears' Producer's 'Nisa' at WAVES Film Bazaar](https://news.google.com/rss/articles/CBMivgFBVV95cUxPTmZWRDNLSzFNVzZnS2RwdjFnLTE4d3Fvd21JU3U3VlVIM2FUZVlNUlFmc25RTXlhZ0hOdkVOYXNReHRIQ0lldklqeHhmQUZSS1piN09BeVRJcDZUQXZNanNpeFhxVDg1R3lDY2w2dW5meVppeElhNlpHSVNpbkd4Q0thLTM2aHBER2RUeFU0WjduQ0ZMOUZEeF9Wcy1iVmszbzZkTl9CaXRsUk1TN24xeVcxVThZcVh2RVMwTUx3?oc=5) (Variety)
 - [Sundance-Winning ‘Cactus Pears’ Producer’s Delhi Beauty Salon Comedy-Drama ‘Nisa’ Bows at India’s WAVES Film Bazaar](https://news.google.com/rss/articles/CBMihgFBVV95cUxPT1VGenlTZ1dhWVkyVF9YdXFvaTN0NkVOaHB2T2JIYmkxNUxCb3gyVUNzMlloczFXUmVMb0ZYY2hKclBIN1JINEZFZy0zRjFVS2ZvMnRoeGhYZW5yVl9vLVQwZ2cwa2ZqZ1l6R0V4TjNNRFVmVVVjSjBpTkNwM0tod2ozbV9Gdw?oc=5) (Yahoo News UK)
 
@@ -25,12 +26,9 @@
 - [Price down: Hydrating Body Wash with Hyaluronic Acid & Coconut Oil - 236 ml | Pack of 3 ₹1047 → ₹949](https://innovist.com/products/hydrating-body-wash-with-hyaluronic-acid-coconut-oil-236-ml-pack-of-3) (Brand store) `Pricing & Promo, Product`
 - [Price down: Hydrating Body Wash with Hyaluronic Acid & Coconut Oil - 236 mlHydrating Body Wash with Hyaluronic Acid & Coconut Oil - 236 ml | Pack of 2 ₹698 → ₹628](https://innovist.com/products/hydrating-body-wash-with-hyaluronic-acid-coconut-oil-236-ml-pack-of-2) (Brand store) `Pricing & Promo, Product`
 
-## Love Beauty and Planet (5 items)
+## Love Beauty and Planet (2 items)
+- [Ever wondered how your hair care is made? Factory BTS 🏭💚](https://www.youtube.com/watch?v=TJYdf3leSSM) (YouTube) `Sustainability`
 - [Tag the friend who needs this wave-saving hair routine💚](https://www.youtube.com/watch?v=yccPNqMExVQ) (YouTube) `Sustainability`
-- [Frizz = Cuticle Damage? Here’s the Fix ✨ #lovebeautyandplanet #haircare](https://www.youtube.com/watch?v=43s2hafWjx0) (YouTube) `Influencer, Sustainability`
-- [Fix Cuticle Damage with Argan Hair Mask ✨ #lovebeautyandplanet #haircare](https://www.youtube.com/watch?v=Yi0pkPnfwLw) (YouTube) `Sustainability`
-- [Your Hair Has a Barrier Too! Here’s Why It Matters 👀 #lovebeautyandplanet](https://www.youtube.com/watch?v=N4KsYEkPvlQ) (YouTube) `Sustainability`
-- [Your Hair’s Daily Triggers? Let’s Talk! 🌿 | Love Beauty & Planet](https://www.youtube.com/watch?v=RmaU-5XIRM0) (YouTube) `Sustainability`
 
 ## Lux (1 items)
 - [Rosalía's LUX: 5 Creative Choices Behind the Album](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQb1JPcXZkVXBxTk5MOHdVOGRfLVpFRC1PWDF2eWJndkJzZEl4MzNwUlY2cHFtMy1vQ3R0cDF3emIzek0ydU9GNkQxeVhSbDczcXVTVXJHU096VGhILWZSQnFYSHFQNmsxampjcV8tUHhnQUs0bjV5VEsxRWhfV1lOc2p5RXgwdnAxT2JCb1QtQnFQM2U4UGlNMXJTNFhMZ3dvcTk2bzgyTnh1MWhxZnVJQmt2aUVnVkU1YW04?oc=5) (HOLR Magazine)
