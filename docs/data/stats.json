@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T11:21:18.415344+00:00",
+ "updated": "2026-11-27T11:14:43.795055+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -182,7 +182,7 @@
    "Love Beauty and Planet": 0,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 1,
+   "Mamaearth": 2,
    "Ghar Soaps": 0
   },
   "2026-09-28": {
@@ -252,7 +252,7 @@
   },
   "2026-11-02": {
    "Fiama": 4,
-   "Dove": 5,
+   "Dove": 6,
    "Nivea": 2,
    "Pears": 0,
    "Palmolive": 0,
@@ -273,7 +273,7 @@
    "Love Beauty and Planet": 2,
    "Lux": 0,
    "Santoor": 0,
-   "Mamaearth": 2,
+   "Mamaearth": 3,
    "Ghar Soaps": 0
   },
   "2026-11-16": {
@@ -287,16 +287,16 @@
    "Lux": 1,
    "Santoor": 0,
    "Mamaearth": 3,
-   "Ghar Soaps": 4
+   "Ghar Soaps": 5
   },
   "2026-11-23": {
    "Fiama": 0,
    "Dove": 0,
    "Nivea": 15,
-   "Pears": 1,
+   "Pears": 2,
    "Palmolive": 0,
    "Chemist at Play": 12,
-   "Love Beauty and Planet": 2,
+   "Love Beauty and Planet": 3,
    "Lux": 0,
    "Santoor": 0,
    "Mamaearth": 0,
@@ -305,7 +305,9 @@
  },
  "tags_90d": {
   "Fiama": {},
-  "Dove": {},
+  "Dove": {
+   "Purpose": 1
+  },
   "Nivea": {
    "Campaign": 3,
    "Partnership": 1,
@@ -318,7 +320,7 @@
    "Product": 28
   },
   "Love Beauty and Planet": {
-   "Sustainability": 17,
+   "Sustainability": 18,
    "Influencer": 1
   },
   "Lux": {
@@ -375,12 +377,12 @@
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 6
+   "found": 4
   },
   {
    "source": "Trade press: Dove",
    "ok": true,
-   "found": 54
+   "found": 55
   },
   {
    "source": "Official: Dove",
@@ -401,12 +403,12 @@
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 89
+   "found": 90
   },
   {
    "source": "Official: Nivea",
    "ok": true,
-   "found": 13
+   "found": 12
   },
   {
    "source": "YouTube: Nivea",
@@ -417,12 +419,12 @@
   {
    "source": "News: Pears",
    "ok": true,
-   "found": 2
+   "found": 1
   },
   {
    "source": "Trade press: Pears",
    "ok": true,
-   "found": 12
+   "found": 10
   },
   {
    "source": "Official: Pears",
@@ -443,7 +445,7 @@
   {
    "source": "Trade press: Palmolive",
    "ok": true,
-   "found": 5
+   "found": 3
   },
   {
    "source": "Official: Palmolive",
@@ -469,7 +471,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 8
+   "found": 9
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -501,12 +503,12 @@
   {
    "source": "News: Lux",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 46
+   "found": 27
   },
   {
    "source": "Official: Lux",
@@ -553,7 +555,7 @@
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 7
+   "found": 13
   },
   {
    "source": "YouTube: Mamaearth",
@@ -564,7 +566,7 @@
   {
    "source": "News: Ghar Soaps",
    "ok": true,
-   "found": 0
+   "found": 1
   },
   {
    "source": "Trade press: Ghar Soaps",
