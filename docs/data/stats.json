@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T11:14:43.795055+00:00",
+ "updated": "2026-11-28T10:45:06.816788+00:00",
  "brands": [
   {
    "name": "Fiama",
@@ -279,7 +279,7 @@
   "2026-11-16": {
    "Fiama": 2,
    "Dove": 1,
-   "Nivea": 4,
+   "Nivea": 5,
    "Pears": 2,
    "Palmolive": 0,
    "Chemist at Play": 16,
@@ -290,7 +290,7 @@
    "Ghar Soaps": 5
   },
   "2026-11-23": {
-   "Fiama": 0,
+   "Fiama": 1,
    "Dove": 0,
    "Nivea": 15,
    "Pears": 2,
@@ -309,7 +309,7 @@
    "Purpose": 1
   },
   "Nivea": {
-   "Campaign": 3,
+   "Campaign": 4,
    "Partnership": 1,
    "Purpose": 1
   },
@@ -377,12 +377,12 @@
   {
    "source": "News: Dove",
    "ok": true,
-   "found": 4
+   "found": 3
   },
   {
    "source": "Trade press: Dove",
    "ok": true,
-   "found": 55
+   "found": 53
   },
   {
    "source": "Official: Dove",
@@ -398,12 +398,12 @@
   {
    "source": "News: Nivea",
    "ok": true,
-   "found": 7
+   "found": 3
   },
   {
    "source": "Trade press: Nivea",
    "ok": true,
-   "found": 90
+   "found": 75
   },
   {
    "source": "Official: Nivea",
@@ -424,7 +424,7 @@
   {
    "source": "Trade press: Pears",
    "ok": true,
-   "found": 10
+   "found": 12
   },
   {
    "source": "Official: Pears",
@@ -445,7 +445,7 @@
   {
    "source": "Trade press: Palmolive",
    "ok": true,
-   "found": 3
+   "found": 5
   },
   {
    "source": "Official: Palmolive",
@@ -471,7 +471,7 @@
   {
    "source": "Official: Chemist at Play",
    "ok": true,
-   "found": 9
+   "found": 8
   },
   {
    "source": "YouTube: Chemist at Play",
@@ -503,12 +503,12 @@
   {
    "source": "News: Lux",
    "ok": true,
-   "found": 1
+   "found": 0
   },
   {
    "source": "Trade press: Lux",
    "ok": true,
-   "found": 27
+   "found": 28
   },
   {
    "source": "Official: Lux",
@@ -529,7 +529,7 @@
   {
    "source": "Trade press: Santoor",
    "ok": true,
-   "found": 52
+   "found": 50
   },
   {
    "source": "Official: Santoor",
@@ -545,17 +545,17 @@
   {
    "source": "News: Mamaearth",
    "ok": true,
-   "found": 13
+   "found": 12
   },
   {
    "source": "Trade press: Mamaearth",
    "ok": true,
-   "found": 56
+   "found": 55
   },
   {
    "source": "Official: Mamaearth",
    "ok": true,
-   "found": 13
+   "found": 5
   },
   {
    "source": "YouTube: Mamaearth",
@@ -587,7 +587,7 @@
   {
    "source": "News: Category",
    "ok": true,
-   "found": 21
+   "found": 22
   },
   {
    "source": "Logged posts",

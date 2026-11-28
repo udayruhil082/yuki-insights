@@ -1,9 +1,9 @@
-# Yuki Insights weekly digest (20 Nov to 27 Nov 2026)
+# Yuki Insights weekly digest (21 Nov to 28 Nov 2026)
 
-**Mentions this week:** Nivea 16, Chemist at Play 12, Love Beauty and Planet 3, Pears 2, Mamaearth 2, Category 1, Lux 1, Fiama 1
+**Mentions this week:** Nivea 16, Chemist at Play 12, Love Beauty and Planet 3, Pears 2, Category 1, Fiama 1, Mamaearth 1
 
 ## Fiama (1 items)
-- [Winter-ready skin starts with Fiama! 🫧 Pro-Ceramides for soft, nourished skin in just 8 washes.](https://www.youtube.com/watch?v=xkTxEgprYV4) (YouTube)
+- [Strawberry-smooth skin starts here! 🍓Try Fiama Papain Scrub with 13% Polishing Blend.💜 #FiamaByITc](https://www.youtube.com/watch?v=k4ht4xTh94s) (YouTube)
 
 ## Nivea (16 items)
 - [NIVEA Soft Gel | Hyaluron and Niacinamide Serum in Gel |Malayalam 10s](https://www.youtube.com/watch?v=mYhodANQw88) (YouTube)
@@ -30,11 +30,7 @@
 - [Ever wondered how your hair care is made? Factory BTS 🏭💚](https://www.youtube.com/watch?v=TJYdf3leSSM) (YouTube) `Sustainability`
 - [Tag the friend who needs this wave-saving hair routine💚](https://www.youtube.com/watch?v=yccPNqMExVQ) (YouTube) `Sustainability`
 
-## Lux (1 items)
-- [Rosalía's LUX: 5 Creative Choices Behind the Album](https://news.google.com/rss/articles/CBMiuwFBVV95cUxQb1JPcXZkVXBxTk5MOHdVOGRfLVpFRC1PWDF2eWJndkJzZEl4MzNwUlY2cHFtMy1vQ3R0cDF3emIzek0ydU9GNkQxeVhSbDczcXVTVXJHU096VGhILWZSQnFYSHFQNmsxampjcV8tUHhnQUs0bjV5VEsxRWhfV1lOc2p5RXgwdnAxT2JCb1QtQnFQM2U4UGlNMXJTNFhMZ3dvcTk2bzgyTnh1MWhxZnVJQmt2aUVnVkU1YW04?oc=5) (HOLR Magazine)
-
-## Mamaearth (2 items)
+## Mamaearth (1 items)
 - [From 2 am worry of a mother to a Rs 1,000 crore skincare empire: How Mamaearth was built](https://news.google.com/rss/articles/CBMi0AFBVV95cUxQN0tpd2JYdU01TmtyejU1SVJfREpjbUZsb0Z6LXJwNTZQS3hvQV83SmVwaXZGSEpIaWZMeG1RVU5YNGY0Q0JSbThPZk9iVHJjdGx5TE9NZElYNEhZWE1XdmxDdXQ0M05WSl96SVUydzBhSTRPX3pGdC1MR0xneGFaYjNMY1o0LVRLdUhCYjUxMkRkNEUtZnE4WGc4akRsSkZVdkZNTTg0YlpYZXpKNlpRQUpFaWxPamI2TlVlNnh6TlFmOFhDYlhIZnJ5RGd0Szh20gHWAUFVX3lxTE9mQVp1YlRpd2dVS1NLRVRrMUxXOUVjSkxoMHFwQUMxSWtvMkJydl9xdEZSVW05SF9uT0VSZVdhOEtad1g2ZVNucENMQUdSb0tmT1RlQ3A2SzlYdWJMU2ktZjgwaWliMkg5aS02WndiOFZsdnE4V09mbTl1QlBGMlNDRUtZWmhLcFJsUlc2WFRJblg4SjlZVmYtNEhRR1o2cElfNjRTZHh5TWpvLU5yZFB1RUxib1dZa28tc3pRdndYZTNsRjBfWDIwU2dsZjQxYlBTdmdjS1E?oc=5) (Organiser) `Pricing & Promo`
-- [Out of stock: Multani Mitti Moisturizing Lotion Soap (3 + 1 Free) (125g x 4)](https://mamaearth.in/products/multani-mitti-soap-1) (Brand store) `Product`
 
 Open the dashboard for everything, and add your 'what Fiama should do' notes there.
